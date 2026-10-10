@@ -1,98 +1,307 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HOME - Cuervo</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="shortcut icon" href="IMAGENES HOME/favicon.png" type="image/x-icon">
 
+    <!-- Bootstrap 5.3.8 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS propio: debe ir después de Bootstrap -->
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="shortcut icon" href="IMAGENES HOME/logo-blanco.png" type="image/x-icon">
+
+    <!-- Fuente Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
+
     <header>
         <div id="mensajes">
             <p class="mensaje-promo">¡Hasta 6 cuotas sin interés!</p>
         </div>
-        <div id="cabecera">
+
+        <!-- Bootstrap: d-flex, justify-content-between, align-items-center -->
+        <div id="cabecera" class="d-flex justify-content-between align-items-center">
+
             <nav id="enlaces-cabecera">
                 <a href="index.html" class="enlaces-paginas">Inicio</a>
                 <a class="enlaces-paginas">Categorías</a>
                 <a class="enlaces-paginas" id="enlace-sale">Sale</a>
             </nav>
-            <img 
-            src="IMAGENES HOME/logo-blanco.png"
-            alt="Logo de CUERVO" 
-            id="logo-blanco"
-            > <!-- ruta relativa -->
+
+            <img
+                src="IMAGENES HOME/logo-blanco.png"
+                alt="Logo de CUERVO"
+                id="logo-blanco"
+            >
+
             <div id="opciones-cabecera">
-                <img src="IMAGENES HOME/icono-lupa.png" alt="buscador" class="iconos-cabecera">
-                <img src="IMAGENES HOME/icono-ubicacion.png" alt="ubicacion" class="iconos-cabecera">
-                <img src="IMAGENES HOME/icono-cuenta.png" alt="cuenta" class="iconos-cabecera">
-                <img src="IMAGENES HOME/icono-favorito.png" alt="favorito" class="iconos-cabecera">
-                <img src="IMAGENES HOME/icono-carrito.png" alt="carrito" class="iconos-cabecera">
+                <img src="IMAGENES HOME/icono-lupa.png" alt="Buscador" class="iconos-cabecera">
+                <img src="IMAGENES HOME/icono-ubicacion.png" alt="Ubicación" class="iconos-cabecera">
+                <img src="IMAGENES HOME/icono-cuenta.png" alt="Cuenta" class="iconos-cabecera">
+                <img src="IMAGENES HOME/icono-favorito.png" alt="Favorito" class="iconos-cabecera">
+                <img src="IMAGENES HOME/icono-carrito.png" alt="Carrito" class="iconos-cabecera">
             </div>
         </div>
     </header>
-    <img src="IMAGENES HOME/banner-rebajas.png" alt="banner-home" id="banner-home">
-    
-    <section class="info">
+
+    <img src="IMAGENES HOME/banner-rebajas.png" alt="Banner de rebajas" id="banner-home">
+
+    <!-- Bootstrap: d-flex, align-items-center, justify-content-center -->
+    <section class="info d-flex align-items-center justify-content-center">
+
         <article class="rectangulo-info">
-            <img src="IMAGENES HOME/envios.png" alt="envios" class="imagenes-info">
+            <img src="IMAGENES HOME/envios.png" alt="Envíos" class="imagenes-info">
             <h4>ENVÍOS GRATIS</h4>
             <p>A partir de $200.000</p>
         </article>
+
         <article class="rectangulo-info">
-            <img src="IMAGENES HOME/tarjetas.png" alt="tarjetas" class="imagenes-info">
+            <img src="IMAGENES HOME/tarjetas.png" alt="Tarjetas" class="imagenes-info">
             <h4>PAGÁ EN CUOTAS</h4>
             <p>¡Hasta 6 cuotas sin interés!</p>
         </article>
+
         <article class="rectangulo-info">
-            <img src="IMAGENES HOME/devoluciones.png" alt="devoluciones" class="imagenes-info">
+            <img src="IMAGENES HOME/devoluciones.png" alt="Devoluciones" class="imagenes-info">
             <h4>DEVOLUCIÓN GRATIS</h4>
             <p>Hasta 15 días desde la compra</p>
         </article>
+
     </section>
 
+    <br><br><br><br>
+
+    <div class="look">
+
+        <h2 class="encuentra">Encuentra tu look</h2>
+
+        <!-- Bootstrap: d-flex, justify-content-center, align-items-center -->
+        <div class="divimg d-flex justify-content-center align-items-center">
+
+            <div class="imagen-look position-relative">
+
+                <img src="IMAGENES HOME/look1.png" class="looks1" alt="Look 1">
+
+                <!-- Bootstrap: vstack organiza verticalmente; gap-3 separa las tarjetas -->
+                <div class="vstack gap-2 contenedores position-absolute">
+                    <div class="promo d-flex align-items-center">
+
+                        <img src="IMAGENES HOME/look1chaqueta.png" alt="Chaqueta 100% cuero">
+
+                        <!-- Bootstrap: d-flex y flex-column -->
+                        <div class="info-promo d-flex flex-column">
+
+                            <a href="">
+                                <h3>Chaqueta 100% cuero</h3>
+                            </a>
+
+                            <!-- Bootstrap: d-flex, align-items-center y gap-2 -->
+                            <div class="d-flex align-items-center gap-2">
+                                <p class="precio-anterior">$180.299</p>
+                                <span class="sale">SALE</span>
+                            </div>
+
+                            <p class="precio">$130.399</p>
+                            <p>3 cuotas sin interés</p>
+                            <p>de $43.466</p>
+
+                        </div>
+                    </div>
+
+                    <div class="promo d-flex align-items-center">
+
+                    <img src="IMAGENES HOME/look1remeralisa.png" alt="Chaqueta 100% cuero">
+
+                    <!-- Bootstrap: d-flex y flex-column -->
+                    <div class="info-promo d-flex flex-column">
+
+                    <a href="">
+                    <h3>Remera lisa</h3>
+                    </a>
+
+                    <!-- Bootstrap: d-flex, align-items-center y gap-2 -->
+                    <div class="d-flex align-items-center gap-2">
+                    <p class="precio-anterior">$48.699</p>
+                    <span class="sale">SALE</span>
+                    </div>
+
+                    <p class="precio">$36.799</p>
+                    <p>3 cuotas sin interés</p>
+                    <p>de $12.266</p>
+
+                    </div>
+                    </div>
+
+                    <div class="promo d-flex align-items-center">
+
+                    <img src="IMAGENES HOME/loo2.pantalones 1.png" alt="Chaqueta 100% cuero">
+
+                    <!-- Bootstrap: d-flex y flex-column -->
+                    <div class="info-promo d-flex flex-column">
+
+                    <a href="">
+                    <h3>Jean 802</h3>
+                    </a>
+
+                    <!-- Bootstrap: d-flex, align-items-center y gap-2 -->
+                    <div class="d-flex align-items-center gap-2">
+                    <p class="precio-anterior">$95.149</p>
+                    <span class="sale">SALE</span>
+                    </div>
+
+                    <p class="precio">$81.799</p>
+                    <p>3 cuotas sin interés</p>
+                    <p>de $27.266</p>
+
+                    </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="imagen-look derecha position-relative">
+
+                <img src="IMAGENES HOME/look2.png" class="looks2" alt="Look 2">
+
+                <!-- Bootstrap: vstack organiza verticalmente las tarjetas -->
+                <div class="vstack gap-2 contenedores position-absolute">
+                    <div class="promo d-flex align-items-center">
+
+                    <img src="IMAGENES HOME/look2chaquetamarron.png" alt="Chaqueta 100% cuero">
+
+                    <!-- Bootstrap: d-flex y flex-column -->
+                    <div class="info-promo d-flex flex-column">
+
+                    <a href="">
+                    <h3>Chaqueta marrón</h3>
+                    </a>
+
+                    <!-- Bootstrap: d-flex, align-items-center y gap-2 -->
+                    <div class="d-flex align-items-center gap-2">
+                    <p class="precio-anterior">$130.799</p>
+                    <span class="sale">SALE</span>
+                    </div>
+
+                    <p class="precio">$100.550</p>
+                    <p>3 cuotas sin interés</p>
+                    <p>de $33.516</p>
+
+                    </div>
+                    </div>
+
+                    <div class="promo d-flex align-items-center">
+
+                    <img src="IMAGENES HOME/look2sueter.png" alt="Chaqueta 100% cuero">
+
+                    <!-- Bootstrap: d-flex y flex-column -->
+                    <div class="info-promo d-flex flex-column">
+
+                    <a href="">
+                    <h3>Sueter tramado</h3>
+                    </a>
+
+                    <!-- Bootstrap: d-flex, align-items-center y gap-2 -->
+                    <div class="d-flex align-items-center gap-2">
+                    <p class="precio-anterior">$95.299</p>
+                    <span class="sale">SALE</span>
+                    </div>
+
+                    <p class="precio">$87.699</p>
+                    <p>3 cuotas sin interés</p>
+                    <p>de $29.233</p>
+
+                    </div>
+                    </div>
+                    <div class="promo d-flex align-items-center">
+
+                    <img src="IMAGENES HOME/look2pantalon.png" alt="Chaqueta 100% cuero">
+
+                    <!-- Bootstrap: d-flex y flex-column -->
+                    <div class="info-promo d-flex flex-column">
+
+                    <a href="">
+                    <h3>Jean 801</h3>
+                    </a>
+
+                    <!-- Bootstrap: d-flex, align-items-center y gap-2 -->
+                    <div class="d-flex align-items-center gap-2">
+                    <p class="precio-anterior">$99.299</p>
+                    <span class="sale">SALE</span>
+                    </div>
+
+                    <p class="precio">$82.799</p>
+                    <p>3 cuotas sin interés</p>
+                    <p>de $27.599</p>
+
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <br><br><br><br>
 
     <footer>
+
         <div id="footer">
-            <div class="informacion">
-                <div class="columna-footer">
+
+            <!-- Bootstrap: d-flex -->
+            <div class="informacion d-flex">
+
+                <!-- Bootstrap: d-flex, flex-column y align-items-start -->
+                <div class="columna-footer d-flex flex-column align-items-start">
                     <h3>NOSOTROS</h3>
                     <a>LOCALES</a>
                     <a>VENTA MAYORISTA</a>
                     <a>VENTA CORPORATIVA</a>
                 </div>
-                <div class="columna-footer">
+
+                <div class="columna-footer d-flex flex-column align-items-start">
                     <h3>AYUDA</h3>
                     <a>CONTACTO</a>
                     <a>FORMAS DE PAGO</a>
                     <a>MÉTODOS DE ENVÍO</a>
                 </div>
-                <div class="columna-footer">
+
+                <div class="columna-footer d-flex flex-column align-items-start">
                     <h3>LEGALES</h3>
                     <a>TÉRMINOS Y CONDICIONES</a>
                     <a>DEFENSA AL CONSUMIDOR</a>
                     <a>BOTÓN DE ARREPENTIMIENTO</a>
                 </div>
+
             </div>
-        
-            <div class="columna-footer">
+
+            <div class="columna-footer d-flex flex-column align-items-start">
                 <h3>CONTACTANOS</h3>
-                <div class="redes-sociales">
+
+                <!-- Bootstrap: d-flex -->
+                <div class="redes-sociales d-flex">
                     <a>
-                        <img src="IMAGENES HOME/icono-whatsapp.png" alt="whatsapp" class="icono-redes">
+                        <img src="IMAGENES HOME/icono-whatsapp.png" alt="WhatsApp" class="icono-redes">
                     </a>
                     <a>
-                        <img src="IMAGENES HOME/icono-instagram.png" alt="instagram" class="icono-redes">
+                        <img src="IMAGENES HOME/icono-instagram.png" alt="Instagram" class="icono-redes">
                     </a>
                     <a>
-                        <img src="IMAGENES HOME/icono-facebook.png" alt="facebook" class="icono-redes">
+                        <img src="IMAGENES HOME/icono-facebook.png" alt="Facebook" class="icono-redes">
                     </a>
                 </div>
             </div>
+
         </div>
+
         <img src="IMAGENES HOME/logo-negro.png" alt="Logo de CUERVO" class="logo-negro">
+
     </footer>
+
 </body>
 </html>
