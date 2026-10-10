@@ -1,10 +1,13 @@
+
+/* GENERAL */
 html, body {
-    margin: 0;
+    font-family: "Inter", sans-serif;
 }
 
+/* CABECERA */
 #mensajes {
     background-color: #000000;
-    color: hsl(0, 0%, 100%);
+    color: white;
     padding: 5px 0;
 }
 
@@ -13,10 +16,8 @@ html, body {
     margin: 0;
 }
 
+/* Bootstrap ya aplica flex y alineación en #cabecera */
 #cabecera {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     margin: 10px 20px;
 }
 
@@ -24,7 +25,6 @@ html, body {
     margin: 0 auto;
     width: 170px;
     height: auto;
-
 }
 
 .enlaces-paginas {
@@ -40,7 +40,7 @@ html, body {
 
 #enlace-sale {
     text-transform: uppercase;
-    color: rgb(255, 0, 0)
+    color: red;
 }
 
 .iconos-cabecera {
@@ -48,20 +48,24 @@ html, body {
     margin: 0 5px;
 }
 
+/* Margen personalizado para todos los párrafos */
 p {
     margin: 0;
 }
 
+/* BANNER */
 #banner-home {
     width: 100%;
     height: auto;
 }
 
-footer{
+/* FOOTER */
+footer {
     background-color: #000000;
     padding: 30px 0;
 }
 
+/* Bootstrap organiza las columnas y las redes sociales */
 #footer {
     display: flex;
     justify-content: space-around;
@@ -70,20 +74,10 @@ footer{
 
 .columna-footer {
     color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
     padding: 20px;
 }
 
-.redes-sociales {
-    display:flex;
-    flex-direction: row;
-}
-
 .informacion {
-    display: flex;
-    flex-direction: row;
     justify-content: left;
 }
 
@@ -100,12 +94,8 @@ footer{
     margin-top: 80px;
 }
 
-.info {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-}
+/* INFORMACIÓN DE ENVÍOS, CUOTAS Y DEVOLUCIONES */
+/* Bootstrap aplica flex, alineación y centrado */
 .rectangulo-info {
     background-color: #E9E9E9;
     width: 300px;
@@ -115,4 +105,115 @@ footer{
 .imagenes-info {
     width: 50px;
     height: auto;
+}
+
+/* ENCUENTRA TU LOOK */
+.look {
+    background-color: #051C3F;
+    padding: 40px 0;
+}
+
+.encuentra {
+    color: white;
+    text-align: center;
+    margin: 10px 0;
+}
+
+/* Bootstrap aplica flex, centrado y alineación */
+.divimg {
+    padding: 40px 0;
+}
+
+.looks1 {
+    margin-right: 15px;
+}
+
+.looks2 {
+    margin-left: 15px;
+}
+
+/* position-relative se aplica mediante Bootstrap */
+.imagen-look {
+    display: inline-block;
+}
+
+/* position-absolute se aplica mediante Bootstrap */
+.contenedores {
+    top: 50%;
+    left: 0;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    z-index: 2;
+}
+
+.derecha .contenedores {
+    left: 100%;
+    transform: translate(-35%, -50%);
+}
+
+/* TARJETAS DE PRODUCTOS */
+.promo {
+    height: 138px;
+    width: 260px;
+    margin-bottom: 10px;
+    background-color: white;
+    border: 1px solid #797979;
+    overflow: hidden;
+    gap: 10px;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.promo img {
+    width: 100px;
+    height: 120px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.info-promo {
+    flex: 1;
+    min-width: 0;
+    gap: 3px;
+    overflow: hidden;
+}
+
+.promo h3 {
+    color: black;
+    font-size: 16px;
+    margin: 0;
+}
+
+.promo a {
+    text-decoration: none;
+}
+
+.info-promo p {
+    color: gray;
+    margin: 0;
+    font-size: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.info-promo .precio {
+    color: black;
+    font-weight: bold;
+    margin-bottom: 1px;
+}
+
+.precio-anterior {
+    color: gray;
+    text-decoration: line-through;
+}
+
+.sale {
+    background-color: #C81919;
+    color: white;
+    padding: 2px 6px;
+    font-size: 12px;
+    font-weight: bold;
+    white-space: nowrap;
+    flex-shrink: 0;
 }
