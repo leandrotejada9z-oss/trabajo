@@ -1,0 +1,118 @@
+html, body {
+    margin: 0;
+}
+
+#mensajes {
+    background-color: #000000;
+    color: hsl(0, 0%, 100%);
+    padding: 5px 0;
+}
+
+.mensaje-promo {
+    text-align: center;
+    margin: 0;
+}
+
+#cabecera {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 20px;
+}
+
+#logo-blanco {
+    margin: 0 auto;
+    width: 170px;
+    height: auto;
+
+}
+
+.enlaces-paginas {
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+    margin: 0 5px;
+}
+
+.enlaces-paginas:hover {
+    text-decoration: underline;
+}
+
+#enlace-sale {
+    text-transform: uppercase;
+    color: rgb(255, 0, 0)
+}
+
+.iconos-cabecera {
+    width: 25px;
+    margin: 0 5px;
+}
+
+p {
+    margin: 0;
+}
+
+#banner-home {
+    width: 100%;
+    height: auto;
+}
+
+footer{
+    background-color: #000000;
+    padding: 30px 0;
+}
+
+#footer {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.columna-footer {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 20px;
+}
+
+.redes-sociales {
+    display:flex;
+    flex-direction: row;
+}
+
+.informacion {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+}
+
+.icono-redes {
+    margin-right: 10px;
+    width: 40px;
+    height: auto;
+}
+
+.logo-negro {
+    width: 250px;
+    height: auto;
+    margin-left: 220px;
+    margin-top: 80px;
+}
+
+.info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.rectangulo-info {
+    background-color: #E9E9E9;
+    width: 300px;
+    height: auto;
+}
+
+.imagenes-info {
+    width: 50px;
+    height: auto;
+}
