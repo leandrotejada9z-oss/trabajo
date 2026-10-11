@@ -106,26 +106,28 @@
 
     <!-- Bootstrap: d-flex, align-items-center, justify-content-center -->
     <!-- Acomoda los elementos en fila y los centra horizontal y verticalmente -->
-    <section class="info d-flex align-items-center justify-content-center">
-
-        <article class="rectangulo-info">
-            <img src="IMAGENES HOME/envios.png" alt="Envíos" class="imagenes-info">
-            <h4>ENVÍOS GRATIS</h4>
-            <p>A partir de $200.000</p>
-        </article>
-
-        <article class="rectangulo-info">
-            <img src="IMAGENES HOME/tarjetas.png" alt="Tarjetas" class="imagenes-info">
-            <h4>PAGÁ EN CUOTAS</h4>
-            <p>¡Hasta 6 cuotas sin interés!</p>
-        </article>
-
-        <article class="rectangulo-info">
-            <img src="IMAGENES HOME/devoluciones.png" alt="Devoluciones" class="imagenes-info2">
-            <h4>DEVOLUCIÓN GRATIS</h4>
-            <p>Hasta 15 días desde la compra</p>
-        </article>
-
+    
+    <!--SECCION DE TARJETAS-->
+    <section class="container info"> <!--Es el contenedor de las tarjetas de información-->
+        <div class=" row"> <!--row: define fila -> hijo directo del contenedor-->
+            <article class="col rectangulo-info"> <!--col: define columnas de la fila-->
+                <i class="bi bi-truck icono-info"></i>
+                <!--BS utiliza etiqueta <i> como un contenedor vacio donde dibujar el icono
+                Tiene dos clases: bi (le avisa al navegador que ese elemento usa la fuente de iconos) y bi-truck (cual es el icono)-->
+                <h4>ENVÍOS GRATIS</h4>
+                <p>A partir de $200.000</p>
+            </article>
+            <article class="col rectangulo-info">
+                <i class="bi bi-credit-card icono-info"></i>
+                <h4>PAGÁ EN CUOTAS</h4>
+                <p>¡Hasta 6 cuotas sin interés!</p>
+            </article>
+            <article class="col rectangulo-info">
+                <i class="bi bi-arrow-repeat icono-info"></i>
+                <h4>DEVOLUCIÓN GRATIS</h4>
+                <p>Hasta 15 días desde la compra</p>
+            </article>
+        </div>
     </section>
 
     <br><br><br><br>
