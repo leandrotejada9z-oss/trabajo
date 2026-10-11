@@ -120,33 +120,13 @@ section {
     padding-bottom: 10px;
 }
 
-article div.row {
+section div.row {
     gap: 10px; /*porque el contenedor padre es flex*/
 }
 
 article h4{
     color: black;
-}
-
-.imagenes-info {
-    width: 40px;
-    height: 40px;
-    object-fit: contain;
-    padding: 3px;
-    
-}
-
-.imagenes-info2 {
-    width: 35px;
-    height: 35px;
-    object-fit: contain;
-    padding: 3px;
-    
-}
-
-.rectangulo-info h4,
-.rectangulo-info p {
-    margin: 5px 0;
+    margin: 0;
 }
 
 /* ENCUENTRA TU LOOK */
