@@ -99,8 +99,6 @@ footer {
     margin-top: 80px;
 }
 /* INFORMACIÓN DE ENVÍOS, CUOTAS Y DEVOLUCIONES */
-/* Bootstrap aplica flex, alineación y centrado */
-
 .info {
     margin-top: 15px;
 }
@@ -120,6 +118,10 @@ section div.row {
 article h4{
     color: black;
     margin: 0;
+}
+
+.icono-info {
+    font-size: 40px; /*se usa font-size y no height/width porque se trata como texto*/
 }
 
 /* ENCUENTRA TU LOOK */
