@@ -21,11 +21,27 @@
 <body>
 
     <header>
-        <div id="mensajes">
-            <p class="mensaje-promo">¡Hasta 6 cuotas sin interés!</p>
+        <div id="mensajes" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+        
+        <div class="carousel-inner">
+
+        <div class="carousel-item active">
+            <p class="mensaje-promo">🔥¡Hasta 6 cuotas sin interés!</p>
         </div>
 
+        <div class="carousel-item">
+            <p class="mensaje-promo">¡Envíos a todo el país!</p>
+        </div>
+
+        <div class="carousel-item">
+            <p class="mensaje-promo">¡Descubrí tu próximo look!</p>
+        </div>
+
+        </div>
+</div>
+
         <!-- Bootstrap: d-flex, justify-content-between, align-items-center -->
+        <!-- Acomoda los elementos en fila, dejando espacio entre ellos y centrándolos verticalmente -->
         <div id="cabecera" class="d-flex justify-content-between align-items-center">
 
             <nav id="enlaces-cabecera">
@@ -50,9 +66,46 @@
         </div>
     </header>
 
-    <img src="IMAGENES HOME/banner-rebajas.png" alt="Banner de rebajas" id="banner-home">
+    <!-- Bootstrap: activa el carrusel y permite el deslizamiento -->
+    <div id="bannerCarrusel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+
+        <!-- Bootstrap: muestra los indicadores para cambiar de imagen -->
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#bannerCarrusel"
+        data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Imagen 1"></button>
+
+        <button type="button" data-bs-target="#bannerCarrusel"
+        data-bs-slide-to="1" aria-label="Imagen 2"></button>
+
+        <button type="button" data-bs-target="#bannerCarrusel"
+        data-bs-slide-to="2" aria-label="Imagen 3"></button>
+    </div>
+
+    <!-- Bootstrap: organiza las imágenes del carrusel -->
+    <div class="carousel-inner">
+        <!-- Bootstrap: define cada diapositiva del carrusel -->
+        <div class="carousel-item active">
+            <img src="IMAGENES HOME/banner1.png"
+                 class="d-block w-100" alt="Banner 1">
+        </div>
+
+        <div class="carousel-item">
+            <img src="IMAGENES HOME/banner2.png"
+                 class="d-block w-100" alt="Banner 2">
+        </div>
+
+        <div class="carousel-item">
+            <img src="IMAGENES HOME/banner3.png"
+                 class="d-block w-100" alt="Banner 3">
+        </div>
+
+    </div>
+</div>
+
 
     <!-- Bootstrap: d-flex, align-items-center, justify-content-center -->
+    <!-- Acomoda los elementos en fila y los centra horizontal y verticalmente -->
     <section class="info d-flex align-items-center justify-content-center">
 
         <article class="rectangulo-info">
@@ -68,7 +121,7 @@
         </article>
 
         <article class="rectangulo-info">
-            <img src="IMAGENES HOME/devoluciones.png" alt="Devoluciones" class="imagenes-info">
+            <img src="IMAGENES HOME/devoluciones.png" alt="Devoluciones" class="imagenes-info2">
             <h4>DEVOLUCIÓN GRATIS</h4>
             <p>Hasta 15 días desde la compra</p>
         </article>
@@ -82,6 +135,7 @@
         <h2 class="encuentra">Encuentra tu look</h2>
 
         <!-- Bootstrap: d-flex, justify-content-center, align-items-center -->
+        <!-- Usa Flexbox y centra los elementos horizontal y verticalmente -->
         <div class="divimg d-flex justify-content-center align-items-center">
 
             <div class="imagen-look position-relative">
@@ -170,12 +224,14 @@
                 <img src="IMAGENES HOME/look2.png" class="looks2" alt="Look 2">
 
                 <!-- Bootstrap: vstack organiza verticalmente las tarjetas -->
+                <!-- Bootstrap: acomoda las tarjetas una debajo de otra con separación -->
                 <div class="vstack gap-2 contenedores position-absolute">
                     <div class="promo d-flex align-items-center">
 
                     <img src="IMAGENES HOME/look2chaquetamarron.png" alt="Chaqueta 100% cuero">
 
                     <!-- Bootstrap: d-flex y flex-column -->
+                    <!-- Bootstrap: acomoda la imagen y la información en fila y las centra verticalmente -->
                     <div class="info-promo d-flex flex-column">
 
                     <a href="">
@@ -183,6 +239,7 @@
                     </a>
 
                     <!-- Bootstrap: d-flex, align-items-center y gap-2 -->
+                    <!-- Bootstrap: alinea el precio anterior y el SALE verticalmente y los separa -->
                     <div class="d-flex align-items-center gap-2">
                     <p class="precio-anterior">$130.799</p>
                     <span class="sale">SALE</span>
@@ -198,7 +255,7 @@
                     <div class="promo d-flex align-items-center">
 
                     <img src="IMAGENES HOME/look2sueter.png" alt="Chaqueta 100% cuero">
-
+                    <!-- Bootstrap: acomoda la información en columna, una debajo de otra -->
                     <!-- Bootstrap: d-flex y flex-column -->
                     <div class="info-promo d-flex flex-column">
 
@@ -254,36 +311,39 @@
         <div id="footer">
 
             <!-- Bootstrap: d-flex -->
-            <div class="informacion d-flex">
+             <!-- Acomoda los elementos en fila -->  
 
-                <!-- Bootstrap: d-flex, flex-column y align-items-start -->
-                <div class="columna-footer d-flex flex-column align-items-start">
-                    <h3>NOSOTROS</h3>
-                    <a>LOCALES</a>
-                    <a>VENTA MAYORISTA</a>
-                    <a>VENTA CORPORATIVA</a>
-                </div>
+        <div class="informacion d-flex">
 
-                <div class="columna-footer d-flex flex-column align-items-start">
-                    <h3>AYUDA</h3>
-                    <a>CONTACTO</a>
-                    <a>FORMAS DE PAGO</a>
-                    <a>MÉTODOS DE ENVÍO</a>
-                </div>
+        <div class="columna-footer d-flex flex-column align-items-start">
+        <a href=""><h3>NOSOTROS</h3></a>
+        <a href="">LOCALES</a>
+        <a href="">VENTA MAYORISTA</a>
+        <a href="">VENTA CORPORATIVA</a>
+        </div>
 
-                <div class="columna-footer d-flex flex-column align-items-start">
-                    <h3>LEGALES</h3>
-                    <a>TÉRMINOS Y CONDICIONES</a>
-                    <a>DEFENSA AL CONSUMIDOR</a>
-                    <a>BOTÓN DE ARREPENTIMIENTO</a>
-                </div>
+        <div class="columna-footer d-flex flex-column align-items-start">
+        <a href=""><h3>AYUDA</h3></a>
+        <a href="">CONTACTO</a>
+        <a href="">FORMAS DE PAGO</a>
+        <a href="">MÉTODOS DE ENVÍO</a>
+         </div>
 
-            </div>
+        <div class="columna-footer d-flex flex-column align-items-start">
+        <a href=""><h3>LEGALES</h3></a>
+        <a href="">TÉRMINOS Y CONDICIONES</a>
+        <a href="">DEFENSA AL CONSUMIDOR</a>
+        <a href="">BOTÓN DE ARREPENTIMIENTO</a>
+        </div>
+
+        </div>
+
 
             <div class="columna-footer d-flex flex-column align-items-start">
                 <h3>CONTACTANOS</h3>
 
                 <!-- Bootstrap: d-flex -->
+                <!-- Acomoda los elementos en fila -->
                 <div class="redes-sociales d-flex">
                     <a>
                         <img src="IMAGENES HOME/icono-whatsapp.png" alt="WhatsApp" class="icono-redes">
@@ -302,6 +362,10 @@
         <img src="IMAGENES HOME/logo-negro.png" alt="Logo de CUERVO" class="logo-negro">
 
     </footer>
+
+
+<!-- Bootstrap: activa el funcionamiento del carrusel -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
