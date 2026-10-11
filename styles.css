@@ -100,14 +100,7 @@ footer {
 }
 /* INFORMACIÓN DE ENVÍOS, CUOTAS Y DEVOLUCIONES */
 /* Bootstrap aplica flex, alineación y centrado */
-section {
-    height: 115px;
-    width: 1142px;
-    margin: 0 auto;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-}
+
 .info {
     margin-top: 15px;
 }
