@@ -311,6 +311,46 @@
 
     <br><br><br><br>
 
+    <!--SECCION CATEGORIAS DESTACADAS-->
+    <section class="container">
+        <h3 class="text-center">Categorías Destacadas</h3>
+        <div class="row gx-5 justify-content-center">
+        <!--gx-*: Define el padding horizontal de las columnas (la mitad del valor a cada lado) y ajusta el margen negativo de la fila -> el contenido sigue alineado con el resto del container-->
+            <div class="col-auto">
+                <!--col-auto: utilidad que, en grid, ajusta el ancho de la columna al contenido-->
+                <a class="position-relative imagenCategoria" href="#">
+                    <img class="tarjeta img-sin-texto" src="IMAGENES HOME/tarjeta-jeans-hover.png" alt="">
+                    <!--imagen hover-->
+                    <img class="tarjeta img-con-texto position-absolute top-0 start-0" src="IMAGENES HOME/tarjeta-jeans-texto.png" alt="Categoria de jeans"> <!--imagen normal-->
+                    <!--la imagen deja de ocupar espacio, y se pone en la esquina superior de la referencia (<a>)-->
+                    <span class="position-absolute top-0 start-0 h-100 w-100 mensaje">Ver JEANS</span>
+                </a>
+                    <!--position define como se ubica el elemento y con respecto a que
+                    position: relative -> marca donde se va a superponer el elemento con position: absolute
+                    position: absolute -> hace que el elemento se mueva respecto al ancestro mas cercano que no tenga position: static (con top, bottom start y end) -> Se superpone-->
+            </div>
+            <div class="col-auto">
+                <a class="position-relative imagenCategoria" href="#">
+                    <img class="tarjeta img-sin-texto" src="IMAGENES HOME/tarjeta-chaquetas-hover.png" alt="">
+                    <!--imagen hover-->
+                    <img class="tarjeta img-con-texto position-absolute top-0 start-0" src="IMAGENES HOME/tarjeta-chaquetas-texto.png" alt="Categoria de chaquetas y abrigos"> <!--imagen normal-->
+                    <!--la imagen deja de ocupar espacio, y se pone en la esquina superior de la referencia (<a>)-->
+                    <span class="position-absolute top-0 start-0 h-100 w-100 mensaje">Ver CHAQUETAS Y ABRIGOS</span>
+                </a>
+            </div>
+            <div class="col-auto">
+                <a class="position-relative imagenCategoria" href="#">
+                    <img class="tarjeta img-sin-texto" src="IMAGENES HOME/tarjeta-camisas-hover.png" alt="">
+                    <!--imagen hover-->
+                    <img class="tarjeta img-con-texto position-absolute top-0 start-0" src="IMAGENES HOME/tarjeta-camisas-texto.png" alt="Categoria de camisas"> <!--imagen normal-->
+                    <!--la imagen deja de ocupar espacio, y se pone en la esquina superior de la referencia (<a>)-->
+                    <span class="position-absolute top-0 start-0 h-100 w-100 mensaje">Ver CAMISAS</span>
+                </a>
+            </div>
+        </div>
+    </section>
+    <br><br><br><br>
+
     <footer>
 
         <div id="footer">
