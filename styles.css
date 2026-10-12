@@ -256,6 +256,48 @@ article h4{
     opacity: 1;
 }
 
+/*APARTADO CATEGORIAS DESTACADAS*/
+
+.imagenCategoria {
+    display: block;
+}
+
+img.tarjeta {
+    width: 16rem;
+    height: auto;
+}
+
+span.mensaje {
+    color: white;
+    display: flex;
+    justify-content: center; /*como la direccion es fila, centra en eje horizontal*/
+    align-items: center; /*como la direccion es fila, centra en eje vertical*/
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.img-con-texto{
+    transition: opacity 0.5s;
+}
+
+a:hover .img-con-texto{ /*el hover se hace sobre el contenedor y luego va la capa que quiero mostrar*/
+    opacity: 0;
+}
+
+.img-sin-texto{
+    transition: filter 0.5s;
+    /*La primera palabra es la propiedad que se quiere animar.
+    El segundo valor es la duración (en s)*/
+}
+
+a:hover .img-sin-texto{
+    filter: brightness(0.3);
+}
+
+a:hover .mensaje {
+    opacity: 1;
+}
+
 .columna-footer a {
     color: white;
     text-decoration: none;
