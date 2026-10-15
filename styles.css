@@ -124,6 +124,63 @@ article h4{
     font-size: 40px; /*se usa font-size y no height/width porque se trata como texto*/
 }
 
+/*APARTADO NOVEDADES -> CARRUSEL + TARJETAS*/
+.itemPrenda{
+    padding: 0 5rem;
+}
+.carruselNovedades{
+    padding: 20px 0;
+}
+.tarjetaPrenda {
+    border-radius: 0;
+}
+
+.enlace-prenda{
+    text-decoration: none;
+}
+
+.nombrePrenda {
+    font-weight: 400;
+}
+.precioPrenda{
+    font-weight: 600;
+}
+
+.cuotasPrenda{
+    color: #6D6D6D;
+    font-weight: 400;
+}
+
+#contenedorImagenes {
+    position: relative; /*por defecto, las imagenes se apilan una debajo de la otra, con position: relative hace que el contenedor se tome como referencia para apilar una sobre otra con position: absolute*/
+}
+
+.imgHover {
+    position: absolute; /*para que pueda superponerse*/
+    top: 0; 
+    left: 0; /*hacen que se pegue a la esquina superior izquierda de la referencia (contenedor)*/
+    width: 100%;
+    height: 100%; /*para que ocupe el total del contenedor y tape a la primera imagen*/
+
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+#contenedorImagenes:hover .imgHover { /*"la .imgHover que esté dentro de un .contenedorImagen sobre el cual el mouse está pasando"*/
+    opacity: 1;
+}
+
+.tarjetaPrenda:hover{
+    background-color: #f8f8f8;
+}
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    filter: invert(1); /*invierte color blanco->negro*/
+}
+
+.carousel-control-next, .carousel-control-prev {
+    width: 5%; /*por bs, los controles ocupan 15% del ancho del carrusel a cada lado, por eso se superponen con las imagenes*/
+}
+
 /* ENCUENTRA TU LOOK */
 .look {
     background-color: #051C3F;
