@@ -501,61 +501,78 @@
     </section>
     <br><br><br><br>
 
-    <footer>
-
-        <div id="footer">
-
-            <!-- Bootstrap: d-flex -->
-             <!-- Acomoda los elementos en fila -->  
-
-        <div class="informacion d-flex">
-
-        <div class="columna-footer d-flex flex-column align-items-start">
-        <a href=""><h3>NOSOTROS</h3></a>
-        <a href="">LOCALES</a>
-        <a href="">VENTA MAYORISTA</a>
-        <a href="">VENTA CORPORATIVA</a>
-        </div>
-
-        <div class="columna-footer d-flex flex-column align-items-start">
-        <a href=""><h3>AYUDA</h3></a>
-        <a href="">CONTACTO</a>
-        <a href="">FORMAS DE PAGO</a>
-        <a href="">MÉTODOS DE ENVÍO</a>
-         </div>
-
-        <div class="columna-footer d-flex flex-column align-items-start">
-        <a href=""><h3>LEGALES</h3></a>
-        <a href="">TÉRMINOS Y CONDICIONES</a>
-        <a href="">DEFENSA AL CONSUMIDOR</a>
-        <a href="">BOTÓN DE ARREPENTIMIENTO</a>
-        </div>
-
-        </div>
-
-
-            <div class="columna-footer d-flex flex-column align-items-start">
-                <h3>CONTACTANOS</h3>
-
-                <!-- Bootstrap: d-flex -->
-                <!-- Acomoda los elementos en fila -->
-                <div class="redes-sociales d-flex">
-                    <a>
-                        <img src="IMAGENES HOME/icono-whatsapp.png" alt="WhatsApp" class="icono-redes">
-                    </a>
-                    <a>
-                        <img src="IMAGENES HOME/icono-instagram.png" alt="Instagram" class="icono-redes">
-                    </a>
-                    <a>
-                        <img src="IMAGENES HOME/icono-facebook.png" alt="Facebook" class="icono-redes">
-                    </a>
+    <!--footer-->
+    <footer class="bg-black">
+        <div class="container-fluid">
+            <div class="row align-items-center justify-content-center mb-5 py-3 bg-light">
+                <div class="col text-center border-end border-1 border-dark py-4">
+                    <!--le da color al fondo de gris claro-->
+                    <!--border-end: clase que agrega borde a la derecha de la columna-->
+                    <!--border-dark: le da borde negro
+                    border-1: le da grosor a borde de 1-->
+                    <h6 class="mb-1 text-secondary">Sé el primero en enterarte de las novedades.</h6>
+                    <!--text-secondary le da color gris al texto-->
+                    <h5>Suscribite a nuestro newsletter</h5>
+                </div>
+                <div class="col text-center">
+                    <form>
+                        <div class="mb-2">
+                            <label for="newsletter-email" class="form-label d-block">
+                                Introduzca su email:
+                            </label>
+                            <!--form-label es clase que le da espacio abajo del label-->
+                            <input type="email" class="inputEmail px-3 py-1" id="newsletter-email" required placeholder="tucorreo@gmail.com">
+                            <p class="py-2 text-secondary">Sin spam. Podés darte de baja cuando quieras.</p>
+                            <!--texto de ayuda o de aviso asociado al campo-->
+                        </div>
+                        <button type="submit" class="btn btn-dark enviarForm px-4">Suscribirse</button>
+                    </form>
                 </div>
             </div>
-
         </div>
-
-        <img src="IMAGENES HOME/logo-negro.png" alt="Logo de CUERVO" class="logo-negro">
-
+        <div class="container text-white">
+            <div class="row seccionPie px-5">
+                <div class="col-auto">
+                    <h3>NOSOTROS</h3>
+                    <a href="#" class="enlace-footer d-block">LOCALES</a>
+                    <a href="#" class="enlace-footer d-block">VENTA MAYORISTA</a>
+                    <a href="#" class="enlace-footer d-block">VENTA CORPORATIVA</a>
+                    <!--se poen d-block porque a es un elemento inline, de esta manera cada espacio ocupa una linea-->
+                </div>
+                <div class="col-auto">
+                    <h3>AYUDA</h3>
+                    <a href="#" class="enlace-footer d-block">CONTACTO</a>
+                    <a href="#" class="enlace-footer d-block">FORMAS DE PAGO</a>
+                    <a href="#" class="enlace-footer d-block">MÉTODOS DE ENVÍO</a>
+                </div>
+                <div class="col-auto">
+                    <h3>LEGALES</h3>
+                    <a href="#" class="enlace-footer d-block">TÉRMINOS Y CONDICIONES</a>
+                    <a href="#" class="enlace-footer d-block">DEFENSA AL CONSUMIDOR</a>
+                    <a href="#" class="enlace-footer d-block">BOTÓN DE ARREPENTIMIENTO</a>
+                </div>
+                <div class="col-auto ms-auto">
+                    <h3 class="contacto">CONTÁCTANOS</h3>
+                    <div class="redes-sociales">
+                        <a href="#">
+                            <i class="bi bi-whatsapp iconoRedes"></i>
+                        </a>
+                        <a href="#">
+                            <i class="bi bi-instagram iconoRedes"></i>
+                        </a>
+                        <a href="#">
+                            <i class="bi bi-facebook iconoRedes"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row px-5">
+                <div class="col">
+                    <img src="IMAGENES HOME/logo-negro.png" alt="Logo de CUERVO" class="logo-negro">
+                </div>
+            </div>
+        </div>
+    
     </footer>
 
 
