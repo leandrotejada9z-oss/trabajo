@@ -66,30 +66,69 @@ footer {
 }
 
 /* Bootstrap organiza las columnas y las redes sociales */
-#footer {
-    display: flex;
-    justify-content: space-around;
-    flex-direction: row;
+.inputEmail {
+    width: 40%;
+    border: none;
+    border-radius: 0;
+    background-color: transparent;
+    border-bottom: 1px solid #272a2e;
 }
 
-.columna-footer {
-    color: white;
-    padding: 20px;
+.inputEmail:focus {
+    background-color: #FFFFFF;
+    outline: none;
+    border-bottom: 1px solid #272a2e;
+
 }
+
+.enviarForm {
+    border-radius: 0;
+}
+
+
+.enlace-footer {
+    text-decoration: none;
+    color: white;
+}
+
+.enlace-footer:hover{
+    text-decoration: underline;
+}
+
 
 .informacion {
+    display: flex;
+    flex-direction: row;
     justify-content: left;
 }
 
-.redes-sociales {
-    justify-content: center;
-    width: 100%;
-    gap: 30px;
+.seccionPie {
+    display: flex;
+    flex-direction: row;
+    gap: 3%;
 }
 
-.icono-redes {
-    width: 53px;
+
+.contacto {
+    text-align: center;
+}
+
+.iconoRedes {
+    margin-right: 10px;
+    font-size: 1.8rem; /*los iconos se tratan como fuentes, por eso no se una width ni height*/
+}
+
+.redes-sociales {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5%;
+}
+
+.logo-negro {
+    width: 250px;
     height: auto;
+    margin-top: 5%;
 }
 
 .logo-negro {
