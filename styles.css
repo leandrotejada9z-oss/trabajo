@@ -161,6 +161,7 @@ article h4{
     left: 0; /*hacen que se pegue a la esquina superior izquierda de la referencia (contenedor)*/
     width: 100%;
     height: 100%; /*para que ocupe el total del contenedor y tape a la primera imagen*/
+    object-fit: cover;
 
     opacity: 0;
     transition: opacity 0.3s;
