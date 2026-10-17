@@ -151,7 +151,7 @@ article h4{
     font-weight: 400;
 }
 
-#contenedorImagenes {
+.contenedorImagenes {
     position: relative; /*por defecto, las imagenes se apilan una debajo de la otra, con position: relative hace que el contenedor se tome como referencia para apilar una sobre otra con position: absolute*/
 }
 
