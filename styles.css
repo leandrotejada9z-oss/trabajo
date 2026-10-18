@@ -126,16 +126,10 @@ footer {
 }
 
 .logo-negro {
-    width: 250px;
+    width: 200px;
     height: auto;
-    margin-top: 5%;
-}
-
-.logo-negro {
-    width: 210px;
-    height: auto;
-    margin-left: 132px;
     margin-top: 80px;
+    margin-left: 0;
 }
 /* INFORMACIÓN DE ENVÍOS, CUOTAS Y DEVOLUCIONES */
 .info {
