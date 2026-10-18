@@ -125,6 +125,10 @@ footer {
     gap: 5%;
 }
 
+.redes-sociales > a {
+    color: white;
+}
+
 .logo-negro {
     width: 200px;
     height: auto;
