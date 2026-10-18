@@ -1,82 +1,221 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HOME - Cuervo</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    
+    <!--ICONOS DE BOOTSTRAP-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css">
+
+    <!-- CSS propio: debe ir después de Bootstrap -->
     <link rel="stylesheet" href="styles.css">
+
     <link rel="shortcut icon" href="IMAGENES HOME/logo-blanco.png" type="image/x-icon">
 
+    <!-- Fuente Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
-    <header>
-        <div id="mensajes">
-            <p class="mensaje-promo">¡Hasta 6 cuotas sin interés!</p>
-        </div>
-        <div id="cabecera">
-            <nav id="enlaces-cabecera">
-                <a href="index.html" class="enlaces-paginas">Inicio</a>
-                <a class="enlaces-paginas">Categorías</a>
-                <a class="enlaces-paginas" id="enlace-sale">Sale</a>
-            </nav>
-            <img 
-            src="IMAGENES HOME/logo-blanco.png"
-            alt="Logo de CUERVO" 
-            id="logo-blanco"
-            > <!-- ruta relativa -->
-            <div id="opciones-cabecera">
-                <img src="IMAGENES HOME/icono-lupa.png" alt="buscador" class="iconos-cabecera">
-                <img src="IMAGENES HOME/icono-ubicacion.png" alt="ubicacion" class="iconos-cabecera">
-                <img src="IMAGENES HOME/icono-cuenta.png" alt="cuenta" class="iconos-cabecera">
-                <img src="IMAGENES HOME/icono-favorito.png" alt="favorito" class="iconos-cabecera">
-                <img src="IMAGENES HOME/icono-carrito.png" alt="carrito" class="iconos-cabecera">
-            </div>
-        </div>
-    </header>
-  <br>
-  <br>
-  <br>
-  <br>
 
-    <footer>
-        <div id="footer">
-            <div class="informacion">
-                <div class="columna-footer">
-                    <h3>NOSOTROS</h3>
-                    <a>LOCALES</a>
-                    <a>VENTA MAYORISTA</a>
-                    <a>VENTA CORPORATIVA</a>
-                </div>
-                <div class="columna-footer">
-                    <h3>AYUDA</h3>
-                    <a>CONTACTO</a>
-                    <a>FORMAS DE PAGO</a>
-                    <a>MÉTODOS DE ENVÍO</a>
-                </div>
-                <div class="columna-footer">
-                    <h3>LEGALES</h3>
-                    <a>TÉRMINOS Y CONDICIONES</a>
-                    <a>DEFENSA AL CONSUMIDOR</a>
-                    <a>BOTÓN DE ARREPENTIMIENTO</a>
-                </div>
-            </div>
+<body>
+
+    <header>
+        <div id="mensajes" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
         
-            <div class="columna-footer">
-                <h3>CONTACTANOS</h3>
-                <div class="redes-sociales">
-                    <a>
-                        <img src="IMAGENES HOME/icono-whatsapp.png" alt="whatsapp" class="icono-redes">
-                    </a>
-                    <a>
-                        <img src="IMAGENES HOME/icono-instagram.png" alt="instagram" class="icono-redes">
-                    </a>
-                    <a>
-                        <img src="IMAGENES HOME/icono-facebook.png" alt="facebook" class="icono-redes">
-                    </a>
+        <div class="carousel-inner">
+
+        <div class="carousel-item active">
+            <p class="mensaje-promo">🔥¡Hasta 6 cuotas sin interés!</p>
+        </div>
+
+        <div class="carousel-item">
+            <p class="mensaje-promo">¡Envíos a todo el país!</p>
+        </div>
+
+        <div class="carousel-item">
+            <p class="mensaje-promo">¡Descubrí tu próximo look!</p>
+        </div>
+
+        </div>
+</div>
+
+
+<!-- container Contiene y centra el contenido de la página -->
+<div class="container">
+    <div class="row">
+        <!-- Formulario centrado: ocupa 8 de las 12 columnas -->
+        <div class="col-8 offset-2 contacto-form"> <!-- Ocupa 8 columnas y deja 2 vacías a la izquierda para centrar -->
+
+        <h2>Escribinos</h2>
+
+        <form>
+        <div class="row">  <!-- Crea una fila para organizar las columnas -->
+        <!-- Asunto: ocupa las 12 columnas -->
+            <div class="col-12">
+                <label for="asunto">Asunto</label>
+                <select id="asunto" name="asunto" required>
+                <option value="">Seleccioná un asunto</option>
+                <option value="consulta">Consultas generales</option>
+                <option value="pedido">Consulta sobre un pedido</option>
+                <option value="cambios">Cambios y devoluciones</option>
+                <option value="cambios">Libro de quejas</option>
+                <option value="otro">Otro</option>
+                </select>
+            </div>
+
+        <!-- Nombre ocupa 6 columnas -->
+        <div class="col-6">
+                <label for="nombre">Nombre *</label>
+                <input type="text" id="nombre" name="nombre" required>
+        </div>
+
+        <!-- Apellido ocupa 6 columnas -->
+        <div class="col-6">
+                <label for="apellido">Apellido *</label>
+                <input type="text" id="apellido" name="apellido" required>
+        </div>
+
+        <!-- Email ocupa 6 columnas -->
+        <div class="col-6">
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" required>
+        </div>
+
+        <!-- Teléfono ocupa 6 columnas -->
+        <div class="col-6">
+                <label for="telefono">Teléfono</label>
+                <input type="tel" id="telefono" name="telefono">
+        </div>
+
+        <!-- Ciudad ocupa las 12 columnas -->
+        <div class="col-12">
+                <label for="ciudad">Ciudad</label>
+
+        <select id="ciudad" name="ciudad">
+            <option value="">Seleccioná tu localidad</option>
+            <option value="Albardón">Albardón</option>
+            <option value="Angaco">Angaco</option>
+            <option value="Calingasta">Calingasta</option>
+            <option value="Capital">Capital</option>
+            <option value="Caucete">Caucete</option>
+            <option value="Chimbas">Chimbas</option>
+            <option value="Iglesia">Iglesia</option>
+            <option value="Jáchal">Jáchal</option>
+            <option value="9 de Julio">9 de Julio</option>
+            <option value="Pocito">Pocito</option>
+            <option value="Rawson">Rawson</option>
+            <option value="Rivadavia">Rivadavia</option>
+            <option value="San Martín">San Martín</option>
+            <option value="Santa Lucía">Santa Lucía</option>
+            <option value="Sarmiento">Sarmiento</option>
+            <option value="Ullum">Ullum</option>
+            <option value="Valle Fértil">Valle Fértil</option>
+            <option value="25 de Mayo">25 de Mayo</option>
+            <option value="Zonda">Zonda</option>
+    </select>
+</div>
+
+            <!-- Comentarios ocupa las 12 columnas -->
+            <div class="col-12">
+                <label for="comentarios">Comentarios</label>
+                <textarea id="comentarios" name="comentarios" rows="5"></textarea>
+            </div>
+
+            <div class="col-12">
+                <p class="aclaracion">* Campos obligatorios</p>
+                <!-- Boton de bootstrap con estilo oscuro -->
+                <button type="submit" class="btn btn-dark enviarForm">Enviar</button>
+            </div>
+        </div>
+    </form>
+
+</div>
+</div>
+</div>
+
+
+
+    <br><br><br><br>
+
+    <!--footer-->
+    <footer class="bg-black">
+        <div class="container-fluid p-0">
+            <div class="row align-items-center justify-content-center mb-5 py-3 bg-light g-0 m-0">
+                <div class="col text-center border-end border-1 border-dark py-4">
+                    <!--le da color al fondo de gris claro-->
+                    <!--border-end: clase que agrega borde a la derecha de la columna-->
+                    <!--border-dark: le da borde negro
+                    border-1: le da grosor a borde de 1-->
+                    <h6 class="mb-1 text-secondary">Sé el primero en enterarte de las novedades.</h6>
+                    <!--text-secondary le da color gris al texto-->
+                    <h5>Suscribite a nuestro newsletter</h5>
+                </div>
+                <div class="col text-center">
+                    <form>
+                        <div class="mb-2">
+                            <label for="newsletter-email" class="form-label d-block">
+                                Introduzca su email:
+                            </label>
+                            <!--form-label es clase que le da espacio abajo del label-->
+                            <input type="email" class="inputEmail px-3 py-1" id="newsletter-email" required placeholder="tucorreo@gmail.com">
+                            <p class="py-2 text-secondary">Sin spam. Podés darte de baja cuando quieras.</p>
+                            <!--texto de ayuda o de aviso asociado al campo-->
+                        </div>
+                        <button type="submit" class="btn btn-dark enviarForm px-4">Suscribirse</button>
+                    </form>
                 </div>
             </div>
         </div>
-        <img src="IMAGENES HOME/logo-negro.png" alt="Logo de CUERVO" class="logo-negro">
+        <div class="container text-white">
+            <div class="row seccionPie px-5">
+                <div class="col-auto">
+                    <h3>NOSOTROS</h3>
+                    <a href="#" class="enlace-footer d-block">LOCALES</a>
+                    <a href="#" class="enlace-footer d-block">VENTA MAYORISTA</a>
+                    <a href="#" class="enlace-footer d-block">VENTA CORPORATIVA</a>
+                    <!--se poen d-block porque a es un elemento inline, de esta manera cada espacio ocupa una linea-->
+                </div>
+                <div class="col-auto">
+                    <h3>AYUDA</h3>
+                    <a href="#" class="enlace-footer d-block">CONTACTO</a>
+                    <a href="#" class="enlace-footer d-block">FORMAS DE PAGO</a>
+                    <a href="#" class="enlace-footer d-block">MÉTODOS DE ENVÍO</a>
+                </div>
+                <div class="col-auto">
+                    <h3>LEGALES</h3>
+                    <a href="#" class="enlace-footer d-block">TÉRMINOS Y CONDICIONES</a>
+                    <a href="#" class="enlace-footer d-block">DEFENSA AL CONSUMIDOR</a>
+                    <a href="#" class="enlace-footer d-block">BOTÓN DE ARREPENTIMIENTO</a>
+                </div>
+                <div class="col-auto ms-auto">
+                    <h3 class="contacto">CONTÁCTANOS</h3>
+                    <div class="redes-sociales">
+                        <a href="contactanos.html">
+                            <i class="bi bi-whatsapp iconoRedes"></i>
+                        </a>
+                        <a href="#">
+                            <i class="bi bi-instagram iconoRedes"></i>
+                        </a>
+                        <a href="#">
+                            <i class="bi bi-facebook iconoRedes"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row px-5">
+                <div class="col">
+                    <img src="IMAGENES HOME/logo-negro.png" alt="Logo de CUERVO" class="logo-negro">
+                </div>
+            </div>
+        </div>
+    
     </footer>
+
+
+<!-- Bootstrap: activa el funcionamiento del carrusel -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
