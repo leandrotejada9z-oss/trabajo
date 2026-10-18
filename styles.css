@@ -404,3 +404,87 @@ a:hover .mensaje {
 .columna-footer a:hover {
     text-decoration: underline;
 }
+
+
+/* Form*/
+/* Estilos generales del formulario */
+.contacto-form {
+    margin: 60px auto;
+    padding: 30px;
+    color: #000;
+    background-color: #fff;
+}
+
+/* Centra el título y define su tamaño */
+.contacto-form h2 {
+    margin-bottom: 30px;
+    font-size: 32px;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* Da formato a los textos de los campos */
+.contacto-form form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+/* Da estilo a las casillas, el selector y los comentarios */
+.contacto-form select,
+.contacto-form input,
+.contacto-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #797979;
+    border-radius: 0;
+    background-color: #fff;
+    color: #000;
+    font-family: inherit;
+    box-sizing: border-box;
+}
+
+/* Permite cambiar la altura del área de comentarios */
+.contacto-form textarea {
+    resize: vertical;
+}
+/* Da estilo al aviso de campos obligatorios */
+.contacto-form .aclaracion {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+/* Hace que el botón ocupe todo el ancho de la columna */
+.contacto-form .enviarForm {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    text-align: center;
+}
+
+/* fija los mensajes promocionales en la parte superior */
+#mensajes {
+    position: fixed; /* quedan fijos al bajar por la pagina */
+    top: 0; /*los pega al borde superior */
+    left: 0; /* los pega al borde izquierdo */
+    width: 100%; /* ocupan todo el ancho de la pantalla */
+    z-index: 1030; /* los mantiene por encima del contenido */
+}
+
+/* fija la cabecera debajo de los mensajes promocionales */
+#cabecera {
+    position: fixed; /* mantiene la cabecera fija al bajar */
+    top: 22px; /*la ubica debajo de los mensajes */
+    left: 0; /* elimina la separación del borde izquierdo */
+    width: 100%; /*hace que ocupe todo el ancho */
+    margin: 0; /*elimina los margenes laterales anteriores */
+    padding: 10px 20px; /* deja espacio interno arriba y a los costados */
+    box-sizing: border-box; /* evita que el padding aumente el ancho total */
+    background-color: white; /* agrega fondo para que no se vea el contenido detras */
+    z-index: 1020; /* La mantiene por encima del contenido */
+}
+
+/* deja espacio para que la cabecera fija no tape el contenido */
+body {
+    padding-top: 100px; /* reserva espacio para los mensajes y la cabecera */
+}
