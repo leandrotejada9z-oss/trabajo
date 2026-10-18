@@ -488,3 +488,24 @@ a:hover .mensaje {
 body {
     padding-top: 100px; /* reserva espacio para los mensajes y la cabecera */
 }
+
+/* transicion suave para la imagen grande */
+.imagen-look > img {
+    transition: filter 0.3s;
+}
+
+/* oscurece la imagen grande al pasar el cursor */
+.imagen-look:hover > img {
+    filter: brightness(0.7);
+}
+
+/* transicion suave para las tarjetas de productos */
+.imagen-look .promo {
+    transition: box-shadow 0.3s, border-color 0.3s;
+}
+
+/* ilumina las tarjetas cuando el cursor esta sobre el look */
+.imagen-look:hover .promo {
+    border-color: #000;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
