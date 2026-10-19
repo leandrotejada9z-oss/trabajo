@@ -403,6 +403,29 @@ a:hover .mensaje {
     text-decoration: underline;
 }
 
+/*Seccion de contacto*/
+.contactoBanner {
+    object-fit: cover; /*escala la foto manteniendo su proporción hasta que el marco quede completamente lleno y lo que sobra se recorta*/
+}
+
+.seccionContacto {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.tituloApartado {
+    font-size: 20px;
+}
+
+.apartadoMail, .infoContacto {
+    font-weight: 500;
+    text-decoration: none;
+    color: #000000;
+}
+
+.apartadoMail:hover {
+    text-decoration: underline;
+}
 
 /* Form*/
 /* Estilos generales del formulario */
