@@ -66,6 +66,44 @@
             </div>
         </div>
 
+<div class="w-100 position-relative" style="height: 250px">
+        <!--con position-relative, div ahora es el marco de referencia para colocar texto sobre la imagen-->
+        <img class="contactoBanner h-100 w-100" src="IMAGENES HOME/contacto-banner.png">
+        <!--la clase h-x le da el x% del alto del elemento padre -> Si el padre no tiene un alto definido (por ejemplo, es el body sin alto fijo), el porcentaje no tiene contra qué calcularse y h-x no hace nada-->
+        <!--la clase w-100 le da el 100% del ancho del elemento padre-->
+        <!--una imagen no es un contenedor, no puede tener elementos dentro-->
+        <h4 class="text-white position-absolute top-50 start-50 translate-middle" style="font-size: 2.5rem;">CONTACTO</h4>
+        <!--start-50: clase que empuja el elemento al 50% a la izquierda desde el borde izquierdo de h4
+        top-50: clase que empuja el elemento al 50% desde arriba desde el borde superior de h4
+        COLOCAN LA ESQUINA DEL ELEMENTO EN EL CENTRO -> se mide con elemento padre
+        En cambio, con translate-middle se corrige para que EL ELEMENTO se centre -> el punto que quedó en el centro del padre deja de ser la esquina y pasa a ser el centro del elemento-->
+    </div>
+
+    <section class="seccionContacto container">
+        <!--container: clase que le pone al elemento un max-width según el tamaño de pantalla, lo centra con márgenes automáticos (margin: auto) y le agrega padding a los lados-->
+        <div class="row gap-3 px-4">
+            <!--se hace flex cada columna-->
+            <article class="col border border-secondary p-3 d-flex flex-column align-items-center justify-content-center text-center">
+                <h6 class="tituloApartado">LLAMANOS</h6>
+                <p class="infoContacto">0264 427-1234</p>
+                <p>HORARIO: De Lunes a Viernes de 08:00 a 17:00 hs</p>
+            </article>
+            <article class="col border border-secondary p-3 d-flex flex-column align-items-center justify-content-center text-center">
+                <h6 class="tituloApartado">CHATEA CON NOSOTROS</h6>
+                <p class="infoContacto">+54 264 555-0123</p>
+                <p>Atención al cliente</p>
+            </article>
+            <article class="col border border-secondary p-3 d-flex flex-column align-items-center justify-content-center text-center">
+                <h6 class="tituloApartado">MANDANOS TUS CONSULTAS</h6>
+                <p>
+                    Completa el formulario de abajo o escribinos a 
+                    <a class="apartadoMail" href="mailto:contacto@cuervo.com">contacto@cuervo.com</a>
+                </p>
+                <!--align-items-center centra el bloque del <p> dentro del article. Pero si <p> es lo bastante ancho como para ocupar todo el espacio disponible, su texto (que es largo y se parte en varias líneas) sigue alineado a la izquierda dentro del <p> -> se usa text-center-->
+            </article>
+        </div>
+    </section>
+
 <!-- container Contiene y centra el contenido de la página -->
 <div class="container">
     <div class="row">
