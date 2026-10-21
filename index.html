@@ -22,7 +22,7 @@
 
 <body>
 
-    <header>
+    <!--<header>
         <div id="mensajes" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
         
         <div class="carousel-inner">
@@ -44,7 +44,7 @@
 
         <!-- Bootstrap: d-flex, justify-content-between, align-items-center -->
         <!-- Acomoda los elementos en fila, dejando espacio entre ellos y centrándolos verticalmente -->
-        <div id="cabecera" class="d-flex justify-content-between align-items-center">
+       <!-- <div id="cabecera" class="d-flex justify-content-between align-items-center">
 
             <nav id="enlaces-cabecera">
                 <a href="index.html" class="enlaces-paginas">Inicio</a>
@@ -66,6 +66,64 @@
                 <img src="IMAGENES HOME/icono-carrito.png" alt="Carrito" class="iconos-cabecera">
             </div>
         </div>
+    </header> -->
+
+    <header> <!--encabezado del sitio: carrusel con mensajes + barra de navegación-->
+        <div id="mensajes" class="carousel slide" data-bs-ride="carousel" data-bs-pause="false" data-bs-interval="3000">
+            <!--data-bs-pause="false": por defecto el carrusel se pausa en hover, asi no se pausa cuando se le pasa el mouse por encima-->
+
+            <div class="carousel-inner">
+
+                <div class="carousel-item active">
+                    <p class="mensaje-promo">¡Hasta 6 cuotas sin interés!</p>
+                </div>
+
+                <div class="carousel-item">
+                    <p class="mensaje-promo">¡Envíos a todo el país!</p>
+                </div>
+
+                <div class="carousel-item">
+                    <p class="mensaje-promo">¡Descubrí tu próximo look!</p>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar bg-white">
+            <!--navbar: establece que el elemento es una barra de navegación-->
+            <div class="container-fluid"> <!--con container-fluid ocupa todo el ancho-->
+                <ul class="nav nav-underline flex-nowrap">
+                    <li class="nav-item">
+                        <a class="nav-link active enlaces-paginas" aria-current="page" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link enlaces-paginas" href="#">Catálogo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link enlaces-paginas" id="enlace-sale" href="#">SALE</a>
+                    </li>
+                </ul>
+                <a class="navbar-brand m-0" href="index.html">
+                <!--navbar-brand: clase de Bootstrap para el logo o nombre de la marca dentro de un navbar. Pone margin para separarlo del siguiente elemento, padding, sin subrayado al pasar mouse (como tiene <a>)...-->
+                    <img src="IMAGENES HOME/logo-blanco.png" alt="logo blanco Cuervo" id="imagen-cabecera">
+                </a>
+                <div id="opciones-cabecera" class="d-flex gap-3 align-items-center">
+                    <a class="icono-cabecera" href="index.html">
+                        <i class="bi bi-search"></i>
+                    </a>
+                    <a class="icono-cabecera" href="index.html">
+                        <i class="bi bi-geo-alt"></i>
+                    </a>
+                    <a class="icono-cabecera" href="index.html">
+                        <i class="bi bi-person"></i>
+                    </a>
+                    <a class="icono-cabecera" href="index.html">
+                        <i class="bi bi-heart"></i>
+                    </a>
+                    <a class="icono-cabecera" href="index.html">
+                        <i class="bi bi-bag"></i>
+                    </a>
+                </div>
+            </div>
+        </nav>
     </header>
 
     <!-- Bootstrap: activa el carrusel y permite el deslizamiento -->
