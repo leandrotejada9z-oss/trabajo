@@ -22,50 +22,63 @@
 
 <body>
 
-    <header>
-        <div id="mensajes" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
-        
-        <div class="carousel-inner">
+    <header> <!--encabezado del sitio: carrusel con mensajes + barra de navegación-->
+        <div id="mensajes" class="carousel slide" data-bs-ride="carousel" data-bs-pause="false" data-bs-interval="3000">
+            <!--data-bs-pause="false": por defecto el carrusel se pausa en hover, asi no se pausa cuando se le pasa el mouse por encima-->
 
-        <div class="carousel-item active">
-            <p class="mensaje-promo">🔥¡Hasta 6 cuotas sin interés!</p>
-        </div>
+            <div class="carousel-inner">
 
-        <div class="carousel-item">
-            <p class="mensaje-promo">¡Envíos a todo el país!</p>
-        </div>
+                <div class="carousel-item active">
+                    <p class="mensaje-promo">¡Hasta 6 cuotas sin interés!</p>
+                </div>
 
-        <div class="carousel-item">
-            <p class="mensaje-promo">¡Descubrí tu próximo look!</p>
-        </div>
+                <div class="carousel-item">
+                    <p class="mensaje-promo">¡Envíos a todo el país!</p>
+                </div>
 
-        </div>
-</div>
-        <!-- Bootstrap: d-flex, justify-content-between, align-items-center -->
-        <!-- Acomoda los elementos en fila, dejando espacio entre ellos y centrándolos verticalmente -->
-        <div id="cabecera" class="d-flex justify-content-between align-items-center">
-
-            <nav id="enlaces-cabecera">
-                <a href="index.html" class="enlaces-paginas">Inicio</a>
-                <a class="enlaces-paginas">CATÁLOGO</a>
-                <a class="enlaces-paginas" id="enlace-sale">Sale</a>
-            </nav>
-
-            <img
-                src="IMAGENES HOME/logo-blanco.png"
-                alt="Logo de CUERVO"
-                id="logo-blanco"
-            >
-
-            <div id="opciones-cabecera">
-                <img src="IMAGENES HOME/icono-lupa.png" alt="Buscador" class="iconos-cabecera">
-                <img src="IMAGENES HOME/icono-ubicacion.png" alt="Ubicación" class="iconos-cabecera">
-                <img src="IMAGENES HOME/icono-cuenta.png" alt="Cuenta" class="iconos-cabecera">
-                <img src="IMAGENES HOME/icono-favorito.png" alt="Favorito" class="iconos-cabecera">
-                <img src="IMAGENES HOME/icono-carrito.png" alt="Carrito" class="iconos-cabecera">
+                <div class="carousel-item">
+                    <p class="mensaje-promo">¡Descubrí tu próximo look!</p>
+                </div>
             </div>
         </div>
-
+        <nav class="navbar bg-white" id="cabecera">
+            <!--navbar: establece que el elemento es una barra de navegación-->
+            <div class="container-fluid"> <!--con container-fluid ocupa todo el ancho-->
+                <ul class="nav nav-underline flex-nowrap">
+                    <li class="nav-item">
+                        <a class="nav-link active enlaces-paginas" aria-current="page" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link enlaces-paginas" href="#">Catálogo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link enlaces-paginas" id="enlace-sale" href="#">SALE</a>
+                    </li>
+                </ul>
+                <a class="navbar-brand m-0" href="index.html">
+                <!--navbar-brand: clase de Bootstrap para el logo o nombre de la marca dentro de un navbar. Pone margin para separarlo del siguiente elemento, padding, sin subrayado al pasar mouse (como tiene <a>)...-->
+                    <img src="IMAGENES HOME/logo-blanco.png" alt="logo blanco Cuervo" id="imagen-cabecera">
+                </a>
+                <div id="opciones-cabecera" class="d-flex gap-3 align-items-center">
+                    <a class="icono-cabecera" href="index.html">
+                        <i class="bi bi-search"></i>
+                    </a>
+                    <a class="icono-cabecera" href="index.html">
+                        <i class="bi bi-geo-alt"></i>
+                    </a>
+                    <a class="icono-cabecera" href="index.html">
+                        <i class="bi bi-person"></i>
+                    </a>
+                    <a class="icono-cabecera" href="index.html">
+                        <i class="bi bi-heart"></i>
+                    </a>
+                    <a class="icono-cabecera" href="index.html">
+                        <i class="bi bi-bag"></i>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
 <div class="w-100 position-relative" style="height: 250px">
         <!--con position-relative, div ahora es el marco de referencia para colocar texto sobre la imagen-->
         <img class="contactoBanner h-100 w-100" src="IMAGENES HOME/contacto-banner.png">
@@ -90,14 +103,16 @@
             </article>
             <article class="col border border-secondary p-3 d-flex flex-column align-items-center justify-content-center text-center">
                 <h6 class="tituloApartado">CHATEA CON NOSOTROS</h6>
-                <p class="infoContacto">+54 264 555-0123</p>
+                <p>
+                    <a href="https://wa.me/5492645709800?text=Hola%20Cuervo,%20quiero%20hacer%20una%20consulta"" target="_blank" rel="noopener" class="infoContacto">+54 9 264 570 9800</a>
+                </p>
                 <p>Atención al cliente</p>
             </article>
             <article class="col border border-secondary p-3 d-flex flex-column align-items-center justify-content-center text-center">
                 <h6 class="tituloApartado">MANDANOS TUS CONSULTAS</h6>
                 <p>
                     Completa el formulario de abajo o escribinos a 
-                    <a class="apartadoMail" href="mailto:contacto@cuervo.com">contacto@cuervo.com</a>
+                   <a class="apartadoMail" href="https://mail.google.com/mail/u/0/?view=cm&to=contacto@cuervo.com&su=Consulta%20desde%20la%20web&body=Hola%20Cuervo,%20quiero%20hacer%20una%20consulta." target="_blank" rel="noopener">contacto@cuervo.com</a>
                 </p>
                 <!--align-items-center centra el bloque del <p> dentro del article. Pero si <p> es lo bastante ancho como para ocupar todo el espacio disponible, su texto (que es largo y se parte en varias líneas) sigue alineado a la izquierda dentro del <p> -> se usa text-center-->
             </article>
@@ -202,7 +217,7 @@
     <br><br><br><br>
 
     <!--footer-->
-    <footer>
+   <footer class="bg-black">
         <div class="container-fluid p-0">
             <div class="row align-items-center justify-content-center mb-5 py-3 bg-light g-0 m-0">
                 <div class="col text-center border-end border-1 border-dark py-4">
@@ -233,28 +248,51 @@
         <div class="container text-white">
             <div class="row seccionPie px-5">
                 <div class="col-auto">
-                    <h3>NOSOTROS</h3>
-                    <a href="#" class="enlace-footer d-block">LOCALES</a>
-                    <a href="#" class="enlace-footer d-block">VENTA MAYORISTA</a>
-                    <a href="#" class="enlace-footer d-block">VENTA CORPORATIVA</a>
-                    <!--se poen d-block porque a es un elemento inline, de esta manera cada espacio ocupa una linea-->
+                    <h4 class="mb-2">NOSOTROS</h4>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a href="#" class="enlace-footer">LOCALES</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="enlace-footer">VENTA MAYORISTA</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="enlace-footer">VENTA MINORISTA</a>
+                        </li>
+                    </ul>
                 </div>
                 <div class="col-auto">
-                    <h3>AYUDA</h3>
-                    <a href="#" class="enlace-footer d-block">CONTACTO</a>
-                    <a href="#" class="enlace-footer d-block">FORMAS DE PAGO</a>
-                    <a href="#" class="enlace-footer d-block">MÉTODOS DE ENVÍO</a>
+                    <h4 class="mb-2">NOSOTROS</h4>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a href="contactanos.html" class="enlace-footer">CONTACTO</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="enlace-footer">FORMAS DE PAGO</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="enlace-footer">METODOS DE ENVIO</a>
+                        </li>
+                    </ul>
                 </div>
                 <div class="col-auto">
-                    <h3>LEGALES</h3>
-                    <a href="#" class="enlace-footer d-block">TÉRMINOS Y CONDICIONES</a>
-                    <a href="#" class="enlace-footer d-block">DEFENSA AL CONSUMIDOR</a>
-                    <a href="#" class="enlace-footer d-block">BOTÓN DE ARREPENTIMIENTO</a>
+                    <h4 class="mb-2">LEGALES</h4>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a href="#" class="enlace-footer">TÉRMINOS Y CONDICIONES</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="enlace-footer">DEFENSA AL CONSUMIDOR</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="enlace-footer">BOTÓN DE ARREPENTIMIENTO</a>
+                        </li>
+                    </ul>
                 </div>
                 <div class="col-auto ms-auto">
                     <h3 class="contacto">CONTÁCTANOS</h3>
                     <div class="redes-sociales">
-                        <a href="contactanos.html">
+                        <a href="https://wa.me/5492645709800?text=Hola%20Cuervo,%20quiero%20hacer%20una%20consulta" target="_blank" rel="noopener" class="infoContacto">
                             <i class="bi bi-whatsapp iconoRedes"></i>
                         </a>
                         <a href="#">
@@ -272,9 +310,7 @@
                 </div>
             </div>
         </div>
-    
     </footer>
-
 
 <!-- Bootstrap: activa el funcionamiento del carrusel -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
