@@ -17,15 +17,20 @@ html, body {
 }
 
 /* Bootstrap ya aplica flex y alineación en #cabecera */
-#cabecera {
+/*#cabecera {
     margin: 10px 20px;
+}*/
+
+#imagen-cabecera {
+    margin: 0;
+    width: 180px; /*no puedo usar % porque el porcentaje de la imagen se calcula sobre su padre, el <a>. Y el <a> toma su ancho del contenido (al ser un item flex-> cualquier hijo directo de un elemento con display: flex), que es la imagen*/
 }
 
-#logo-blanco {
+/*#logo-blanco {
     margin: 0 auto;
     width: 170px;
     height: auto;
-}
+}*/
 
 .enlaces-paginas {
     text-decoration: none;
@@ -35,7 +40,7 @@ html, body {
 }
 
 .enlaces-paginas:hover {
-    text-decoration: underline;
+    color: #000000;
 }
 
 #enlace-sale {
@@ -43,9 +48,17 @@ html, body {
     color: red;
 }
 
-.iconos-cabecera {
+/*.iconos-cabecera {
     width: 25px;
     margin: 0 5px;
+}*/
+.icono-cabecera{
+    font-size: 1.4rem;
+    color: #000000;
+}
+
+.icono-cabecera:hover{
+    text-decoration: none;
 }
 
 /* Margen personalizado para todos los párrafos */
