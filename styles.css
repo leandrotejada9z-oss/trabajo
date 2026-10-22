@@ -5,25 +5,44 @@ html, body {
 }
 
 /* CABECERA */
-#mensajes {
-    background-color: #000000;
-    color: white;
-    padding: 5px 0;
-}
-
 .mensaje-promo {
     text-align: center;
     margin: 0;
 }
+/* fija los mensajes promocionales en la parte superior */
+#mensajes {
+    background-color: #000000;
+    color: white;
+    padding: 5px 0;
+    position: fixed; /* quedan fijos al bajar por la pagina */
+    top: 0; /*los pega al borde superior */
+    left: 0; /* los pega al borde izquierdo */
+    width: 100%; /* ocupan todo el ancho de la pantalla */
+    z-index: 1030; /* los mantiene por encima del contenido */
+}
 
-/* Bootstrap ya aplica flex y alineación en #cabecera */
-/*#cabecera {
-    margin: 10px 20px;
-}*/
+/* fija la cabecera debajo de los mensajes promocionales */
+#cabecera {
+    position: fixed; /* mantiene la cabecera fija al bajar */
+    top: 22px; /*la ubica debajo de los mensajes */
+    left: 0; /* elimina la separación del borde izquierdo */
+    width: 100%; /*hace que ocupe todo el ancho */
+    margin: 0; /*elimina los margenes laterales anteriores */
+    padding: 10px 20px; /* deja espacio interno arriba y a los costados */
+    box-sizing: border-box; /* evita que el padding aumente el ancho total */
+    background-color: white; /* agrega fondo para que no se vea el contenido detras */
+    z-index: 1020; /* La mantiene por encima del contenido */
+}
+
+/* deja espacio para que la cabecera fija no tape el contenido */
+body {
+    padding-top: 100px; /* reserva espacio para los mensajes y la cabecera */
+}
 
 #imagen-cabecera {
     margin: 0;
-    width: 180px; /*no puedo usar % porque el porcentaje de la imagen se calcula sobre su padre, el <a>. Y el <a> toma su ancho del contenido (al ser un item flex-> cualquier hijo directo de un elemento con display: flex), que es la imagen*/
+    height: 50px;
+    width: auto;
 }
 
 /*#logo-blanco {
@@ -39,9 +58,10 @@ html, body {
     margin: 0 5px;
 }
 
-.enlaces-paginas:hover {
+.enlaces-paginas:hover, .enlaces-paginas:active, .enlace-paginas:focus {
     color: #000000;
 }
+
 
 #enlace-sale {
     text-transform: uppercase;
@@ -98,7 +118,6 @@ footer {
     border-radius: 0;
 }
 
-
 .enlace-footer {
     text-decoration: none;
     color: white;
@@ -107,7 +126,6 @@ footer {
 .enlace-footer:hover{
     text-decoration: underline;
 }
-
 
 .informacion {
     display: flex;
@@ -165,6 +183,7 @@ section div.row {
     gap: 10px; /*porque el contenedor padre es flex*/
 }
 
+
 article h4{
     color: black;
     margin: 0;
@@ -178,9 +197,7 @@ article h4{
 .itemPrenda{
     padding: 0 5rem;
 }
-.carruselNovedades{
-    padding: 20px 0;
-}
+
 .tarjetaPrenda {
     border-radius: 0;
 }
@@ -245,10 +262,6 @@ article h4{
 }
 
 /* Bootstrap aplica flex, centrado y alineación */
-.divimg {
-    padding: 40px 0;
-}
-
 .looks1 {
     margin-right: 15px;
 }
@@ -365,7 +378,9 @@ article h4{
 }
 
 /*APARTADO CATEGORIAS DESTACADAS*/
-
+.seccion {
+    padding: 40px;
+}
 .imagenCategoria {
     display: block;
 }
@@ -423,7 +438,7 @@ a:hover .mensaje {
 
 .seccionContacto {
     margin-top: 3rem;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 
 .tituloApartado {
@@ -443,7 +458,7 @@ a:hover .mensaje {
 /* Form*/
 /* Estilos generales del formulario */
 .contacto-form {
-    margin: 60px auto;
+    margin: 10px auto;
     padding: 30px;
     color: #000;
     background-color: #fff;
@@ -494,33 +509,6 @@ a:hover .mensaje {
     width: 100%;
     padding: 12px;
     text-align: center;
-}
-
-/* fija los mensajes promocionales en la parte superior */
-#mensajes {
-    position: fixed; /* quedan fijos al bajar por la pagina */
-    top: 0; /*los pega al borde superior */
-    left: 0; /* los pega al borde izquierdo */
-    width: 100%; /* ocupan todo el ancho de la pantalla */
-    z-index: 1030; /* los mantiene por encima del contenido */
-}
-
-/* fija la cabecera debajo de los mensajes promocionales */
-#cabecera {
-    position: fixed; /* mantiene la cabecera fija al bajar */
-    top: 22px; /*la ubica debajo de los mensajes */
-    left: 0; /* elimina la separación del borde izquierdo */
-    width: 100%; /*hace que ocupe todo el ancho */
-    margin: 0; /*elimina los margenes laterales anteriores */
-    padding: 10px 20px; /* deja espacio interno arriba y a los costados */
-    box-sizing: border-box; /* evita que el padding aumente el ancho total */
-    background-color: white; /* agrega fondo para que no se vea el contenido detras */
-    z-index: 1020; /* La mantiene por encima del contenido */
-}
-
-/* deja espacio para que la cabecera fija no tape el contenido */
-body {
-    padding-top: 100px; /* reserva espacio para los mensajes y la cabecera */
 }
 
 /* transicion suave para la imagen grande */
