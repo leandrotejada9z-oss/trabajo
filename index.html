@@ -21,51 +21,6 @@
 </head>
 
 <body>
-    <!--<header>
-        <div id="mensajes" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
-        
-        <div class="carousel-inner">
-
-        <div class="carousel-item active">
-            <p class="mensaje-promo">¡Hasta 6 cuotas sin interés!</p>
-        </div>
-
-        <div class="carousel-item">
-            <p class="mensaje-promo">¡Envíos a todo el país!</p>
-        </div>
-
-        <div class="carousel-item">
-            <p class="mensaje-promo">¡Descubrí tu próximo look!</p>
-        </div>
-
-        </div>
-</div>
-
-        Bootstrap: d-flex, justify-content-between, align-items-center -->
-        <!-- Acomoda los elementos en fila, dejando espacio entre ellos y centrándolos verticalmente -->
-        <!-- <div id="cabecera" class="d-flex justify-content-between align-items-center">
-
-            <nav id="enlaces-cabecera">
-                <a href="index.html" class="enlaces-paginas">Inicio</a>
-                <a class="enlaces-paginas">CATÁLOGO</a>
-                <a class="enlaces-paginas" id="enlace-sale">Sale</a>
-            </nav>
-
-            <img
-                src="IMAGENES HOME/logo-blanco.png"
-                alt="Logo de CUERVO"
-                id="logo-blanco"
-            >
-
-            <div id="opciones-cabecera">
-                <img src="IMAGENES HOME/icono-lupa.png" alt="Buscador" class="iconos-cabecera">
-                <img src="IMAGENES HOME/icono-ubicacion.png" alt="Ubicación" class="iconos-cabecera">
-                <img src="IMAGENES HOME/icono-cuenta.png" alt="Cuenta" class="iconos-cabecera">
-                <img src="IMAGENES HOME/icono-favorito.png" alt="Favorito" class="iconos-cabecera">
-                <img src="IMAGENES HOME/icono-carrito.png" alt="Carrito" class="iconos-cabecera">
-            </div>
-        </div>
-    </header> -->
     <header> <!--encabezado del sitio: carrusel con mensajes + barra de navegación-->
         <div id="mensajes" class="carousel slide" data-bs-ride="carousel" data-bs-pause="false" data-bs-interval="3000">
             <!--data-bs-pause="false": por defecto el carrusel se pausa en hover, asi no se pausa cuando se le pasa el mouse por encima-->
@@ -166,7 +121,7 @@
     <!-- Acomoda los elementos en fila y los centra horizontal y verticalmente -->
     
     <!--SECCION DE TARJETAS-->
-   <section class="container info separacion-seccion"> <!--Es el contenedor de las tarjetas de información-->
+   <section class="container separacion-secciones"> <!--Es el contenedor de las tarjetas de información-->
         <div class=" row"> <!--row: define fila -> hijo directo del contenedor-->
             <article class="col rectangulo-info"> <!--col: define columnas de la fila-->
                 <i class="bi bi-truck icono-info"></i>
@@ -190,12 +145,12 @@
 
 
 <!-- CARRUSEL DE PRODUCTOS -->
-<section class="separacion-seccion">
+<section class="separacion-secciones">
      <div class="container"> <!--container envuelve novedades + carrusel-->
         <div class="col-12">
-        <h3 class="text-center titulo-seccion">Novedades</h3>
+        <h3 class="text-center titulo-seccion separacion-encabezado">Novedades</h3>
         </div>
-        <div id="carouselExample" class="carousel slide seccion"> <!--carrusel-->
+        <div id="carouselExample" class="carousel slide"> <!--carrusel-->
             <div class="carousel-inner">
                 <div class="carousel-item itemPrenda active">
                     <div class="row row-cols-4 g-1"> <!--define fila con 4 columnas-->
@@ -347,7 +302,7 @@
     
 
 <!-- SECCIÓN ENCUENTRA TU LOOK -->
-<section class="look separacion-seccion">
+<section class="look relleno-secciones separacion-secciones">
 
     <div class="container">
 
@@ -360,7 +315,7 @@
         <div class="row">
             <div class="col-12">
 
-                <div class="seccion d-flex justify-content-center align-items-center">
+                <div class="relleno-secciones d-flex justify-content-center align-items-center">
 
                     <!-- LOOK 1 -->
                     <div class="imagen-look position-relative">
@@ -486,10 +441,10 @@
 </section>
 
     <!--SECCION CATEGORIAS DESTACADAS-->
-    <section class="separacion-seccion">
+    <section class="separacion-secciones">
         <div class="container">
             <div class="col-12">
-        <h3 class="text-center titulo-seccion">Productos Destacados</h3>
+        <h3 class="text-center titulo-seccion separacion-encabezado">Productos Destacados</h3>
     </div>
         <div class="row gx-0 justify-content-center seccion">
         <!--gx-*: Define el padding horizontal de las columnas (la mitad del valor a cada lado) y ajusta el margen negativo de la fila -> el contenido sigue alineado con el resto del container-->
