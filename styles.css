@@ -589,23 +589,50 @@ a:hover .mensaje {
     filter: brightness(0.7);
 }
 
-/* Separación entre ambos looks */
+/* Separa un poco las dos imagenes del look */
 .looks1 {
     margin-right: 15px;
 }
 
-/* Ajustes exclusivos para Look 2 */
+/* Ajusta la imagen del segundo look */
 .derecha .imagen-hover-contenedor {
-    width: 394px;
-    margin-left: 15px;
-    position: relative;
+    width: 394px; /* Ancho de la imagen */
+    margin-left: 15px; /* Separa la imagen de la otra */
+    position: relative; /* Sirve de referencia para ubicar la imagen hover */
 }
 
+/* Hace que las imagenes del segundo look tengan el mismo tamano */
 .derecha .imagen-hover-contenedor img {
-    width: 394px;
-    height: 585px;
-    margin: 0;
-    display: block;
-    object-fit: cover;
-    box-sizing: border-box;
+    width: 394px; /* Ancho */
+    height: 585px; /* Alto */
+    margin: 0; /* Saca margenes que puedan molestar */
+    display: block; /* Evita espacios raros debajo de la imagen */
+    object-fit: cover; /* Hace que la imagen llene el espacio sin deformarse */
+    box-sizing: border-box; /* Evita que bordes o rellenos aumenten el tamano */
 }
+
+/* Deja espacio entre una seccion y otra */
+.separacion-seccion {
+    margin-bottom: 20px; /* Espacio debajo de la seccion */
+    margin-top: 10px; /* Espacio arriba de la seccion */
+}
+
+/* Deja espacio adentro de las secciones, arriba y abajo */
+.look,
+.separacion-seccion {
+    padding: 40px 0;
+}
+
+/* Separa un poco los titulos de lo que tienen arriba y abajo */
+.encuentra,
+.titulo-seccion {
+    margin: 10px 0;
+}
+
+/* .separacion-seccion {
+    background-color: yellow;
+}
+
+.look {
+    background-color: yellow;
+} */
