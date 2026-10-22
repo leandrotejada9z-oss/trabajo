@@ -166,7 +166,7 @@
     <!-- Acomoda los elementos en fila y los centra horizontal y verticalmente -->
     
     <!--SECCION DE TARJETAS-->
-    <section class="container info"> <!--Es el contenedor de las tarjetas de información-->
+   <section class="container info separacion-seccion"> <!--Es el contenedor de las tarjetas de información-->
         <div class=" row"> <!--row: define fila -> hijo directo del contenedor-->
             <article class="col rectangulo-info"> <!--col: define columnas de la fila-->
                 <i class="bi bi-truck icono-info"></i>
@@ -188,11 +188,13 @@
         </div>
     </section>
 
-    <br><br><br><br>
 
-    <!--CARRUSEL DE PRODUCTOS-->
-    <div class="container"> <!--container envuelve novedades + carrusel-->
+<!-- CARRUSEL DE PRODUCTOS -->
+<section class="separacion-seccion">
+     <div class="container"> <!--container envuelve novedades + carrusel-->
+        <div class="col-12">
         <h3 class="text-center">Novedades</h3>
+        </div>
         <div id="carouselExample" class="carousel slide seccion"> <!--carrusel-->
             <div class="carousel-inner">
                 <div class="carousel-item itemPrenda active">
@@ -339,187 +341,150 @@
         </div>
     </div>
 
+</section>
+
    
     
-    <div class="look">
 
-        <h2 class="encuentra">Encuentra tu look</h2>
+<!-- SECCIÓN ENCUENTRA TU LOOK -->
+<section class="look separacion-seccion">
 
-        <!-- Bootstrap: d-flex, justify-content-center, align-items-center -->
-        <!-- Usa Flexbox y centra los elementos horizontal y verticalmente -->
-        <div class="seccion d-flex justify-content-center align-items-center">
+    <div class="container">
 
-            <div class="imagen-look position-relative">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="encuentra">Encuentra tu look</h2>
+            </div>
+        </div>
 
-                <img src="IMAGENES HOME/look1.png" class="looks1" alt="Look 1">
+        <div class="row">
+            <div class="col-12">
 
-                <!-- Bootstrap: vstack organiza verticalmente; gap-3 separa las tarjetas -->
-                <div class="vstack gap-2 contenedores position-absolute">
-                    <div class="promo d-flex align-items-center">
+                <div class="seccion d-flex justify-content-center align-items-center">
 
-                        <img src="IMAGENES HOME/look1chaqueta.png" alt="Chaqueta 100% cuero">
+                    <!-- LOOK 1 -->
+                    <div class="imagen-look position-relative">
 
-                        <!-- Bootstrap: d-flex y flex-column -->
-                        <div class="info-promo d-flex flex-column">
+                        <img src="IMAGENES HOME/look1.png" class="looks1" alt="Look 1">
 
-                            <a href="">
-                                <h3>Chaqueta 100% cuero</h3>
-                            </a>
+                        <div class="vstack gap-2 contenedores position-absolute">
 
-                            <!-- Bootstrap: d-flex, align-items-center y gap-2 -->
-                            <div class="d-flex align-items-center gap-2">
-                                <p class="precio-anterior">$180.299</p>
-                                <span class="sale">SALE</span>
+                            <div class="promo d-flex align-items-center">
+                                <img src="IMAGENES HOME/look1chaqueta.png" alt="Chaqueta 100% cuero">
+
+                                <div class="info-promo d-flex flex-column">
+                                    <a href=""><h3>Chaqueta 100% cuero</h3></a>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <p class="precio-anterior">$180.299</p>
+                                        <span class="sale">SALE</span>
+                                    </div>
+                                    <p class="precio">$130.399</p>
+                                    <p>3 cuotas sin interés</p>
+                                    <p>de $43.466</p>
+                                </div>
                             </div>
 
-                            <p class="precio">$130.399</p>
-                            <p>3 cuotas sin interés</p>
-                            <p>de $43.466</p>
+                            <div class="promo d-flex align-items-center">
+                                <img src="IMAGENES HOME/look1remeralisa.png" alt="Remera lisa">
+
+                                <div class="info-promo d-flex flex-column">
+                                    <a href=""><h3>Remera lisa</h3></a>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <p class="precio-anterior">$48.699</p>
+                                        <span class="sale">SALE</span>
+                                    </div>
+                                    <p class="precio">$36.799</p>
+                                    <p>3 cuotas sin interés</p>
+                                    <p>de $12.266</p>
+                                </div>
+                            </div>
+
+                            <div class="promo d-flex align-items-center">
+                                <img src="IMAGENES HOME/loo2.pantalones 1.png" alt="Jean 802">
+
+                                <div class="info-promo d-flex flex-column">
+                                    <a href=""><h3>Jean 802</h3></a>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <p class="precio-anterior">$95.149</p>
+                                        <span class="sale">SALE</span>
+                                    </div>
+                                    <p class="precio">$81.799</p>
+                                    <p>3 cuotas sin interés</p>
+                                    <p>de $27.266</p>
+                                </div>
+                            </div>
 
                         </div>
                     </div>
 
-                    <div class="promo d-flex align-items-center">
+                    <!-- LOOK 2 -->
+                    <div class="imagen-look derecha position-relative">
 
-                    <img src="IMAGENES HOME/look1remeralisa.png" alt="Chaqueta 100% cuero">
+                        <img src="IMAGENES HOME/look2.png" class="looks2" alt="Look 2">
 
-                    <!-- Bootstrap: d-flex y flex-column -->
-                    <div class="info-promo d-flex flex-column">
+                        <div class="vstack gap-2 contenedores position-absolute">
 
-                    <a href="">
-                    <h3>Remera lisa</h3>
-                    </a>
+                            <div class="promo d-flex align-items-center">
+                                <img src="IMAGENES HOME/look2chaquetamarron.png" alt="Chaqueta marrón">
 
-                    <!-- Bootstrap: d-flex, align-items-center y gap-2 -->
-                    <div class="d-flex align-items-center gap-2">
-                    <p class="precio-anterior">$48.699</p>
-                    <span class="sale">SALE</span>
-                    </div>
+                                <div class="info-promo d-flex flex-column">
+                                    <a href=""><h3>Chaqueta marrón</h3></a>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <p class="precio-anterior">$130.799</p>
+                                        <span class="sale">SALE</span>
+                                    </div>
+                                    <p class="precio">$100.550</p>
+                                    <p>3 cuotas sin interés</p>
+                                    <p>de $33.516</p>
+                                </div>
+                            </div>
 
-                    <p class="precio">$36.799</p>
-                    <p>3 cuotas sin interés</p>
-                    <p>de $12.266</p>
+                            <div class="promo d-flex align-items-center">
+                                <img src="IMAGENES HOME/look2sueter.png" alt="Suéter tramado">
 
-                    </div>
-                    </div>
+                                <div class="info-promo d-flex flex-column">
+                                    <a href=""><h3>Sueter tramado</h3></a>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <p class="precio-anterior">$95.299</p>
+                                        <span class="sale">SALE</span>
+                                    </div>
+                                    <p class="precio">$87.699</p>
+                                    <p>3 cuotas sin interés</p>
+                                    <p>de $29.233</p>
+                                </div>
+                            </div>
 
-                    <div class="promo d-flex align-items-center">
+                            <div class="promo d-flex align-items-center">
+                                <img src="IMAGENES HOME/look2pantalon.png" alt="Jean 801">
 
-                    <img src="IMAGENES HOME/loo2.pantalones 1.png" alt="Chaqueta 100% cuero">
+                                <div class="info-promo d-flex flex-column">
+                                    <a href=""><h3>Jean 801</h3></a>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <p class="precio-anterior">$99.299</p>
+                                        <span class="sale">SALE</span>
+                                    </div>
+                                    <p class="precio">$82.799</p>
+                                    <p>3 cuotas sin interés</p>
+                                    <p>de $27.599</p>
+                                </div>
+                            </div>
 
-                    <!-- Bootstrap: d-flex y flex-column -->
-                    <div class="info-promo d-flex flex-column">
-
-                    <a href="">
-                    <h3>Jean 802</h3>
-                    </a>
-
-                    <!-- Bootstrap: d-flex, align-items-center y gap-2 -->
-                    <div class="d-flex align-items-center gap-2">
-                    <p class="precio-anterior">$95.149</p>
-                    <span class="sale">SALE</span>
-                    </div>
-
-                    <p class="precio">$81.799</p>
-                    <p>3 cuotas sin interés</p>
-                    <p>de $27.266</p>
-
-                    </div>
+                        </div>
                     </div>
 
                 </div>
             </div>
-
-            <div class="imagen-look derecha position-relative">
-
-                <img src="IMAGENES HOME/look2.png" class="looks2" alt="Look 2">
-
-                <!-- Bootstrap: vstack organiza verticalmente las tarjetas -->
-                <!-- Bootstrap: acomoda las tarjetas una debajo de otra con separación -->
-                <div class="vstack gap-2 contenedores position-absolute">
-                    <div class="promo d-flex align-items-center">
-
-                    <img src="IMAGENES HOME/look2chaquetamarron.png" alt="Chaqueta 100% cuero">
-
-                    <!-- Bootstrap: d-flex y flex-column -->
-                    <!-- Bootstrap: acomoda la imagen y la información en fila y las centra verticalmente -->
-                    <div class="info-promo d-flex flex-column">
-
-                    <a href="">
-                    <h3>Chaqueta marrón</h3>
-                    </a>
-
-                    <!-- Bootstrap: d-flex, align-items-center y gap-2 -->
-                    <!-- Bootstrap: alinea el precio anterior y el SALE verticalmente y los separa -->
-                    <div class="d-flex align-items-center gap-2">
-                    <p class="precio-anterior">$130.799</p>
-                    <span class="sale">SALE</span>
-                    </div>
-
-                    <p class="precio">$100.550</p>
-                    <p>3 cuotas sin interés</p>
-                    <p>de $33.516</p>
-
-                    </div>
-                    </div>
-
-                    <div class="promo d-flex align-items-center">
-
-                    <img src="IMAGENES HOME/look2sueter.png" alt="Chaqueta 100% cuero">
-                    <!-- Bootstrap: acomoda la información en columna, una debajo de otra -->
-                    <!-- Bootstrap: d-flex y flex-column -->
-                    <div class="info-promo d-flex flex-column">
-
-                    <a href="">
-                    <h3>Sueter tramado</h3>
-                    </a>
-
-                    <!-- Bootstrap: d-flex, align-items-center y gap-2 -->
-                    <div class="d-flex align-items-center gap-2">
-                    <p class="precio-anterior">$95.299</p>
-                    <span class="sale">SALE</span>
-                    </div>
-
-                    <p class="precio">$87.699</p>
-                    <p>3 cuotas sin interés</p>
-                    <p>de $29.233</p>
-
-                    </div>
-                    </div>
-                    <div class="promo d-flex align-items-center">
-
-                    <img src="IMAGENES HOME/look2pantalon.png" alt="Chaqueta 100% cuero">
-
-                    <!-- Bootstrap: d-flex y flex-column -->
-                    <div class="info-promo d-flex flex-column">
-
-                    <a href="">
-                    <h3>Jean 801</h3>
-                    </a>
-
-                    <!-- Bootstrap: d-flex, align-items-center y gap-2 -->
-                    <div class="d-flex align-items-center gap-2">
-                    <p class="precio-anterior">$99.299</p>
-                    <span class="sale">SALE</span>
-                    </div>
-
-                    <p class="precio">$82.799</p>
-                    <p>3 cuotas sin interés</p>
-                    <p>de $27.599</p>
-
-                    </div>
-                    </div>
-                </div>
-            </div>
-
         </div>
-    </div>
 
-    <br><br><br><br>
+    </div>
+</section>
 
     <!--SECCION CATEGORIAS DESTACADAS-->
-    <section class="container">
+    <section class="separacion-seccion">
+        <div class="container">
+            <div class="col-12">
         <h3 class="text-center">Productos Destacados</h3>
+    </div>
         <div class="row gx-0 justify-content-center seccion">
         <!--gx-*: Define el padding horizontal de las columnas (la mitad del valor a cada lado) y ajusta el margen negativo de la fila -> el contenido sigue alineado con el resto del container-->
             <div class="col-auto">
@@ -554,8 +519,9 @@
                 </a>
             </div>
         </div>
+        </div>
     </section>
-    <br><br><br><br>
+    
 
     <!--footer-->
     <footer class="bg-black">
