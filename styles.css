@@ -555,3 +555,57 @@ a:hover .mensaje {
     margin-bottom: 60px;
     margin-top: 10px;
 }
+
+/* Contiene las dos imagenes */
+.imagen-hover-contenedor img {
+    display: block;
+    width: 394px;
+    height: 585px;
+    object-fit: cover;
+}
+
+/* La imagen alternativa queda encima de la principal */
+.imagen-hover-look {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Al pasar el cursor, aparece la segunda imagen y la nueva se oscurece */
+.imagen-hover-contenedor:hover .imagen-hover-look {
+    opacity: 1;
+    filter: brightness(0.7);
+}
+
+
+/* Al pasar el cursor, aparece la segunda imagen y se oscurece */
+.imagen-hover-contenedor:hover .imagen-hover-look {
+    opacity: 1;
+    filter: brightness(0.7);
+}
+
+/* Separación entre ambos looks */
+.looks1 {
+    margin-right: 15px;
+}
+
+/* Ajustes exclusivos para Look 2 */
+.derecha .imagen-hover-contenedor {
+    width: 394px;
+    margin-left: 15px;
+    position: relative;
+}
+
+.derecha .imagen-hover-contenedor img {
+    width: 394px;
+    height: 585px;
+    margin: 0;
+    display: block;
+    object-fit: cover;
+    box-sizing: border-box;
+}
