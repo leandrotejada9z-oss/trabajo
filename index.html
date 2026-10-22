@@ -21,14 +21,13 @@
 </head>
 
 <body>
-
     <!--<header>
         <div id="mensajes" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
         
         <div class="carousel-inner">
 
         <div class="carousel-item active">
-            <p class="mensaje-promo">🔥¡Hasta 6 cuotas sin interés!</p>
+            <p class="mensaje-promo">¡Hasta 6 cuotas sin interés!</p>
         </div>
 
         <div class="carousel-item">
@@ -42,9 +41,9 @@
         </div>
 </div>
 
-        <!-- Bootstrap: d-flex, justify-content-between, align-items-center -->
+        Bootstrap: d-flex, justify-content-between, align-items-center -->
         <!-- Acomoda los elementos en fila, dejando espacio entre ellos y centrándolos verticalmente -->
-       <!-- <div id="cabecera" class="d-flex justify-content-between align-items-center">
+        <!-- <div id="cabecera" class="d-flex justify-content-between align-items-center">
 
             <nav id="enlaces-cabecera">
                 <a href="index.html" class="enlaces-paginas">Inicio</a>
@@ -67,7 +66,6 @@
             </div>
         </div>
     </header> -->
-
     <header> <!--encabezado del sitio: carrusel con mensajes + barra de navegación-->
         <div id="mensajes" class="carousel slide" data-bs-ride="carousel" data-bs-pause="false" data-bs-interval="3000">
             <!--data-bs-pause="false": por defecto el carrusel se pausa en hover, asi no se pausa cuando se le pasa el mouse por encima-->
@@ -87,7 +85,7 @@
                 </div>
             </div>
         </div>
-        <nav class="navbar bg-white">
+        <nav class="navbar bg-white" id="cabecera">
             <!--navbar: establece que el elemento es una barra de navegación-->
             <div class="container-fluid"> <!--con container-fluid ocupa todo el ancho-->
                 <ul class="nav nav-underline flex-nowrap">
@@ -147,17 +145,17 @@
         <!-- Bootstrap: define cada diapositiva del carrusel -->
         <div class="carousel-item active">
             <img src="IMAGENES HOME/banner-sale.png"
-                 class="d-block w-100" alt="Banner 1">
+                class="d-block w-100" alt="Banner 1">
         </div>
 
         <div class="carousel-item">
             <img src="IMAGENES HOME/banner-denim.png"
-                 class="d-block w-100" alt="Banner 2">
+                class="d-block w-100" alt="Banner 2">
         </div>
 
         <div class="carousel-item">
             <img src="IMAGENES HOME/banner-nueva-coleccion.png"
-                 class="d-block w-100" alt="Banner 3">
+                class="d-block w-100" alt="Banner 3">
         </div>
 
     </div>
@@ -195,7 +193,7 @@
     <!--CARRUSEL DE PRODUCTOS-->
     <div class="container"> <!--container envuelve novedades + carrusel-->
         <h3 class="text-center">Novedades</h3>
-        <div id="carouselExample" class="carousel slide carruselNovedades"> <!--carrusel-->
+        <div id="carouselExample" class="carousel slide seccion"> <!--carrusel-->
             <div class="carousel-inner">
                 <div class="carousel-item itemPrenda active">
                     <div class="row row-cols-4 g-1"> <!--define fila con 4 columnas-->
@@ -341,7 +339,7 @@
         </div>
     </div>
 
-    <br><br><br><br>
+   
     
     <div class="look">
 
@@ -349,7 +347,7 @@
 
         <!-- Bootstrap: d-flex, justify-content-center, align-items-center -->
         <!-- Usa Flexbox y centra los elementos horizontal y verticalmente -->
-        <div class="divimg d-flex justify-content-center align-items-center">
+        <div class="seccion d-flex justify-content-center align-items-center">
 
             <div class="imagen-look position-relative">
 
@@ -521,8 +519,8 @@
 
     <!--SECCION CATEGORIAS DESTACADAS-->
     <section class="container">
-        <h3 class="text-center">Categorías Destacadas</h3>
-        <div class="row gx-0 justify-content-center">
+        <h3 class="text-center">Productos Destacados</h3>
+        <div class="row gx-0 justify-content-center seccion">
         <!--gx-*: Define el padding horizontal de las columnas (la mitad del valor a cada lado) y ajusta el margen negativo de la fila -> el contenido sigue alineado con el resto del container-->
             <div class="col-auto">
                 <!--col-auto: utilidad que, en grid, ajusta el ancho de la columna al contenido-->
@@ -560,7 +558,7 @@
     <br><br><br><br>
 
     <!--footer-->
-    <footer>
+    <footer class="bg-black">
         <div class="container-fluid p-0">
             <div class="row align-items-center justify-content-center mb-5 py-3 bg-light g-0 m-0">
                 <div class="col text-center border-end border-1 border-dark py-4">
@@ -591,28 +589,51 @@
         <div class="container text-white">
             <div class="row seccionPie px-5">
                 <div class="col-auto">
-                    <h3>NOSOTROS</h3>
-                    <a href="#" class="enlace-footer d-block">LOCALES</a>
-                    <a href="#" class="enlace-footer d-block">VENTA MAYORISTA</a>
-                    <a href="#" class="enlace-footer d-block">VENTA CORPORATIVA</a>
-                    <!--se poen d-block porque a es un elemento inline, de esta manera cada espacio ocupa una linea-->
+                    <h4 class="mb-2">NOSOTROS</h4>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a href="#" class="enlace-footer">LOCALES</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="enlace-footer">VENTA MAYORISTA</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="enlace-footer">VENTA MINORISTA</a>
+                        </li>
+                    </ul>
                 </div>
                 <div class="col-auto">
-                    <h3>AYUDA</h3>
-                    <a href="contactanos.html" class="enlace-footer d-block">CONTACTO</a>
-                    <a href="#" class="enlace-footer d-block">FORMAS DE PAGO</a>
-                    <a href="#" class="enlace-footer d-block">MÉTODOS DE ENVÍO</a>
+                    <h4 class="mb-2">NOSOTROS</h4>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a href="contactanos.html" class="enlace-footer">CONTACTO</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="enlace-footer">FORMAS DE PAGO</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="enlace-footer">METODOS DE ENVIO</a>
+                        </li>
+                    </ul>
                 </div>
                 <div class="col-auto">
-                    <h3>LEGALES</h3>
-                    <a href="#" class="enlace-footer d-block">TÉRMINOS Y CONDICIONES</a>
-                    <a href="#" class="enlace-footer d-block">DEFENSA AL CONSUMIDOR</a>
-                    <a href="#" class="enlace-footer d-block">BOTÓN DE ARREPENTIMIENTO</a>
+                    <h4 class="mb-2">LEGALES</h4>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a href="#" class="enlace-footer">TÉRMINOS Y CONDICIONES</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="enlace-footer">DEFENSA AL CONSUMIDOR</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="enlace-footer">BOTÓN DE ARREPENTIMIENTO</a>
+                        </li>
+                    </ul>
                 </div>
                 <div class="col-auto ms-auto">
                     <h3 class="contacto">CONTÁCTANOS</h3>
                     <div class="redes-sociales">
-                        <a href="https://wa.me/5492645709800?text=Hola%20Cuervo,%20quiero%20hacer%20una%20consulta" target="_blank" rel="noopener" class="infoContacto">
+                        <a href="#">
                             <i class="bi bi-whatsapp iconoRedes"></i>
                         </a>
                         <a href="#">
@@ -625,14 +646,13 @@
                 </div>
             </div>
             <div class="row px-5">
-                <div class="col">
+                <div class="col p-0">
                     <img src="IMAGENES HOME/logo-negro.png" alt="Logo de CUERVO" class="logo-negro">
                 </div>
             </div>
         </div>
     
     </footer>
-
 
 <!-- Bootstrap: activa el funcionamiento del carrusel -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
