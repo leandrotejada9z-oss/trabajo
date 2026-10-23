@@ -4,6 +4,12 @@ html, body {
     font-family: "Inter", sans-serif;
 }
 
+/* Margen personalizado para todos los párrafos */
+p {
+    margin: 0;
+}
+
+/*PARA SEPARAR SECCIONES DE LA PÁGINA*/
 .separacion-secciones {
     margin-top: 100px;
     margin-bottom: 100px;
@@ -20,10 +26,6 @@ html, body {
 
 
 /* CABECERA */
-.mensaje-promo {
-    text-align: center;
-    margin: 0;
-}
 /* fija los mensajes promocionales en la parte superior */
 #mensajes {
     background-color: #000000;
@@ -34,6 +36,11 @@ html, body {
     left: 0; /* los pega al borde izquierdo */
     width: 100%; /* ocupan todo el ancho de la pantalla */
     z-index: 1030; /* los mantiene por encima del contenido */
+}
+
+.mensaje-promo {
+    text-align: center;
+    margin: 0;
 }
 
 /* fija la cabecera debajo de los mensajes promocionales */
@@ -54,18 +61,6 @@ body {
     padding-top: 100px; /* reserva espacio para los mensajes y la cabecera */
 }
 
-#imagen-cabecera {
-    margin: 0;
-    height: 50px;
-    width: auto;
-}
-
-/*#logo-blanco {
-    margin: 0 auto;
-    width: 170px;
-    height: auto;
-}*/
-
 .enlaces-paginas {
     text-decoration: none;
     color: #000000;
@@ -77,16 +72,17 @@ body {
     color: #000000;
 }
 
+#imagen-cabecera {
+    margin: 0;
+    height: 50px;
+    width: auto;
+}
 
 #enlace-sale {
     text-transform: uppercase;
     color: red;
 }
 
-/*.iconos-cabecera {
-    width: 25px;
-    margin: 0 5px;
-}*/
 .icono-cabecera{
     font-size: 1.4rem;
     color: #000000;
@@ -96,90 +92,29 @@ body {
     text-decoration: none;
 }
 
-/* Margen personalizado para todos los párrafos */
-p {
-    margin: 0;
-}
-
-/* BANNER */
-#banner-home {
+/*BANNER*/
+#bannerCarrusel img {
     width: 100%;
     height: auto;
+    display: block;
 }
 
-/* FOOTER */
-footer {
-    background-color: #000000;
-    padding: 0;
-}
-
-/* Bootstrap organiza las columnas y las redes sociales */
-.inputEmail {
-    width: 40%;
-    border: none;
-    border-radius: 0;
-    background-color: transparent;
-    border-bottom: 1px solid #272a2e;
-}
-
-.inputEmail:focus {
-    background-color: #FFFFFF;
-    outline: none;
-    border-bottom: 1px solid #272a2e;
-
-}
-
-.enviarForm {
-    border-radius: 0;
-}
-
-.enlace-footer {
-    text-decoration: none;
-    color: white;
-}
-
-.enlace-footer:hover{
-    text-decoration: underline;
-}
-
-.seccionPie {
-    display: flex;
-    flex-direction: row;
-    gap: 3%;
+/* Indicadores circulares del carrusel */
+#bannerCarrusel .carousel-indicators [data-bs-target] {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 0;
+    margin: 0 5px;
+    opacity: 0.5;
 }
 
 
-.contacto {
-    text-align: center;
+#bannerCarrusel .carousel-indicators .active {
+    opacity: 1;
 }
 
-.iconoRedes {
-    margin-right: 10px;
-    font-size: 1.8rem; /*los iconos se tratan como fuentes, por eso no se una width ni height*/
-}
-
-.redes-sociales {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 5%;
-}
-
-.redes-sociales > a {
-    color: white;
-}
-
-.logo-negro {
-    width: 200px;
-    height: auto;
-    margin-top: 80px;
-    margin-left: 0;
-}
-/* INFORMACIÓN DE ENVÍOS, CUOTAS Y DEVOLUCIONES */
-.info {
-    margin-top: 15px;
-}
-
+/* SECCION DE TARJETAS DE ENVÍOS, CUOTAS Y DEVOLUCIONES */
 .rectangulo-info { /*de cada tarjeta*/
     display: flex;
     flex-direction: column;
@@ -189,12 +124,7 @@ footer {
     padding: 15px 10px;
 }
 
-section div.row {
-    gap: 10px; /*porque el contenedor padre es flex*/
-}
-
-
-article h4{
+.rectangulo-info h4{
     color: black;
     margin: 0;
 }
@@ -203,17 +133,22 @@ article h4{
     font-size: 40px; /*se usa font-size y no height/width porque se trata como texto*/
 }
 
+
 /*APARTADO NOVEDADES -> CARRUSEL + TARJETAS*/
 .itemPrenda{
     padding: 0 5rem;
 }
 
-.tarjetaPrenda {
-    border-radius: 0;
+.itemPrenda .row {
+    flex-wrap: nowrap;
 }
 
 .enlace-prenda{
     text-decoration: none;
+}
+
+.tarjetaPrenda {
+    border-radius: 0;
 }
 
 .nombrePrenda {
@@ -227,6 +162,20 @@ article h4{
     color: #6D6D6D;
     font-weight: 400;
 }
+
+/* Fija la altura del carrusel para que la página no se mueva
+   cuando pasamos de una tanda de productos a la otra */
+#carouselExample .carousel-inner {
+    height: 514px;
+}
+
+
+/* Hace que cada diapositiva ocupe el 100% de esa altura,
+   así ambas mantienen el mismo tamaño */
+#carouselExample .carousel-item {
+    height: 100%;
+}
+
 
 .contenedorImagenes {
     position: relative; /*por defecto, las imagenes se apilan una debajo de la otra, con position: relative hace que el contenedor se tome como referencia para apilar una sobre otra con position: absolute*/
@@ -272,13 +221,34 @@ article h4{
 }
 
 /* Bootstrap aplica flex, centrado y alineación */
-.looks1 .looks2 {
+/*.looks1.looks2 {
     margin-right: 15px;
-}
+}*/
 
 /* position-relative se aplica mediante Bootstrap */
 .imagen-look {
     display: inline-block;
+}
+
+/* transicion suave para la imagen grande */
+.imagen-look > img {
+    transition: filter 0.3s;
+}
+
+/* oscurece la imagen grande al pasar el cursor */
+.imagen-look:hover > img {
+    filter: brightness(0.7);
+}
+
+/* transicion suave para las tarjetas de productos */
+.imagen-look .promo {
+    transition: box-shadow 0.3s, border-color 0.3s;
+}
+
+/* ilumina las tarjetas cuando el cursor esta sobre el look */
+.imagen-look:hover .promo {
+    border-color: #000;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
 }
 
 /* position-absolute se aplica mediante Bootstrap */
@@ -295,7 +265,7 @@ article h4{
     transform: translate(-35%, -50%);
 }
 
-/* TARJETAS DE PRODUCTOS */
+/*TARJETAS DE PRODUCTOS DE ENCUENTRA TU LOOK*/
 .promo {
     height: 138px;
     width: 260px;
@@ -362,25 +332,53 @@ article h4{
     flex-shrink: 0;
 }
 
-
-#bannerCarrusel img {
-    width: 100%;
-    height: auto;
+/* Contiene las dos imagenes */
+.imagen-hover-contenedor img {
     display: block;
+    width: 394px;
+    height: 585px;
+    object-fit: cover;
 }
 
-/* Indicadores circulares del carrusel */
-#bannerCarrusel .carousel-indicators [data-bs-target] {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    border: 0;
-    margin: 0 5px;
-    opacity: 0.5;
+/* La imagen alternativa queda encima de la principal */
+.imagen-hover-look {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
-#bannerCarrusel .carousel-indicators .active {
+/* Al pasar el cursor, aparece la segunda imagen y la nueva se oscurece */
+.imagen-hover-contenedor:hover .imagen-hover-look {
     opacity: 1;
+    filter: brightness(0.7);
+}
+
+
+/* Separa un poco las dos imagenes del look */
+.looks1 {
+    margin-right: 15px;
+}
+
+/* Ajusta la imagen del segundo look */
+.derecha .imagen-hover-contenedor {
+    width: 394px; /* Ancho de la imagen */
+    margin-left: 15px; /* Separa la imagen de la otra */
+    position: relative; /* Sirve de referencia para ubicar la imagen hover */
+}
+
+/* Hace que las imagenes del segundo look tengan el mismo tamano */
+.derecha .imagen-hover-contenedor img {
+    width: 394px; /* Ancho */
+    height: 585px; /* Alto */
+    margin: 0; /* Saca margenes que puedan molestar */
+    display: block; /* Evita espacios raros debajo de la imagen */
+    object-fit: cover; /* Hace que la imagen llene el espacio sin deformarse */
+    box-sizing: border-box; /* Evita que bordes o rellenos aumenten el tamano */
 }
 
 /*APARTADO CATEGORIAS DESTACADAS*/
@@ -423,6 +421,80 @@ a:hover .img-sin-texto{
 a:hover .mensaje {
     opacity: 1;
 }
+
+/* FOOTER */
+footer {
+    background-color: #000000;
+    padding: 0;
+}
+
+/*Formulario de newsletter de footer*/
+.inputEmail {
+    width: 40%;
+    border: none;
+    border-radius: 0;
+    background-color: transparent;
+    border-bottom: 1px solid #272a2e;
+}
+
+.inputEmail:focus {
+    background-color: #FFFFFF;
+    outline: none;
+    border-bottom: 1px solid #272a2e;
+
+}
+
+.enviarForm {
+    border-radius: 0;
+}
+
+/*contenido de footer*/
+.enlace-footer {
+    text-decoration: none;
+    color: white;
+}
+
+.enlace-footer:hover{
+    text-decoration: underline;
+}
+
+.seccionPie {
+    display: flex;
+    flex-direction: row;
+    gap: 3%;
+}
+
+
+.contacto {
+    text-align: center;
+}
+
+.iconoRedes {
+    margin-right: 10px;
+    font-size: 1.8rem; /*los iconos se tratan como fuentes, por eso no se una width ni height*/
+}
+
+.redes-sociales {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5%;
+}
+
+.redes-sociales > a {
+    color: white;
+}
+
+.logo-negro {
+    width: 200px;
+    height: auto;
+    margin-top: 80px;
+    margin-left: 0;
+}
+
+
+
+
 
 /*Seccion de contacto*/
 .contactoBanner {
@@ -508,95 +580,6 @@ a:hover .mensaje {
     width: 100%;
     padding: 12px;
     text-align: center;
-}
-
-/* transicion suave para la imagen grande */
-.imagen-look > img {
-    transition: filter 0.3s;
-}
-
-/* oscurece la imagen grande al pasar el cursor */
-.imagen-look:hover > img {
-    filter: brightness(0.7);
-}
-
-/* transicion suave para las tarjetas de productos */
-.imagen-look .promo {
-    transition: box-shadow 0.3s, border-color 0.3s;
-}
-
-/* ilumina las tarjetas cuando el cursor esta sobre el look */
-.imagen-look:hover .promo {
-    border-color: #000;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
-}
-
-
-.itemPrenda .row {
-    flex-wrap: nowrap;
-}
-
-/* Fija la altura del carrusel para que la página no se mueva
-   cuando pasamos de una tanda de productos a la otra */
-
-#carouselExample .carousel-inner {
-    height: 514px;
-}
-
-
-/* Hace que cada diapositiva ocupe el 100% de esa altura,
-   así ambas mantienen el mismo tamaño */
-#carouselExample .carousel-item {
-    height: 100%;
-}
-
-/* Contiene las dos imagenes */
-.imagen-hover-contenedor img {
-    display: block;
-    width: 394px;
-    height: 585px;
-    object-fit: cover;
-}
-
-/* La imagen alternativa queda encima de la principal */
-.imagen-hover-look {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-/* Al pasar el cursor, aparece la segunda imagen y la nueva se oscurece */
-.imagen-hover-contenedor:hover .imagen-hover-look {
-    opacity: 1;
-    filter: brightness(0.7);
-}
-
-
-/* Separa un poco las dos imagenes del look */
-.looks1 {
-    margin-right: 15px;
-}
-
-/* Ajusta la imagen del segundo look */
-.derecha .imagen-hover-contenedor {
-    width: 394px; /* Ancho de la imagen */
-    margin-left: 15px; /* Separa la imagen de la otra */
-    position: relative; /* Sirve de referencia para ubicar la imagen hover */
-}
-
-/* Hace que las imagenes del segundo look tengan el mismo tamano */
-.derecha .imagen-hover-contenedor img {
-    width: 394px; /* Ancho */
-    height: 585px; /* Alto */
-    margin: 0; /* Saca margenes que puedan molestar */
-    display: block; /* Evita espacios raros debajo de la imagen */
-    object-fit: cover; /* Hace que la imagen llene el espacio sin deformarse */
-    box-sizing: border-box; /* Evita que bordes o rellenos aumenten el tamano */
 }
 
 
