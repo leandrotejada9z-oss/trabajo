@@ -21,7 +21,7 @@
 </head>
 
 <body>
-    <header> <!--encabezado del sitio: carrusel con mensajes + barra de navegación-->
+     <header> <!--encabezado del sitio: carrusel con mensajes + barra de navegación-->
         <div id="mensajes" class="carousel slide" data-bs-ride="carousel" data-bs-pause="false" data-bs-interval="3000">
             <!--data-bs-pause="false": por defecto el carrusel se pausa en hover, asi no se pausa cuando se le pasa el mouse por encima-->
 
@@ -42,23 +42,27 @@
         </div>
         <nav class="navbar bg-white" id="cabecera">
             <!--navbar: establece que el elemento es una barra de navegación-->
-            <div class="container-fluid"> <!--con container-fluid ocupa todo el ancho-->
-                <ul class="nav nav-underline flex-nowrap">
-                    <li class="nav-item">
-                        <a class="nav-link enlaces-paginas" aria-current="page" href="index.html">Temporada SS26/27</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link enlaces-paginas" href="#">Catálogo</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link enlaces-paginas" id="enlace-sale" href="#">SALE</a>
-                    </li>
-                </ul>
-                <a class="navbar-brand m-0" href="index.html">
-                <!--navbar-brand: clase de Bootstrap para el logo o nombre de la marca dentro de un navbar. Pone margin para separarlo del siguiente elemento, padding, sin subrayado al pasar mouse (como tiene <a>)...-->
-                    <img src="IMAGENES HOME/logo-blanco.png" alt="logo blanco Cuervo" id="imagen-cabecera">
-                </a>
-                <div id="opciones-cabecera" class="d-flex gap-3 align-items-center">
+            <div class="container flex-nowrap">
+                 <div class="col">
+                    <ul class="nav nav-underline flex-nowrap">
+                        <li class="nav-item">
+                            <a class="nav-link enlaces-paginas" aria-current="page" href="index.html">Temporada SS26/27</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link enlaces-paginas" href="#">Catálogo</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link enlaces-paginas" id="enlace-sale" href="#">SALE</a>
+                        </li>
+                    </ul>
+                 </div>
+                <div class="col-auto"> <!--col-auto hace que el elemento ocupe solo el ancho que necesita su contenido. Todo el resto de espacio que sobra se divide en partes iguales entre los dos col -> el logo queda exactamente en el centro-->
+                    <a class="navbar-brand m-0" href="index.html">
+                    <!--navbar-brand: clase de Bootstrap para el logo o nombre de la marca dentro de un navbar. Pone margin para separarlo del siguiente elemento, padding, sin subrayado al pasar mouse (como tiene <a>)...-->
+                        <img src="IMAGENES HOME/logo-blanco.png" alt="logo blanco Cuervo" id="imagen-cabecera">
+                    </a>
+                </div>
+                <div id="opciones-cabecera" class="col d-flex justify-content-end align-items-center gap-3">
                     <a class="icono-cabecera" href="index.html">
                         <i class="bi bi-search"></i>
                     </a>
