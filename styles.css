@@ -294,7 +294,7 @@ body {
 
 .promo h3 {
     color: black;
-    font-size: 16px;
+    font-size: 14px;
     margin: 0;
 }
 
@@ -305,7 +305,7 @@ body {
 .info-promo p {
     color: gray;
     margin: 0;
-    font-size: 12px;
+    font-size: 13px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
