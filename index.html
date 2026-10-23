@@ -44,22 +44,26 @@
         <nav class="navbar bg-white" id="cabecera">
             <!--navbar: establece que el elemento es una barra de navegación-->
             <div class="container">
-                <ul class="nav nav-underline flex-nowrap">
-                    <li class="nav-item">
-                        <a class="nav-link enlaces-paginas" aria-current="page" href="index.html">Temporada SS26/27</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link enlaces-paginas" href="#">Catálogo</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link enlaces-paginas" id="enlace-sale" href="#">SALE</a>
-                    </li>
-                </ul>
-                <a class="navbar-brand m-0" href="index.html">
-                <!--navbar-brand: clase de Bootstrap para el logo o nombre de la marca dentro de un navbar. Pone margin para separarlo del siguiente elemento, padding, sin subrayado al pasar mouse (como tiene <a>)...-->
-                    <img src="IMAGENES HOME/logo-blanco.png" alt="logo blanco Cuervo" id="imagen-cabecera">
-                </a>
-                <div id="opciones-cabecera" class="d-flex gap-3 align-items-center">
+                 <div class="col">
+                    <ul class="nav nav-underline flex-nowrap">
+                        <li class="nav-item">
+                            <a class="nav-link enlaces-paginas" aria-current="page" href="index.html">Temporada SS26/27</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link enlaces-paginas" href="#">Catálogo</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link enlaces-paginas" id="enlace-sale" href="#">SALE</a>
+                        </li>
+                    </ul>
+                 </div>
+                <div class="col-auto"> <!--col-auto hace que el elemento ocupe solo el ancho que necesita su contenido. Todo el resto de espacio que sobra se divide en partes iguales entre los dos col -> el logo queda exactamente en el centro-->
+                    <a class="navbar-brand m-0" href="index.html">
+                    <!--navbar-brand: clase de Bootstrap para el logo o nombre de la marca dentro de un navbar. Pone margin para separarlo del siguiente elemento, padding, sin subrayado al pasar mouse (como tiene <a>)...-->
+                        <img src="IMAGENES HOME/logo-blanco.png" alt="logo blanco Cuervo" id="imagen-cabecera">
+                    </a>
+                </div>
+                <div id="opciones-cabecera" class="col d-flex gap-3 align-items-center">
                     <a class="icono-cabecera" href="index.html">
                         <i class="bi bi-search"></i>
                     </a>
