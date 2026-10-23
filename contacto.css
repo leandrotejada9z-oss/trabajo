@@ -1,1 +1,86 @@
+/*Seccion de contacto*/
+.contactoBanner {
+    object-fit: cover; /*escala la foto manteniendo su proporción hasta que el marco quede completamente lleno y lo que sobra se recorta*/
+}
+
+.tarjetasContacto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid #505050;
+    padding: 15px 0;
+}
+
+
+.tituloApartado {
+    font-size: 20px;
+}
+
+.apartadoMail, .infoContacto {
+    font-weight: 500;
+    text-decoration: none;
+    color: #000000;
+}
+
+.apartadoMail:hover {
+    text-decoration: underline;
+}
+
+/* Formulario*/
+/* Estilos generales del formulario */
+.contacto-form {
+    margin: 0 auto;
+    padding: 0 30px;
+    color: #000;
+    background-color: #fff;
+}
+
+/* Centra el título y define su tamaño */
+.contacto-form h2 {
+    margin-bottom: 30px;
+    font-size: 32px;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* Da formato a los textos de los campos */
+.contacto-form form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+/* Da estilo a las casillas, el selector y los comentarios */
+.contacto-form select,
+.contacto-form input,
+.contacto-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #797979;
+    border-radius: 0;
+    background-color: #fff;
+    color: #000;
+    font-family: inherit;
+    box-sizing: border-box;
+}
+
+/* Permite cambiar la altura del área de comentarios */
+.contacto-form textarea {
+    resize: vertical;
+}
+/* Da estilo al aviso de campos obligatorios */
+.contacto-form .aclaracion {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+/* Hace que el botón ocupe todo el ancho de la columna */
+.contacto-form .enviarForm {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    text-align: center;
+}
 
