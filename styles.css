@@ -166,7 +166,7 @@ body {
 /* Fija la altura del carrusel para que la página no se mueva
    cuando pasamos de una tanda de productos a la otra */
 #carouselExample .carousel-inner {
-    height: 514px;
+    height: 520px;
 }
 
 
