@@ -73,7 +73,7 @@ body {
     margin: 0 5px;
 }
 
-.enlaces-paginas:hover, .enlaces-paginas:active, .enlace-paginas:focus {
+.enlaces-paginas:hover, .enlaces-paginas:active, .enlaces-paginas:focus {
     color: #000000;
 }
 
