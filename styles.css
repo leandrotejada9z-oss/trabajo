@@ -312,7 +312,7 @@ body {
 }
 
 .precio-actual {
-    color: black;
+    color: black !important;
     font-weight: bold;
     margin-bottom: 1px;
 }
