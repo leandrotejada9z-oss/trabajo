@@ -142,12 +142,6 @@ footer {
     text-decoration: underline;
 }
 
-.informacion {
-    display: flex;
-    flex-direction: row;
-    justify-content: left;
-}
-
 .seccionPie {
     display: flex;
     flex-direction: row;
@@ -278,12 +272,8 @@ article h4{
 }
 
 /* Bootstrap aplica flex, centrado y alineación */
-.looks1 {
+.looks1 .looks2 {
     margin-right: 15px;
-}
-
-.looks2 {
-    margin-left: 15px;
 }
 
 /* position-relative se aplica mediante Bootstrap */
@@ -394,9 +384,6 @@ article h4{
 }
 
 /*APARTADO CATEGORIAS DESTACADAS*/
-.seccion {
-    padding: 40px;
-}
 .imagenCategoria {
     display: block;
 }
@@ -435,16 +422,6 @@ a:hover .img-sin-texto{
 
 a:hover .mensaje {
     opacity: 1;
-}
-
-.columna-footer a {
-    color: white;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.columna-footer a:hover {
-    text-decoration: underline;
 }
 
 /*Seccion de contacto*/
@@ -599,12 +576,6 @@ a:hover .mensaje {
     filter: brightness(0.7);
 }
 
-
-/* Al pasar el cursor, aparece la segunda imagen y se oscurece */
-.imagen-hover-contenedor:hover .imagen-hover-look {
-    opacity: 1;
-    filter: brightness(0.7);
-}
 
 /* Separa un poco las dos imagenes del look */
 .looks1 {
