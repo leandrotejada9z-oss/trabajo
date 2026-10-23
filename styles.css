@@ -311,7 +311,7 @@ body {
     text-overflow: ellipsis;
 }
 
-.info-promo .precio {
+.info-promo .precio-actual {
     color: black;
     font-weight: bold;
     margin-bottom: 1px;
