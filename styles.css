@@ -479,7 +479,7 @@ a:hover .mensaje {
 /* Form*/
 /* Estilos generales del formulario */
 .contacto-form {
-    margin: 10px auto;
+    margin: 0 auto;
     padding: 0 30px;
     color: #000;
     background-color: #fff;
