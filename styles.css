@@ -45,15 +45,17 @@ p {
 
 /* fija la cabecera debajo de los mensajes promocionales */
 #cabecera {
-    position: fixed; /* mantiene la cabecera fija al bajar */
-    top: 22px; /*la ubica debajo de los mensajes */
-    left: 0; /* elimina la separación del borde izquierdo */
-    width: 100%; /*hace que ocupe todo el ancho */
-    margin: 0; /*elimina los margenes laterales anteriores */
-    padding: 10px 20px; /* deja espacio interno arriba y a los costados */
-    box-sizing: border-box; /* evita que el padding aumente el ancho total */
-    background-color: white; /* agrega fondo para que no se vea el contenido detras */
-    z-index: 1020; /* La mantiene por encima del contenido */
+    position: fixed;
+    top: 22px;
+    left: 0;
+    right: 0;
+    width: auto;
+    max-width: 100vw;
+    margin: 0;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    background-color: white;
+    z-index: 1020;
 }
 
 /* deja espacio para que la cabecera fija no tape el contenido */
@@ -337,7 +339,7 @@ body {
     display: block;
     width: 394px;
     height: 585px;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 /* La imagen alternativa queda encima de la principal */
@@ -366,19 +368,19 @@ body {
 
 /* Ajusta la imagen del segundo look */
 .derecha .imagen-hover-contenedor {
-    width: 394px; /* Ancho de la imagen */
-    margin-left: 15px; /* Separa la imagen de la otra */
-    position: relative; /* Sirve de referencia para ubicar la imagen hover */
+    width: 394px;
+    max-width: 100%;
+    margin-left: 15px;
+    position: relative;
 }
 
-/* Hace que las imagenes del segundo look tengan el mismo tamano */
-.derecha .imagen-hover-contenedor img {
-    width: 394px; /* Ancho */
-    height: 585px; /* Alto */
-    margin: 0; /* Saca margenes que puedan molestar */
-    display: block; /* Evita espacios raros debajo de la imagen */
-    object-fit: cover; /* Hace que la imagen llene el espacio sin deformarse */
-    box-sizing: border-box; /* Evita que bordes o rellenos aumenten el tamano */
+.derecha .imagen-hover-contenedor img:not(.imagen-hover-look) {
+    width: 394px;
+    max-width: 100%;
+    height: 585px;
+    object-fit: contain;
+    margin: 0;
+    display: block;
 }
 
 /*APARTADO CATEGORIAS DESTACADAS*/
@@ -583,9 +585,332 @@ footer {
 }
 
 
-#cabecera .nav,
-#cabecera .navbar-brand,
-#opciones-cabecera {
-    display: flex;
-    align-items: center;
+
+/* HEADER Y NAVEGACIÓN EN CELULAR*/
+@media (max-width: 767.98px) {
+    #cabecera .container {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        padding: 0 12px;
+        box-sizing: border-box;
+    }
+
+    #cabecera .row {
+        position: relative;
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        min-height: 42px;
+        margin: 0;
+    }
+
+    /* Centra el logo sin depender del espacio de las columnas */
+    #cabecera .logo-cabecera {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: auto;
+    }
+
+    #imagen-cabecera {
+        width: auto;
+        height: 36px;
+    }
+
+    /* Mantiene el menú y los iconos por encima del logo */
+    #cabecera .menu-movil,
+    #cabecera .iconos-movil {
+        position: relative;
+        z-index: 2;
+        padding: 0;
+    }
+
+    #cabecera .iconos-movil {
+        margin-left: auto;
+    }
+
+    #cabecera .icono-cabecera {
+        color: #000;
+        font-size: 1.2rem;
+        line-height: 1;
+        text-decoration: none;
+    }
+
+    #cabecera .menu-movil button {
+        background: transparent;
+        box-shadow: none;
+    }
+}
+
+
+/* AJUSTES GENERALES */
+
+/* Evita el desbordamiento horizontal de la página */
+html,
+body {
+    max-width: 100%;
+    overflow-x: clip;
+}
+
+/* Evita que las imágenes superen el ancho de su contenedor */
+img {
+    max-width: 100%;
+}
+
+/* Mantiene el banner superior dentro del ancho disponible */
+#mensajes {
+    left: 0;
+    right: 0;
+    width: auto;
+    box-sizing: border-box;
+}
+
+
+/* TÍTULOS DESPLEGABLES DEL FOOTER */
+
+/* Da aspecto de título a los botones que abren cada sección */
+.footer-titulo {
+    padding: 0;
+    border: none;
+    background: none;
+    color: white;
+    font: inherit;
+    font-weight: bold;
+    text-align: left;
+}
+
+/* Separa la flecha del texto */
+.footer-titulo i {
+    margin-left: 8px;
+}
+
+
+/*  FOOTER EN CELULAR */
+@media (max-width: 767.98px) {
+
+    /* Newsletter: coloca el contenido en dos bloques verticales */
+    footer .row.bg-light {
+        flex-direction: column;
+    }
+
+    footer .row.bg-light > .col {
+        width: 100%;
+        padding: 20px 12px !important;
+        border-right: none !important;
+    }
+
+    footer .inputEmail {
+        max-width: 90%;
+    }
+
+    /* Apila las secciones del footer */
+    .seccionPie {
+        flex-direction: column;
+        gap: 30px;
+        padding-right: 20px !important;
+        padding-left: 20px !important;
+    }
+
+    .seccionPie > .footer-col {
+        width: 100%;
+        margin-left: 0 !important;
+        padding-bottom: 15px;
+        border-bottom: 1px solid #555;
+    }
+
+    /* Alinea los títulos y permite que ocupen todo el ancho */
+    .footer-titulo {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    /* Alinea el título de contacto y las redes a la izquierda */
+    .seccionPie .contacto {
+        text-align: left;
+    }
+
+    .redes-sociales {
+        justify-content: flex-start;
+        gap: 15px;
+    }
+
+    .iconoRedes {
+        margin-right: 0;
+    }
+
+    /* Ajusta el tamaño y la posición del logo en celular */
+    .logo-negro {
+        width: 160px;
+        max-width: 100%;
+        margin-top: 35px;
+        margin-left: 0;
+    }
+
+    /* Alinea el logo con el contenido del footer */
+    footer .row.px-5:has(.logo-negro) {
+        padding-left: 20px !important;
+    }
+}
+
+
+/* LOGO DEL FOOTER */
+
+/* Hace que el logo se comporte como un bloque */
+.logo-negro {
+    display: block;
+    margin-left: 0;
+}
+
+
+/* ENCUENTRA TU LOOK EN CELULAR  */
+
+.look-movil {
+    background-color: #051C3C;
+}
+
+/* FONDO Y ESPACIADO DE LA VERSIÓN CELULAR */
+.look-movil {
+    padding: 40px 0;
+}
+
+/* ENCUENTRA TU LOOK EN CELULAR */
+@media (max-width: 767.98px) {
+
+    /* Centra el título en el espacio superior de la sección */
+    .look-movil .encuentra {
+        margin: 10px 0 50px;
+        padding: 0;
+        text-align: center;
+    }
+
+    /* Distribuye los productos a la izquierda y la foto a la derecha */
+    .look-movil-contenido {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+        align-items: stretch;
+        height: 260px;
+    }
+
+    /* Apila los tres productos en filas iguales */
+    .productos-look-movil {
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        gap: 6px;
+        min-width: 0;
+        min-height: 0;
+    }
+
+    /* Diseño de cada tarjeta de producto */
+    .producto-movil {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        min-width: 0;
+        min-height: 0;
+        padding: 4px;
+        background-color: #f5f5f5;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        overflow: hidden;
+    }
+
+    /* Ajusta la imagen del producto dentro de su tarjeta */
+    .producto-movil > img {
+        display: block;
+        width: 38%;
+        height: 100%;
+        min-width: 0;
+        object-fit: contain;
+    }
+
+    /* Evita que la información desborde la tarjeta */
+    .info-producto-movil {
+        min-width: 0;
+        overflow: hidden;
+    }
+
+    /* Nombre del producto */
+    .info-producto-movil h3 {
+        font-size: 9px;
+        font-weight: 600;
+        margin: 0 0 3px;
+    }
+
+    /* Precios y cuotas */
+    .info-producto-movil p {
+        font-size: 8px;
+        line-height: 1.2;
+        margin: 2px 0;
+    }
+
+    /* Precio anterior tachado */
+    .info-producto-movil .precio-anterior {
+        text-decoration: line-through;
+    }
+
+    /* Destaca el precio actual */
+    .info-producto-movil .precio-actual {
+        font-size: 10px;
+        font-weight: 700;
+    }
+
+    /* Etiqueta de oferta */
+    .info-producto-movil .sale {
+        display: inline-block;
+        font-size: 8px;
+    }
+
+    /* Contenedor de la foto principal */
+    .foto-look-movil {
+        width: 100%;
+        height: 100%;
+        min-width: 0;
+        min-height: 0;
+        overflow: hidden;
+        border-radius: 4px;
+    }
+
+    /* Recorta la foto para ocupar todo el espacio */
+    .foto-look-movil img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center top;
+    }
+
+    /* Reserva espacio debajo del carrusel para los indicadores */
+    .look-movil .carousel {
+        padding-bottom: 28px;
+    }
+
+    /* Posiciona los indicadores en la parte inferior */
+    .look-movil .carousel-indicators {
+        bottom: 0;
+        margin-bottom: 0;
+    }
+
+    /* Oscurece los indicadores para que contrasten con el fondo */
+    .look-movil .carousel-indicators [data-bs-target] {
+        background-color: white;
+    }
+
+}
+
+.derecha .imagen-hover-contenedor {
+    width: 100%;
+    max-width: 394px;
+}
+
+.derecha .imagen-hover-contenedor img {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    display: block;
+    object-fit: contain;
+    box-sizing: border-box;
 }
