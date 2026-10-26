@@ -342,6 +342,7 @@ body {
     object-fit: contain;
 }
 
+/* La imagen alternativa ocupa exactamente el espacio de la principal */
 /* La imagen alternativa queda encima de la principal */
 .imagen-hover-look {
     position: absolute;
@@ -369,18 +370,28 @@ body {
 /* Ajusta la imagen del segundo look */
 .derecha .imagen-hover-contenedor {
     width: 394px;
-    max-width: 100%;
+    height: 585px;
     margin-left: 15px;
     position: relative;
+    overflow: hidden;
 }
 
-.derecha .imagen-hover-contenedor img:not(.imagen-hover-look) {
-    width: 394px;
-    max-width: 100%;
-    height: 585px;
+.derecha .imagen-hover-contenedor > img {
+    width: 100%;
+    height: 100%;
     object-fit: contain;
-    margin: 0;
-    display: block;
+}
+
+.derecha .imagen-hover-contenedor .imagen-hover-look {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.derecha .imagen-hover-contenedor:hover .imagen-hover-look {
+    opacity: 1;
+    filter: brightness(0.7);
 }
 
 /*APARTADO CATEGORIAS DESTACADAS*/
@@ -586,7 +597,8 @@ footer {
 
 
 
-/* HEADER Y NAVEGACIÓN EN CELULAR*/
+```css
+/* HEADER Y NAVEGACIÓN EN CELULAR */
 @media (max-width: 767.98px) {
     #cabecera .container {
         width: 100%;
@@ -605,7 +617,6 @@ footer {
         margin: 0;
     }
 
-    /* Centra el logo sin depender del espacio de las columnas */
     #cabecera .logo-cabecera {
         position: absolute;
         left: 50%;
@@ -618,7 +629,6 @@ footer {
         height: 36px;
     }
 
-    /* Mantiene el menú y los iconos por encima del logo */
     #cabecera .menu-movil,
     #cabecera .iconos-movil {
         position: relative;
@@ -645,20 +655,16 @@ footer {
 
 
 /* AJUSTES GENERALES */
-
-/* Evita el desbordamiento horizontal de la página */
 html,
 body {
     max-width: 100%;
     overflow-x: clip;
 }
 
-/* Evita que las imágenes superen el ancho de su contenedor */
 img {
     max-width: 100%;
 }
 
-/* Mantiene el banner superior dentro del ancho disponible */
 #mensajes {
     left: 0;
     right: 0;
@@ -668,8 +674,6 @@ img {
 
 
 /* TÍTULOS DESPLEGABLES DEL FOOTER */
-
-/* Da aspecto de título a los botones que abren cada sección */
 .footer-titulo {
     padding: 0;
     border: none;
@@ -680,16 +684,13 @@ img {
     text-align: left;
 }
 
-/* Separa la flecha del texto */
 .footer-titulo i {
     margin-left: 8px;
 }
 
 
-/*  FOOTER EN CELULAR */
+/* FOOTER EN CELULAR */
 @media (max-width: 767.98px) {
-
-    /* Newsletter: coloca el contenido en dos bloques verticales */
     footer .row.bg-light {
         flex-direction: column;
     }
@@ -704,7 +705,6 @@ img {
         max-width: 90%;
     }
 
-    /* Apila las secciones del footer */
     .seccionPie {
         flex-direction: column;
         gap: 30px;
@@ -719,7 +719,6 @@ img {
         border-bottom: 1px solid #555;
     }
 
-    /* Alinea los títulos y permite que ocupen todo el ancho */
     .footer-titulo {
         display: flex;
         justify-content: space-between;
@@ -727,7 +726,6 @@ img {
         width: 100%;
     }
 
-    /* Alinea el título de contacto y las redes a la izquierda */
     .seccionPie .contacto {
         text-align: left;
     }
@@ -741,7 +739,6 @@ img {
         margin-right: 0;
     }
 
-    /* Ajusta el tamaño y la posición del logo en celular */
     .logo-negro {
         width: 160px;
         max-width: 100%;
@@ -749,7 +746,6 @@ img {
         margin-left: 0;
     }
 
-    /* Alinea el logo con el contenido del footer */
     footer .row.px-5:has(.logo-negro) {
         padding-left: 20px !important;
     }
@@ -757,36 +753,25 @@ img {
 
 
 /* LOGO DEL FOOTER */
-
-/* Hace que el logo se comporte como un bloque */
 .logo-negro {
     display: block;
     margin-left: 0;
 }
 
 
-/* ENCUENTRA TU LOOK EN CELULAR  */
-
+/* ENCUENTRA TU LOOK EN CELULAR */
 .look-movil {
     background-color: #051C3C;
-}
-
-/* FONDO Y ESPACIADO DE LA VERSIÓN CELULAR */
-.look-movil {
     padding: 40px 0;
 }
 
-/* ENCUENTRA TU LOOK EN CELULAR */
 @media (max-width: 767.98px) {
-
-    /* Centra el título en el espacio superior de la sección */
     .look-movil .encuentra {
         margin: 10px 0 50px;
         padding: 0;
         text-align: center;
     }
 
-    /* Distribuye los productos a la izquierda y la foto a la derecha */
     .look-movil-contenido {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -795,7 +780,6 @@ img {
         height: 260px;
     }
 
-    /* Apila los tres productos en filas iguales */
     .productos-look-movil {
         display: grid;
         grid-template-rows: repeat(3, 1fr);
@@ -804,7 +788,6 @@ img {
         min-height: 0;
     }
 
-    /* Diseño de cada tarjeta de producto */
     .producto-movil {
         display: flex;
         align-items: center;
@@ -818,7 +801,6 @@ img {
         overflow: hidden;
     }
 
-    /* Ajusta la imagen del producto dentro de su tarjeta */
     .producto-movil > img {
         display: block;
         width: 38%;
@@ -827,44 +809,37 @@ img {
         object-fit: contain;
     }
 
-    /* Evita que la información desborde la tarjeta */
     .info-producto-movil {
         min-width: 0;
         overflow: hidden;
     }
 
-    /* Nombre del producto */
     .info-producto-movil h3 {
         font-size: 9px;
         font-weight: 600;
         margin: 0 0 3px;
     }
 
-    /* Precios y cuotas */
     .info-producto-movil p {
         font-size: 8px;
         line-height: 1.2;
         margin: 2px 0;
     }
 
-    /* Precio anterior tachado */
     .info-producto-movil .precio-anterior {
         text-decoration: line-through;
     }
 
-    /* Destaca el precio actual */
     .info-producto-movil .precio-actual {
         font-size: 10px;
         font-weight: 700;
     }
 
-    /* Etiqueta de oferta */
     .info-producto-movil .sale {
         display: inline-block;
         font-size: 8px;
     }
 
-    /* Contenedor de la foto principal */
     .foto-look-movil {
         width: 100%;
         height: 100%;
@@ -874,7 +849,6 @@ img {
         border-radius: 4px;
     }
 
-    /* Recorta la foto para ocupar todo el espacio */
     .foto-look-movil img {
         display: block;
         width: 100%;
@@ -883,39 +857,22 @@ img {
         object-position: center top;
     }
 
-    /* Reserva espacio debajo del carrusel para los indicadores */
     .look-movil .carousel {
         padding-bottom: 28px;
     }
 
-    /* Posiciona los indicadores en la parte inferior */
     .look-movil .carousel-indicators {
         bottom: 0;
         margin-bottom: 0;
     }
 
-    /* Oscurece los indicadores para que contrasten con el fondo */
     .look-movil .carousel-indicators [data-bs-target] {
         background-color: white;
     }
-
 }
 
-.derecha .imagen-hover-contenedor {
-    width: 100%;
-    max-width: 394px;
-}
 
-.derecha .imagen-hover-contenedor img {
-    width: 100%;
-    height: auto;
-    margin: 0;
-    display: block;
-    object-fit: contain;
-    box-sizing: border-box;
-}
-
-/* Menu desplegable mvil */
+/* MENÚ DESPLEGABLE MÓVIL */
 .menu-desplegable-movil {
     padding: 8px;
     border-radius: 0;
@@ -948,6 +905,8 @@ img {
     }
 }
 
+
+/* SEGUNDO LOOK DEL CARRUSEL MÓVIL */
 @media (max-width: 767.98px) {
     #carruselLooks .carousel-item:nth-child(2) .look-movil-contenido {
         display: flex;
@@ -955,22 +914,116 @@ img {
         gap: 8px;
     }
 
-    #carruselLooks .carousel-item:nth-child(2) .productos-look-movil {
-        margin: 0;
-        flex: 1;
-    }
-
+    #carruselLooks .carousel-item:nth-child(2) .productos-look-movil,
     #carruselLooks .carousel-item:nth-child(2) .foto-look-movil {
         flex: 1;
     }
+
+    #carruselLooks .carousel-item:nth-child(2) .productos-look-movil {
+        margin: 0;
+    }
 }
 
+
+/* ESPACIO PARA EL HEADER FIJO */
 body {
     padding-top: 80px;
 }
 
-@media (max-width: 767.98px) {
-    body {
-        padding-top: 80px;
+
+/* ENCUENTRA TU LOOK: IMÁGENES DEL SEGUNDO LOOK */
+.derecha .imagen-hover-contenedor {
+    width: 100%;
+    max-width: 394px;
+}
+
+.derecha .imagen-hover-contenedor img {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    display: block;
+    object-fit: contain;
+    box-sizing: border-box;
+}
+
+
+/* CELULAR EN HORIZONTAL */
+@media (orientation: landscape) and (max-height: 500px) {
+    /* Muestra la versión de escritorio */
+    section.look {
+        display: block !important;
+        padding: 15px 0;
+    }
+
+    /* Oculta la versión móvil para evitar duplicados */
+    section.look-movil {
+        display: none !important;
+    }
+
+    /* Ajusta las fotos a la altura de la pantalla */
+    section.look .imagen-hover-contenedor {
+        width: min(34vw, 394px);
+        height: 70vh;
+        margin-left: 8px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    section.look .imagen-hover-contenedor > img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    section.look .imagen-hover-contenedor > img:first-child {
+        position: static;
+    }
+
+    section.look .imagen-hover-contenedor .imagen-hover-look {
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    section.look .imagen-hover-contenedor:hover .imagen-hover-look {
+        opacity: 1;
+        filter: brightness(0.7);
+    }
+
+    /* Reduce las tarjetas para aprovechar el espacio */
+    section.look .contenedores {
+        width: 210px;
+    }
+
+    section.look .promo {
+        width: 190px;
+        height: 90px;
+        margin-bottom: 4px;
+        gap: 5px;
+        padding: 3px;
+    }
+
+    section.look .promo img {
+        width: 55px;
+        height: 80px;
+    }
+
+    section.look .promo h3 {
+        font-size: 10px;
+    }
+
+    section.look .info-promo p {
+        font-size: 9px;
+    }
+
+    section.look .sale {
+        font-size: 9px;
+        padding: 1px 3px;
+    }
+
+    section.look .derecha .contenedores {
+        transform: translate(-15%, -50%);
     }
 }
+```
