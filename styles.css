@@ -964,3 +964,13 @@ img {
         flex: 1;
     }
 }
+
+body {
+    padding-top: 80px;
+}
+
+@media (max-width: 767.98px) {
+    body {
+        padding-top: 80px;
+    }
+}
