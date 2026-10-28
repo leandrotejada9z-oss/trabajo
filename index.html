@@ -210,7 +210,7 @@
         <div class="col-12">
         <h3 class="text-center separacion-encabezado">Novedades</h3>
         </div>
-        <div id="carouselExample" class="carousel slide"> <!--carrusel-->
+        <div id="carouselExample" class="carousel slide d-none d-md-block"><!--carrusel-->
             <div class="carousel-inner">
                 <div class="carousel-item itemPrenda active">
                     <div class="row row-cols-4 g-1"> <!--define fila con 4 columnas-->
@@ -355,6 +355,193 @@
             </button>
         </div>
     </div>
+
+
+<!-- CARRUSEL EXCLUSIVO PARA CELULARES -->
+<div class="container d-block d-md-none">
+    <div id="carouselCelular" class="carousel slide">
+
+        <div class="carousel-inner">
+
+            <!-- Primera pareja -->
+            <div class="carousel-item active">
+                <div class="row row-cols-2 g-2">
+
+                    <!-- Jean regular gris -->
+                            <div class="col">
+                            <a href="#" class="enlace-prenda">
+                                <div class="card tarjetaPrenda tarjeta border-0 p-1"> <!--tarjeta-->
+                                <!---bs-card-border-radius: 0 pone en 0 el redondeo de las esquinas-->
+                                    <div class="contenedorImagenes"> <!--contenedor que agrupa las dos imagenes -> Sirve como punto de referencia para posicionar la segunda sobre la primera y para detectar hover-->
+                                        <img src="IMAGENES HOME/jean-regular-gris1.png" class="img-fluid imgPrenda d-block w-100" alt="jean gris"> <!--imagen normal-->
+                                        <!--w-100 para que ocupe el 100% del contenedor-->
+                                        <img src="IMAGENES HOME/jean-regular-gris2.png" class="imgHover" alt="jean gris alternativa"> <!--imagen hover-->
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="nombrePrenda">JEAN REGULAR 801</p>
+                                        <p class="precioPrenda">$67.800</p>
+                                        <p class="cuotasPrenda">3 cuotas sin interés de $22.600</p>
+                                    </div> <!--cierra card-body-->
+                                </div> <!--cierra card-->
+                            </a>
+                        </div> <!--cierra col-->
+
+                    <!-- Campera bomber -->
+                        <div class="col">
+                            <a href="#" class="enlace-prenda">
+                                <div class="card tarjetaPrenda border-0 p-1">
+                                    <div class="contenedorImagenes">
+                                        <img src="IMAGENES HOME/campera-bomber-cafe1.png" class="img-fluid imgPrenda d-block w-100" alt="campera bomber"> <!--imagen normal-->
+                                        <!--w-100 para que ocupe el 100% del contenedor-->
+                                        <img src="IMAGENES HOME/campera-bomber-cafe2.png" class="imgHover" alt="campera bomber alternativa"> <!--imagen hover-->
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="nombrePrenda">CAMPERA BOMBER DE NAILON</p>
+                                        <p class="precioPrenda">$84.700</p>
+                                        <p class="cuotasPrenda">3 cuotas sin interés de $28.233</p>
+                                    </div> <!--cierra card-body-->
+                                </div> <!--cierra card-->
+                            </a>
+                        </div> <!--cierra col-->
+
+                </div>
+            </div>
+
+            <!-- Segunda pareja -->
+            <div class="carousel-item">
+                <div class="row row-cols-2 g-2">
+
+                    <!-- Sobrecamisa sarga -->
+                            <div class="col">
+                            <div class="card tarjetaPrenda border-0 p-1">
+                                <div class="contenedorImagenes">
+                                    <img src="IMAGENES HOME/campera-sarga-gris1.png" class="img-fluid imgPrenda d-block w-100" alt="campera sarga"> <!--imagen normal-->
+                                        <!--w-100 para que ocupe el 100% del contenedor-->
+                                    <img src="IMAGENES HOME/campera-sarga-gris2.png" class="imgHover" alt="campera sarga alternativa"> <!--imagen hover-->
+                                </div>
+                                <div class="card-body">
+                                    <p class="nombrePrenda">SOBRECAMISA SARGA</p>
+                                    <p class="precioPrenda">$71.300</p>
+                                    <p class="cuotasPrenda">3 cuotas sin interés de $23.766</p>
+                                </div> <!--cierra card-body-->
+                            </div> <!--cierra card-->
+                        </div> <!--cierra col-->
+
+                    <!-- Jersey crema -->
+                    <div class="col">
+                            <div class="card tarjetaPrenda border-0 p-1">
+                                <div class="contenedorImagenes">
+                                    <img src="IMAGENES HOME/jersey-crema1.png" class="img-fluid imgPrenda d-block w-100" alt="jersey"> <!--imagen normal-->
+                                        <!--w-100 para que ocupe el 100% del contenedor-->
+                                    <img src="IMAGENES HOME/jersey-crema2.png" class="imgHover" alt="jersey alternativa"> <!--imagen hover-->
+                                </div>
+                                <div class="card-body">
+                                    <p class="nombrePrenda">JERSEY CON MEDIA CREMALLERA</p>
+                                    <p class="precioPrenda">$75.200</p>
+                                    <p class="cuotasPrenda">3 cuotas sin interés de $25.066</p>
+                                </div> <!--cierra card-body-->
+                            </div> <!--cierra card-->
+                        </div> <!--cierra col-->
+
+                </div>
+            </div>
+
+            <!-- Tercera pareja -->
+            <div class="carousel-item">
+                <div class="row row-cols-2 g-2">
+
+                    <!-- Polo de rugby -->
+                    <div class="col">
+                            <div class="card tarjetaPrenda border-0 p-1"> <!--tarjeta-->
+                                <div class="contenedorImagenes">
+                                    <img src="IMAGENES HOME/polo-rugby-azul1.png" class="img-fluid imgPrenda d-block w-100" alt="polo"> <!--imagen normal-->
+                                        <!--w-100 para que ocupe el 100% del contenedor-->
+                                    <img src="IMAGENES HOME/polo-rugby-azul2.png" class="imgHover" alt="polo alternativa"> <!--imagen hover-->
+                                </div>
+                                <div class="card-body">
+                                    <p class="nombrePrenda">POLO DE RUGBY EN ALGODÓN</p>
+                                    <p class="precioPrenda">$43.900</p>
+                                    <p class="cuotasPrenda">3 cuotas sin interés de $14.633</p>
+                                </div> <!--cierra card-body-->
+                            </div> <!--cierra card-->
+                        </div> <!--cierra col-->
+
+                    <!-- Jean recto azul -->
+                    <div class="col">
+                            <div class="card tarjetaPrenda border-0 p-1">
+                                <div class="contenedorImagenes">
+                                    <img src="IMAGENES HOME/jean-recto-azul1.png" class="img-fluid imgPrenda d-block w-100" alt="jean azul"> <!--imagen normal-->
+                                        <!--w-100 para que ocupe el 100% del contenedor-->
+                                    <img src="IMAGENES HOME/jean-recto-azul2.png" class="img-fluid imgHover" alt="jean azul alternativa"> <!--imagen hover-->
+                                </div>
+                                <div class="card-body">
+                                    <p class="nombrePrenda">JEAN REGULAR 801</p>
+                                    <p class="precioPrenda">$67.800</p>
+                                    <p class="cuotasPrenda">3 cuotas sin interés de $22.600</p>
+                                </div> <!--cierra card-body-->
+                            </div> <!--cierra card-->
+                        </div> <!--cierra col-->
+
+                </div>
+            </div>
+
+            <!-- Cuarta pareja -->
+            <div class="carousel-item">
+                <div class="row row-cols-2 g-2">
+
+                    <!-- Camisa Oxford blanca -->
+                    <div class="col">
+                            <div class="card tarjetaPrenda border-0 p-1">
+                                <div class="contenedorImagenes">
+                                    <img src="IMAGENES HOME/camisa-blanca1.png" class="img-fluid imgPrenda d-block w-100" alt="camisa blanca"> <!--imagen normal-->
+                                        <!--w-100 para que ocupe el 100% del contenedor-->
+                                    <img src="IMAGENES HOME/camisa-blanca-look1.png" class="imgHover" alt="camisa blanca alternativa"> <!--imagen hover-->
+                                </div>
+                                <div class="card-body">
+                                    <p class="nombrePrenda">CAMISA OXFORD BLANCA</p>
+                                    <p class="precioPrenda">$45.600</p>
+                                    <p class="cuotasPrenda">3 cuotas sin interés de $15.200</p>
+                                </div> <!--cierra card-body-->
+                            </div> <!--cierra card-->
+                        </div> <!--cierra col-->
+
+                    <!-- Pantalón beige -->
+                    <div class="col">
+                            <div class="card tarjetaPrenda border-0 p-1">
+                                <div class="contenedorImagenes">
+                                    <img src="IMAGENES HOME/pantalon-beige1.png" class="img-fluid imgPrenda d-block w-100" alt="pantalon beige"> <!--imagen normal-->
+                                        <!--w-100 para que ocupe el 100% del contenedor-->
+                                    <img src="IMAGENES HOME/pantalones-beige-look2.png" class="imgHover" alt="pantalon beige alternativa"> <!--imagen hover-->
+                                </div>
+                                <div class="card-body">
+                                    <p class="nombrePrenda">PANTALÓN DE ALGODÓN</p>
+                                    <p class="precioPrenda">$40.900</p>
+                                    <p class="cuotasPrenda">3 cuotas sin interés de $13.633</p>
+                                </div> <!--cierra card-body-->
+                            </div> <!--cierra card-->
+                        </div> <!--cierra col-->
+
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Flecha anterior -->
+        <button class="carousel-control-prev" type="button"
+                data-bs-target="#carouselCelular" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+        </button>
+
+        <!-- Flecha siguiente -->
+        <button class="carousel-control-next" type="button"
+                data-bs-target="#carouselCelular" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+        </button>
+
+    </div>
+</div>
 
 </section>
 
