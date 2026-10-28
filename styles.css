@@ -101,6 +101,15 @@ body {
     display: block;
 }
 
+/* banner
+#bannerCarrusel img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    display: block;
+}
+
+
 /* Indicadores circulares del carrusel */
 #bannerCarrusel .carousel-indicators [data-bs-target] {
     width: 10px;
@@ -167,9 +176,6 @@ body {
 
 /* Fija la altura del carrusel para que la página no se mueva
    cuando pasamos de una tanda de productos a la otra */
-#carouselExample .carousel-inner {
-    height: 520px;
-}
 
 
 /* Hace que cada diapositiva ocupe el 100% de esa altura,
@@ -1215,3 +1221,79 @@ img {
 }
 
 /* FIN MAPA */
+
+/* novedades */
+
+/* ajusta el espacio lateral de las tarjetas */
+.itemPrenda {
+    padding: 0 5rem;
+}
+
+/* evita que las tarjetas se acomoden en varias filas */
+.itemPrenda .row {
+    flex-wrap: nowrap;
+}
+
+/* ajusta la posicion y el tamaño de las flechas del celular */
+#carouselCelular .carousel-control-prev,
+#carouselCelular .carousel-control-next {
+    width: 20px;
+    top: 35%;
+    bottom: auto;
+    height: 50px;
+}
+
+/* acerca la flecha izquierda al borde */
+#carouselCelular .carousel-control-prev {
+    left: -15px;
+}
+
+/* acerca la flecha derecha al borde */
+#carouselCelular .carousel-control-next {
+    right: -15px;
+}
+
+/* reduce el espacio y el texto de las tarjetas en celulares */
+@media (max-width: 991.98px) {
+    #carouselCelular .card-body {
+        padding: 5px;
+    }
+
+    #carouselCelular .nombrePrenda,
+    #carouselCelular .precioPrenda,
+    #carouselCelular .cuotasPrenda {
+        font-size: 12px;
+    }
+}
+
+/* ajusta las tarjetas y las flechas de pc en pantallas medianas */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    #carouselExample .card-body {
+        padding: 5px;
+    }
+
+    #carouselExample .nombrePrenda,
+    #carouselExample .precioPrenda,
+    #carouselExample .cuotasPrenda {
+        font-size: 12px;
+    }
+
+    /* reduce el ancho de los controles */
+    #carouselExample .carousel-control-prev,
+    #carouselExample .carousel-control-next {
+        width: 30px;
+        top: 35%;
+        bottom: auto;
+        height: 50px;
+    }
+
+    /* reduce el tamaño de los iconos de las flechas */
+    #carouselExample .carousel-control-prev-icon,
+    #carouselExample .carousel-control-next-icon {
+        width: 20px;
+        height: 20px;
+        background-size: 100%;
+    }
+}
+
+/* fin novedades */
