@@ -184,7 +184,9 @@ body {
 
 /* Fija la altura del carrusel para que la página no se mueva
    cuando pasamos de una tanda de productos a la otra */
-
+#carouselExample .carousel-inner {
+    height: 500px;
+}
 
 /* Hace que cada diapositiva ocupe el 100% de esa altura,
    así ambas mantienen el mismo tamaño */
@@ -1303,5 +1305,21 @@ img {
         background-size: 100%;
     }
 }
+#carouselCelular .carousel-inner {
+    height: 430px;
+}
 
+/* ajusta la altura del carrusel en pantallas medianas */
+@media (min-width: 767px) and (max-width: 991px) {
+    #carouselExample .carousel-inner {
+        height: 280px; /* cambia este valor a gusto */
+    }
+}
+
+@media (max-width: 767.98px) {
+    .contenedorImagenes .imgHover {
+        display: none;
+    }
+}
 /* fin novedades */
+
