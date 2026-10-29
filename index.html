@@ -177,7 +177,7 @@
     <!--SECCION DE TARJETAS-->
     <section class="container separacion-secciones"> <!--Es el contenedor de las tarjetas de información-->
     <!--PARA RESOLUCIÓN CELULAR-->
-        <div id="carouselExampleIndicators" class="carousel carousel-dark slide d-md-none pb-5"> <!--Aplica display: none desde el breakpoint md (768px) de ahi a pantallas mas grandes-->
+        <div id="carouselExampleIndicators" class="carousel carousel-dark slide d-sm-none pb-5"> <!--Aplica display: none desde el breakpoint md (768px) de ahi a pantallas mas grandes-->
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -822,7 +822,7 @@
                     <!--imagen hover-->
                     <img class="tarjeta img-con-texto position-absolute top-0 start-0" src="IMAGENES HOME/tarjeta-jeans-texto.png" alt="Categoria de jeans"> <!--imagen normal-->
                     <!--la imagen deja de ocupar espacio, y se pone en la esquina superior de la referencia (<a>)-->
-                    <div class="position-absolute contenidoCategoria">
+                    <div class="position-absolute contenidoCategoria d-sm-none">
                         <span class="mensajeCategoria">JEANS</span>
                         <span class="botonCategoria">Explorá</span> <!--no se pueden anidar las etiquetas <a>, se le da estilo de boton al span-->
                     </div>
@@ -838,7 +838,7 @@
                     <!--imagen hover-->
                     <img class="tarjeta img-con-texto position-absolute top-0 start-0" src="IMAGENES HOME/tarjeta-chaquetas-texto.png" alt="Categoria de chaquetas y abrigos"> <!--imagen normal-->
                     <!--la imagen deja de ocupar espacio, y se pone en la esquina superior de la referencia (<a>)-->
-                    <div class="position-absolute contenidoCategoria">
+                    <div class="position-absolute contenidoCategoria d-sm-none">
                         <span class="mensajeCategoria">CHAQUETAS Y ABRIGOS</span>
                         <span class="botonCategoria">Explorá</span> <!--no se pueden anidar las etiquetas <a>, se le da estilo de boton al span-->
                     </div>
@@ -846,12 +846,12 @@
                 </a>
             </div>
             <div class="col-auto">
-                <a class="position-relative imagenCategoria">
+                <a class="position-relative imagenCategoria" href="#">
                     <img class="tarjeta img-sin-texto" src="IMAGENES HOME/tarjeta-camisas-hover.png" alt="">
                     <!--imagen hover-->
                     <img class="tarjeta img-con-texto position-absolute top-0 start-0" src="IMAGENES HOME/tarjeta-camisas-texto.png" alt="Categoria de camisas"> <!--imagen normal-->
                     <!--la imagen deja de ocupar espacio, y se pone en la esquina superior de la referencia (<a>)-->
-                    <div class="position-absolute contenidoCategoria">
+                    <div class="position-absolute contenidoCategoria d-sm-none">
                         <span class="mensajeCategoria">CAMISAS</span>
                         <span class="botonCategoria">Explorá</span> <!--no se pueden anidar las etiquetas <a>, se le da estilo de boton al span-->
                     </div>
