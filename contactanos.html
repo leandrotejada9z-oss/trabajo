@@ -21,25 +21,25 @@
 </head>
 
 <body>
-     <header> <!--encabezado del sitio: carrusel con mensajes + barra de navegación-->
-        <div id="mensajes" class="carousel slide" data-bs-ride="carousel" data-bs-pause="false" data-bs-interval="3000">
-            <!--data-bs-pause="false": por defecto el carrusel se pausa en hover, asi no se pausa cuando se le pasa el mouse por encima-->
+     <header> <!--encabezado del sitio: carrusel con mensajes + barra de navegacion-->
+    <div id="mensajes" class="carousel slide" data-bs-ride="carousel" data-bs-pause="false" data-bs-interval="3000">
+        <!--data-bs-pause="false": por defecto el carrusel se pausa en hover, asi no se pausa cuando se le pasa el mouse por encima-->
 
-            <div class="carousel-inner">
+        <div class="carousel-inner">
 
-                <div class="carousel-item active">
-                    <p class="mensaje-promo">¡Hasta 6 cuotas sin interés!</p>
-                </div>
+            <div class="carousel-item active">
+                <p class="mensaje-promo">¡Hasta 6 cuotas sin interés!</p>
+            </div>
 
-                <div class="carousel-item">
-                    <p class="mensaje-promo">¡Envíos a todo el país!</p>
-                </div>
+            <div class="carousel-item">
+                <p class="mensaje-promo">¡Envíos a todo el país!</p>
+            </div>
 
-                <div class="carousel-item">
-                    <p class="mensaje-promo">¡Descubrí tu próximo look!</p>
-                </div>
+            <div class="carousel-item">
+                <p class="mensaje-promo">¡Descubrí tu próximo look!</p>
             </div>
         </div>
+    </div>
 
 
 <nav class="navbar bg-white" id="cabecera">
@@ -71,13 +71,13 @@
                         <i class="bi bi-list icono-cabecera"></i>
                     </button>
 
-<ul class="dropdown-menu menu-desplegable-movil">
+                    <ul class="dropdown-menu menu-desplegable-movil">
     <li><a class="dropdown-item enlaces-paginas" href="index.html">Temporada SS26/27</a></li>
     <li><a class="dropdown-item enlaces-paginas" href="#">Catálogo</a></li>
     <li><a class="dropdown-item enlaces-paginas" id="enlace-sale" href="#">SALE</a></li>
     <li><hr class="dropdown-divider"></li>
-    <li><a class="dropdown-item enlaces-paginas" href="index.html"><i class="bi bi-geo-alt me-2"></i>Ubicación</a></li>
-    <li><a class="dropdown-item enlaces-paginas" href="index.html"><i class="bi bi-heart me-2"></i>Favoritos</a></li>
+    <li><a class="dropdown-item enlaces-paginas" href="locales.html"><i class="bi bi-geo-alt me-2"></i>Ubicación</a></li>
+    <li><a class="dropdown-item enlaces-paginas" href="index.html"><i class="bi bi-people"></i>Contáctanos</a></li>
 </ul>
                 </div>
 
@@ -96,26 +96,26 @@
             </div>
 
             <!-- iconos -->
-            <div id="opciones-cabecera" class="col d-none d-xl-flex justify-content-end align-items-center gap-3">
-                <a class="icono-cabecera" href="index.html">
-                    <i class="bi bi-search"></i>
-                </a>
-                <a class="icono-cabecera" href="index.html">
-                    <i class="bi bi-geo-alt"></i>
-                </a>
-                <a class="icono-cabecera" href="index.html">
-                    <i class="bi bi-person"></i>
-                </a>
-                <a class="icono-cabecera" href="index.html">
-                    <i class="bi bi-heart"></i>
-                </a>
-                <a class="icono-cabecera" href="index.html">
-                    <i class="bi bi-bag"></i>
-                </a>
-            </div>
+           <div id="opciones-cabecera" class="col d-none d-xl-flex justify-content-end align-items-center gap-3">
+    <a class="icono-cabecera" href="index.html" title="Buscar">
+        <i class="bi bi-search"></i>
+    </a>
+    <a class="icono-cabecera" href="locales.html" title="Ubicación">
+        <i class="bi bi-geo-alt"></i>
+    </a>
+    <a class="icono-cabecera" href="index.html" title="Mi cuenta">
+        <i class="bi bi-person"></i>
+    </a>
+    <a class="icono-cabecera" href="contactanos.html" title="Contáctanos">
+        <i class="bi bi-people"></i>
+    </a>
+    <a class="icono-cabecera" href="index.html" title="Mis compras">
+        <i class="bi bi-bag"></i>
+    </a>
+</div>
 
             <!-- cuenta y bolso para celulares -->
-           <div class="col-auto iconos-movil d-flex align-items-center gap-3 d-xl-none">
+            <div class="col-auto iconos-movil d-flex align-items-center gap-3 d-xl-none">
                 <a class="icono-cabecera" href="index.html" aria-label="Mi cuenta">
                     <i class="bi bi-person"></i>
                 </a>
@@ -126,8 +126,10 @@
 
         </div>
     </div>
-</nav>  
-    </header>
+</nav>
+
+</header>
+
 
 <div class="w-100 position-relative" style="height: 250px">
         <!--con position-relative, div ahora es el marco de referencia para colocar texto sobre la imagen-->
