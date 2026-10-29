@@ -451,6 +451,50 @@ a:hover .mensaje {
     opacity: 1;
 }
 
+/*PARA CELULAR*/
+
+@media (max-width: 575.98px) {
+    .img-con-texto, span.mensaje { /*no .mensaje solo, porque no iguala especificidad de estilo definido mas arriba o no es mas especìfico*/
+        display: none;
+    }
+    .img-sin-texto {
+        transition: none;
+    }
+
+    a:hover .img-sin-texto {
+        filter: none;
+        opacity: 1;
+    }
+
+    .categorias {
+        gap: 15px;
+    }
+    .contenidoCategoria{
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        align-items: center;
+        padding-bottom: 30px;
+    }
+
+    .mensajeCategoria {
+        color: white;
+        font-weight: 300;
+    }
+
+    .botonCategoria {
+        background-color: black;
+        color: white;
+        font-weight: 400;
+        padding: 4px 15px;
+        text-decoration: none;
+    }
+}
+
 /* FOOTER */
 footer {
     background-color: #000000;
