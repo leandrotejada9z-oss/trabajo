@@ -24,6 +24,22 @@ p {
     padding-bottom: 50px;
 }
 
+@media (max-width: 575.98px) {
+    .separacion-secciones {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .relleno-secciones {
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+
+    .separacion-encabezado {
+        padding-bottom: 25px;
+    }
+}
+
 
 /* CABECERA */
 /* fija los mensajes promocionales en la parte superior */
