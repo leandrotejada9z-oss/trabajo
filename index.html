@@ -810,21 +810,22 @@
 
 
 
-    <!--SECCION CATEGORIAS DESTACADAS-->
-    <section class="separacion-secciones">
-        <div class="container">
-            <div class="col-12">
-        <h3 class="text-center separacion-encabezado">Productos Destacados</h3>
-    </div>
-        <div class="row gx-3 justify-content-center">
+    <!--SECCION PRODUCTOS DESTACADOS-->
+    <section class="container separacion-secciones">
+        <h2 class="text-center m-0 separacion-encabezado">Productos Destacados</h2>
+        <div class="row justify-content-center categorias">
         <!--gx-*: Define el padding horizontal de las columnas (la mitad del valor a cada lado) y ajusta el margen negativo de la fila -> el contenido sigue alineado con el resto del container-->
             <div class="col-auto">
                 <!--col-auto: utilidad que, en grid, ajusta el ancho de la columna al contenido-->
                 <a class="position-relative imagenCategoria" href="#">
-                    <img class="tarjeta img-sin-texto" src="IMAGENES HOME/tarjeta-jeans-hover.png" alt="Categoria jeans">
+                    <img class="tarjeta img-sin-texto" src="IMAGENES HOME/tarjeta-jeans-hover.png" alt="">
                     <!--imagen hover-->
-                    <img class="tarjeta img-con-texto position-absolute top-0 start-0" src="IMAGENES HOME/tarjeta-jeans-texto.png" alt="Categoria de jeans alternativa"> <!--imagen normal-->
+                    <img class="tarjeta img-con-texto position-absolute top-0 start-0" src="IMAGENES HOME/tarjeta-jeans-texto.png" alt="Categoria de jeans"> <!--imagen normal-->
                     <!--la imagen deja de ocupar espacio, y se pone en la esquina superior de la referencia (<a>)-->
+                    <div class="position-absolute contenidoCategoria">
+                        <span class="mensajeCategoria">JEANS</span>
+                        <span class="botonCategoria">Explorá</span> <!--no se pueden anidar las etiquetas <a>, se le da estilo de boton al span-->
+                    </div>
                     <span class="position-absolute top-0 start-0 h-100 w-100 mensaje">Ver JEANS</span>
                 </a>
                     <!--position define como se ubica el elemento y con respecto a que
@@ -833,23 +834,30 @@
             </div>
             <div class="col-auto">
                 <a class="position-relative imagenCategoria" href="#">
-                    <img class="tarjeta img-sin-texto" src="IMAGENES HOME/tarjeta-chaquetas-hover.png" alt="Categoria de chaquetas y abrigos">
+                    <img class="tarjeta img-sin-texto" src="IMAGENES HOME/tarjeta-chaquetas-hover.png" alt="">
                     <!--imagen hover-->
-                    <img class="tarjeta img-con-texto position-absolute top-0 start-0" src="IMAGENES HOME/tarjeta-chaquetas-texto.png" alt="Categoria de chaquetas y abrigos alternativa"> <!--imagen normal-->
+                    <img class="tarjeta img-con-texto position-absolute top-0 start-0" src="IMAGENES HOME/tarjeta-chaquetas-texto.png" alt="Categoria de chaquetas y abrigos"> <!--imagen normal-->
                     <!--la imagen deja de ocupar espacio, y se pone en la esquina superior de la referencia (<a>)-->
+                    <div class="position-absolute contenidoCategoria">
+                        <span class="mensajeCategoria">CHAQUETAS Y ABRIGOS</span>
+                        <span class="botonCategoria">Explorá</span> <!--no se pueden anidar las etiquetas <a>, se le da estilo de boton al span-->
+                    </div>
                     <span class="position-absolute top-0 start-0 h-100 w-100 mensaje">Ver CHAQUETAS Y ABRIGOS</span>
                 </a>
             </div>
             <div class="col-auto">
-                <a class="position-relative imagenCategoria" href="#">
-                    <img class="tarjeta img-sin-texto" src="IMAGENES HOME/tarjeta-camisas-hover.png" alt="Categoría de camisas">
+                <a class="position-relative imagenCategoria">
+                    <img class="tarjeta img-sin-texto" src="IMAGENES HOME/tarjeta-camisas-hover.png" alt="">
                     <!--imagen hover-->
                     <img class="tarjeta img-con-texto position-absolute top-0 start-0" src="IMAGENES HOME/tarjeta-camisas-texto.png" alt="Categoria de camisas"> <!--imagen normal-->
                     <!--la imagen deja de ocupar espacio, y se pone en la esquina superior de la referencia (<a>)-->
+                    <div class="position-absolute contenidoCategoria">
+                        <span class="mensajeCategoria">CAMISAS</span>
+                        <span class="botonCategoria">Explorá</span> <!--no se pueden anidar las etiquetas <a>, se le da estilo de boton al span-->
+                    </div>
                     <span class="position-absolute top-0 start-0 h-100 w-100 mensaje">Ver CAMISAS</span>
                 </a>
             </div>
-        </div>
         </div>
     </section>
     
