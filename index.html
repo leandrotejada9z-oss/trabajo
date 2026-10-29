@@ -175,8 +175,41 @@
     <!-- Acomoda los elementos en fila y los centra horizontal y verticalmente -->
     
     <!--SECCION DE TARJETAS-->
-   <section class="container separacion-secciones"> <!--Es el contenedor de las tarjetas de información-->
-        <div class=" row"> <!--row: define fila -> hijo directo del contenedor-->
+    <section class="container separacion-secciones"> <!--Es el contenedor de las tarjetas de información-->
+    <!--PARA RESOLUCIÓN CELULAR-->
+        <div id="carouselExampleIndicators" class="carousel carousel-dark slide d-md-none pb-5"> <!--Aplica display: none desde el breakpoint md (768px) de ahi a pantallas mas grandes-->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <article class="rectangulo-info h-100">
+                        <i class="bi bi-truck icono-info"></i>
+                        <h4>ENVÍOS GRATIS</h4>
+                        <p>A partir de $200.000</p>
+                    </article>
+                </div>
+                <div class="carousel-item">
+                    <article class="rectangulo-info h-100">
+                        <i class="bi bi-credit-card icono-info"></i>
+                        <h4>PAGÁ EN CUOTAS</h4>
+                        <p>Hasta 6 cuotas sin interés</p>
+                    </article>
+                </div>
+                <div class="carousel-item">
+                    <article class="rectangulo-info h-100">
+                        <i class="bi bi-arrow-repeat icono-info"></i>
+                        <h4>DEVOLUCIÓN GRATIS</h4>
+                        <p>Hasta 15 días desde la compra</p>
+                    </article>
+                </div>
+            </div>
+            <!--Por defecto los controles de Bootstrap (carousel-control-prev y carousel-control-next) van encima de la tarjeta, posicionados de forma absoluta dentro del carrusel (que tiene position relative)-->
+        </div>
+        <!--PARA RESOLUCION DE ESCRITORIO-->
+        <div class=" row d-none d-md-flex"> <!--row: define fila -> hijo directo del contenedor-->
             <div class="col">
                 <article class="rectangulo-info h-100"> <!--col: define columnas de la fila-->
                     <i class="bi bi-truck icono-info"></i>
