@@ -466,10 +466,15 @@ a:hover .img-sin-texto{
 a:hover .mensaje {
     opacity: 1;
 }
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .categorias .col-auto:nth-child(3) {
+        margin-top: 15px;
+    }
+}
 
 /*PARA CELULAR*/
 
-@media (max-width: 575.98px) {
+@media (max-width:767.98px) {
     .img-con-texto, span.mensaje { /*no .mensaje solo, porque no iguala especificidad de estilo definido mas arriba o no es mas especìfico*/
         display: none;
     }
@@ -1382,4 +1387,3 @@ img {
     }
 }
 /* fin novedades */
-
