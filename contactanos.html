@@ -131,7 +131,7 @@
 </header>
 
 
-<div class="w-100 position-relative" style="height: 250px">
+<div class="w-100 position-relative bannerContacto">
         <!--con position-relative, div ahora es el marco de referencia para colocar texto sobre la imagen-->
         <img class="contactoBanner h-100 w-100" src="IMAGENES HOME/contacto-banner.png">
         <!--la clase h-x le da el x% del alto del elemento padre -> Si el padre no tiene un alto definido (por ejemplo, es el body sin alto fijo), el porcentaje no tiene contra qué calcularse y h-x no hace nada-->
@@ -146,22 +146,22 @@
 
     <section class="container separacion-secciones">
         <!--container: clase que le pone al elemento un max-width según el tamaño de pantalla, lo centra con márgenes automáticos (margin: auto) y le agrega padding a los lados-->
-        <div class="row gap-3">
+        <div class="row gap-3 filaContacto">
             <!--se hace flex cada columna-->
-            <article class="col tarjetasContacto">
+            <article class="col-12 col-md tarjetasContacto">
                 <h6 class="tituloApartado">LLAMANOS</h6>
                 <p class="infoContacto">0264 427-1234</p>
                 <p>HORARIO:</p> 
                 <p>De Lunes a Viernes de 08:00 a 17:00 hs</p>
             </article>
-            <article class="col tarjetasContacto">
+            <article class="col-12 col-md tarjetasContacto">
                 <h6 class="tituloApartado">CHATEA CON NOSOTROS</h6>
                 <p>
                     <a href="https://wa.me/5492645709800?text=Hola%20Cuervo,%20quiero%20hacer%20una%20consulta"" target="_blank" rel="noopener" class="infoContacto">+54 9 264 570 9800</a>
                 </p>
                 <p>Atención al cliente</p>
             </article>
-            <article class="col tarjetasContacto">
+            <article class="col-12 col-md tarjetasContacto">
                 <h6 class="tituloApartado">MANDANOS TUS CONSULTAS</h6>
                 <p>
                     Completa el formulario de abajo o escribinos a 
@@ -199,25 +199,25 @@
             </div>
 
         <!-- Nombre ocupa 6 columnas -->
-        <div class="col-6">
+        <div class="col-12 col-md-6">
                 <label for="nombre">Nombre *</label>
                 <input type="text" id="nombre" name="nombre" required>
         </div>
 
         <!-- Apellido ocupa 6 columnas -->
-        <div class="col-6">
+        <div class="col-12 col-md-6">
                 <label for="apellido">Apellido *</label>
                 <input type="text" id="apellido" name="apellido" required>
         </div>
 
         <!-- Email ocupa 6 columnas -->
-        <div class="col-6">
+        <div class="col-12 col-md-6">
                 <label for="email">Email *</label>
                 <input type="email" id="email" name="email" required>
         </div>
 
         <!-- Teléfono ocupa 6 columnas -->
-        <div class="col-6">
+        <div class="col-12 col-md-6">
                 <label for="telefono">Teléfono</label>
                 <input type="tel" id="telefono" name="telefono">
         </div>
