@@ -1429,3 +1429,60 @@ img {
     object-fit: cover;
     display: block;
 }
+
+/*PAGINA TEMPORADA SS 26/27*/
+@media (max-width: 767.98px){
+
+    /*para darle estilo al punto cuando está seleccionado*/
+    .precios .form-check-input:checked {
+        background-color: black;
+        border-color: black;
+    }
+
+    .form-check-input:focus {
+        box-shadow: none;
+    }
+    .talles .btn-outline-dark, .categorias .btn-outline-dark {
+        border-radius: 0;
+    }
+
+    .filtros-opciones .accordion-button:not(.collapsed) { /*boton abierto*/
+        background-color: transparent;
+        color: black;
+        font-weight: 400;
+    }
+    .accordion-button:focus {
+        box-shadow: none; /*le saco la sombra*/
+    }
+}
+
+@media (min-width: 768px) {
+    .offcanvas.offcanvas-start {
+        position: static; /*position: fixed lo sacó del flujo*/
+        visibility: visible; /*lo hace visible*/
+        transform: none; /*lo mueve a su posición original*/
+        transition: none; /*le saco la transición*/
+    }
+
+    /*para darle estilo al punto cuando está seleccionado*/
+    .precios .form-check-input:checked {
+        background-color: black;
+        border-color: black;
+    }
+
+    .form-check-input:focus {
+        box-shadow: none;
+    }
+    .talles .btn-outline-dark, .categorias .btn-outline-dark {
+        border-radius: 0;
+    }
+
+    .filtros-opciones .accordion-button:not(.collapsed) { /*boton abierto*/
+        background-color: transparent;
+        color: black;
+        font-weight: 400;
+    }
+    .accordion-button:focus {
+        box-shadow: none; /*le saco la sombra*/
+    }
+}
