@@ -134,6 +134,295 @@
 
 
 
+<!--panel lateral de filtro -> OFFCANVAS DONDE CADA ELEMENTO ES UN ACORDEON-->
+<div class="container">
+    <div class="row">
+        <!--FILTROS-->
+        <div class="col-md-3"> <!--a partir de resolucion md, se ponen uno al lado de otro (para servir como barra lateral)-->
+            <!--BOTON PARA MOSTRAR/DEJAR DE MOSTRAR PANEL-->
+            <button class="btn d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#filtros">
+                <!--d-md-none: a partir de esa resolución en adelante desaparece ese elemento
+                data-bs-toggle define comportamiento
+                data-bs-target define donde se aplica-->
+                <i class="bi bi-sliders2"></i>
+                FILTRAR POR
+            </button>
+            <!--PANEL-->
+            <div class="offcanvas offcanvas-md offcanvas-start" tabindex="-1" id="filtros" aria-labelledby="filtrosTitulo"> <!--por defecto, el panel se desplaza en la izquierda-->
+
+                <!--titulo de panel + cruz(boton de cierre de panel)-->
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="filtrosTitulo">FILTROS</h5>
+                    <button type="button" class="btn-close"  data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <!--cuerpo del panel-->
+                <div class="offcanvas-body">
+                    <div class="accordion accordion-flush filtros-opciones" id="opcionesFiltro">
+                        <!--accordion-flush para remover borde y redondeo-->
+                        <div class="accordion-item">
+                            <h6 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#filtroCategoria">
+                                    PRODUCTO
+                                </button>
+                            </h6>
+                            <div id="filtroCategoria" class="accordion-collapse collapse show" data-bs-parent="#opcionesFiltro">
+                                <div class="accordion-body">
+                                    <!--Filtro de PRODUCTOS-->
+                                    <div class="categorias d-flex flex-wrap gap-2 rounded-0">
+                                        <!--flex-wrap para que si no hay espacio, los elementos pasen a la siguiente linea
+                                        gap-2 para dar espacio entre los elementos-->
+                                        <!--todos los productos-->
+                                        <input type="checkbox" class="btn-check" id="opcion-todos">
+                                        <label for="opcion-todos" class="btn btn-outline-dark">TODOS</label>
+                                        <!--para remeras-->
+                                        <input type="checkbox" class="btn-check" id="opcion-remeras">
+                                        <label for="opcion-remeras" class="btn btn-outline-dark">REMERAS</label>
+                                        <!--para camisas-->
+                                        <input type="checkbox" class="btn-check" id="opcion-camisas">
+                                        <label for="opcion-camisas" class="btn btn-outline-dark">CAMISAS</label> 
+                                        <!--para jeans-->
+                                        <input type="checkbox" class="btn-check" id="opcion-jeans">
+                                        <label for="opcion-jeans" class="btn btn-outline-dark">JEANS</label>
+                                        <!--para pantalones-->
+                                        <input type="checkbox" class="btn-check" id="opcion-pantalones">
+                                        <label for="opcion-pantalones" class="btn btn-outline-dark">PANTALONES</label>
+                                        <!--para abrigos-->
+                                        <input type="checkbox" class="btn-check" id="opcion-abrigos">
+                                        <label for="opcion-abrigos" class="btn btn-outline-dark">CHAQUETAS Y ABRIGOS</label>
+                                        
+                                    </div>
+                                    <button class="verMas btn btn-link">Ver más</button> <!--lo pongo abajo del div de productos para que no me quede como un elemento mas del contenedor y se vaya para abajo-->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h6 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#filtroTalle">
+                                    TALLE
+                                </button>
+                            </h6>
+                            <div id="filtroTalle" class="accordion-collapse collapse show" data-bs-parent="#opcionesFiltro">
+                                <div class="accordion-body">
+                                    <!--opciones dentro de filtro-->
+                                    <!--Filtro de TALLE-->
+                                    <div class="talles d-flex flex-wrap gap-2">
+                                        <!--talle XS-->
+                                        <input type="checkbox" class="btn-check" id="talleXS">
+                                        <label for="talleXS" class="btn btn-outline-dark">XS</label>
+                                        <!--talle S-->
+                                        <input type="checkbox" class="btn-check" id="talleS">
+                                        <label for="talleS" class="btn btn-outline-dark">S</label>
+                                        <!--talle M-->
+                                        <input type="checkbox" class="btn-check" id="talleM">
+                                        <label for="talleM" class="btn btn-outline-dark">M</label> 
+                                        <!--talle L-->
+                                        <input type="checkbox" class="btn-check" id="talleL">
+                                        <label for="talleL" class="btn btn-outline-dark">L</label>
+                                        <!--Talle XL-->
+                                        <input type="checkbox" class="btn-check" id="talleXL">
+                                        <label for="talleXL" class="btn btn-outline-dark">XL</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h6 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#filtroPrecio">
+                                    PRECIO
+                                </button>
+                            </h6>
+                            <div id="filtroPrecio" class="accordion-collapse collapse show" data-bs-parent="#opcionesFiltro">
+                                <div class="accordion-body">
+                                    <!--Filtro de PRECIOS-->
+                                    <div class="precios">
+                                        <div class="form-check">
+                                            <!--hasta $40.000-->
+                                            <input type="radio" id="hasta40" class="form-check-input" name="precios">
+                                            <label for="hasta40" class="form-check-label">Hasta $40.000</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <!--de $40.000 a $70.000-->
+                                            <input type="radio" id="hasta70" class="form-check-input" name="precios">
+                                            <label for="hasta70" class="form-check-label">Desde $40.000 hasta $70.000</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <!--de $70.000 hasta $100.000-->
+                                            <input type="radio" id="hasta100" class="form-check-input" name="precios">
+                                            <label for="hasta100" class="form-check-label">De $70.000 hasta $100.000</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <!--mas de $100.000-->
+                                            <input type="radio" id="mas100" class="form-check-input" name="precios">
+                                            <label for="mas100" class="form-check-label">Más de $100.000</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="text-center">
+                            <button class="btn btn-outline-dark rounded-0 m-3">BUSCAR</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        <!--PRODUCTOS-->
+        
+            <div class="col-md-9"> <!--tarjetas de productos-->
+                <div class="row row-cols-md-4 row-cols-sm-3 g-3">
+                    <div class="col">
+                        <a href="#" class="enlace-prenda">
+                            <div class="card tarjetaPrenda border-0">
+                                <img src="IMAGENES HOME/jean-regular-gris1.png" alt="Jean 801 regular gris">
+                                <div class="card-body"> <!--TARJETA-->
+                                    <p class="nombrePrenda">JEAN REGULAR 801</p>
+                                    <p class="precioPrenda">$67.800</p>
+                                    <p class="cuotasPrenda">3 cuotas sin interés de 22.600</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="#" class="enlace-prenda">
+                            <div class="card tarjetaPrenda border-0">
+                                <img src="IMAGENES HOME/campera-sarga-gris1.png" alt="campera sarga gris">
+                                <div class="card-body"> <!--TARJETA-->
+                                    <p class="nombrePrenda">SOBRECAMISA SARGA</p>
+                                    <p class="precioPrenda">$71.300</p>
+                                    <p class="cuotasPrenda">3 cuotas sin interés de $23.766,66</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col">
+                        <a href="#" class="enlace-prenda">
+                            <div class="card tarjetaPrenda border-0">
+                                <img src="IMAGENES HOME/camisa-blanca-look1.png" alt="camisa blanca oxford">
+                                <div class="card-body"> <!--TARJETA-->
+                                    <p class="nombrePrenda">CAMISA OXFORD BLANCA</p>
+                                    <p class="precioPrenda">$45.600</p>
+                                    <p class="cuotasPrenda">3 cuotas sin interés de $15.200</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="col">
+                        <a href="#" class="enlace-prenda">
+                            <div class="card tarjetaPrenda border-0">
+                                <img src="IMAGENES HOME/jean-azul-look1.png" alt="jean regular 801 azul">
+                                <div class="card-body"> <!--TARJETA-->
+                                    <p class="nombrePrenda">JEAN REGULAR 801</p>
+                                    <p class="precioPrenda">$67.800</p>
+                                    <p class="cuotasPrenda">3 cuotas sin interés de $22.600</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col">
+                        <a href="#" class="enlace-prenda">
+                            <div class="card tarjetaPrenda border-0">
+                                <img src="IMAGENES HOME/polo-rugby-azul1.png" alt="jean polo rugby azul">
+                                <div class="card-body"> <!--TARJETA-->
+                                    <p class="nombrePrenda">POLO DE RUGBY EN ALGODÓN</p>
+                                    <p class="precioPrenda">$43.900</p>
+                                    <p class="cuotasPrenda">3 cuotas de $14.633,33</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col">
+                        <a href="#" class="enlace-prenda">
+                            <div class="card tarjetaPrenda border-0">
+                                <img src="IMAGENES HOME/camiseta-azul-boton1.png" alt="camiseta azul">
+                                <div class="card-body"> <!--TARJETA-->
+                                    <p class="nombrePrenda">CAMISETA AZUL CON BOTONES</p>
+                                    <p class="precioPrenda">$44.200</p>
+                                    <p class="cuotasPrenda">3 cuotas de </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="#" class="enlace-prenda">
+                            <div class="card tarjetaPrenda border-0">
+                                <img src="IMAGENES HOME/camiseta-azul-boton1.png" alt="camiseta azul">
+                                <div class="card-body"> <!--TARJETA-->
+                                    <p class="nombrePrenda">CAMISETA AZUL CON BOTONES</p>
+                                    <p class="precioPrenda">$44.200</p>
+                                    <p class="cuotasPrenda">3 cuotas de </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="#" class="enlace-prenda">
+                            <div class="card tarjetaPrenda border-0">
+                                <img src="IMAGENES HOME/camiseta-azul-boton1.png" alt="camiseta azul">
+                                <div class="card-body"> <!--TARJETA-->
+                                    <p class="nombrePrenda">CAMISETA AZUL CON BOTONES</p>
+                                    <p class="precioPrenda">$44.200</p>
+                                    <p class="cuotasPrenda">3 cuotas de </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="#" class="enlace-prenda">
+                            <div class="card tarjetaPrenda border-0">
+                                <img src="IMAGENES HOME/camiseta-azul-boton1.png" alt="camiseta azul">
+                                <div class="card-body"> <!--TARJETA-->
+                                    <p class="nombrePrenda">CAMISETA AZUL CON BOTONES</p>
+                                    <p class="precioPrenda">$44.200</p>
+                                    <p class="cuotasPrenda">3 cuotas de </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="#" class="enlace-prenda">
+                            <div class="card tarjetaPrenda border-0">
+                                <img src="IMAGENES HOME/camiseta-azul-boton1.png" alt="camiseta azul">
+                                <div class="card-body"> <!--TARJETA-->
+                                    <p class="nombrePrenda">CAMISETA AZUL CON BOTONES</p>
+                                    <p class="precioPrenda">$44.200</p>
+                                    <p class="cuotasPrenda">3 cuotas de </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="#" class="enlace-prenda">
+                            <div class="card tarjetaPrenda border-0">
+                                <img src="IMAGENES HOME/camiseta-azul-boton1.png" alt="camiseta azul">
+                                <div class="card-body"> <!--TARJETA-->
+                                    <p class="nombrePrenda">CAMISETA AZUL CON BOTONES</p>
+                                    <p class="precioPrenda">$44.200</p>
+                                    <p class="cuotasPrenda">3 cuotas de </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="#" class="enlace-prenda">
+                            <div class="card tarjetaPrenda border-0">
+                                <img src="IMAGENES HOME/camiseta-azul-boton1.png" alt="camiseta azul">
+                                <div class="card-body"> <!--TARJETA-->
+                                    <p class="nombrePrenda">CAMISETA AZUL CON BOTONES</p>
+                                    <p class="precioPrenda">$44.200</p>
+                                    <p class="cuotasPrenda">3 cuotas de </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div> <!--cierre row-->
+    </div> <!--cierre container-->
 
 
 
