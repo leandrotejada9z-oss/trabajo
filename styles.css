@@ -1606,3 +1606,14 @@ img {
 .form-check-input {
     border: 1px solid #000;
 }
+
+/* PANEL LATERAL DE PRODUCTOS */
+.panel-producto {
+    width: 50vw !important;
+}
+
+@media (max-width: 767px) {
+    .panel-producto {
+        width: 100% !important;
+    }
+}
