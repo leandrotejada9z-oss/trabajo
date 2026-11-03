@@ -69,3 +69,51 @@ document.querySelector(".btn-buscar").addEventListener("click", () => {
     });
 
 });
+
+
+// ABRIR DETALLES DEL PRODUCTO
+document.querySelectorAll(".enlace-prenda").forEach((enlace) => {
+
+    enlace.addEventListener("click", (e) => {
+
+        e.preventDefault();
+
+        const producto = enlace.querySelector(".tarjetaPrenda");
+
+        const imagen = producto.querySelector("img");
+        const nombre = producto.querySelector(".nombrePrenda");
+        const precio = producto.querySelector(".precioPrenda");
+        const cuotas = producto.querySelector(".cuotasPrenda");
+
+        document.getElementById("modalImagen").src = imagen.src;
+        document.getElementById("modalNombre").textContent = nombre.textContent;
+        document.getElementById("modalPrecio").textContent = precio.textContent;
+        document.getElementById("modalCuotas").textContent = cuotas.textContent;
+
+        // REINICIAR CANTIDAD Y TALLE
+        document.getElementById("cantidadProducto").textContent = 1;
+        document.getElementById("modalTalle").value = "";
+
+    });
+
+});
+
+// SUMAR CANTIDAD
+document.getElementById("sumarCantidad").addEventListener("click", () => {
+
+    let cantidad = Number(document.getElementById("cantidadProducto").textContent);
+
+    document.getElementById("cantidadProducto").textContent = cantidad + 1;
+
+});
+
+// RESTAR CANTIDAD
+document.getElementById("restarCantidad").addEventListener("click", () => {
+
+    let cantidad = Number(document.getElementById("cantidadProducto").textContent);
+
+    if (cantidad > 1) {
+        document.getElementById("cantidadProducto").textContent = cantidad - 1;
+    }
+
+});
