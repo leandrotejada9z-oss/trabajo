@@ -1295,6 +1295,7 @@ img {
 
 .locales-seccion {
     margin-top: 40px;
+
 }
 
 /* FIN MAPA */
@@ -1559,4 +1560,23 @@ img {
     font-size: 2.5rem;
     background-color: rgba(0, 0, 0, 0.5);
     padding: 10px 25px;
+}
+
+/*.contenedor-local {
+    border: 1px solid #051C3F !important;
+} */
+
+.bodylocales{
+    background-color: #051C3F;
+}
+
+
+
+.contenedor-local {
+    background-color: white;
+    border-radius: 10px;
+}
+
+.titulo-locales{
+    color: white;
 }
