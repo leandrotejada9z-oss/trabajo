@@ -1607,6 +1607,7 @@ img {
     border: 1px solid #000;
 }
 
+
 /* PANEL LATERAL DE PRODUCTOS */
 .panel-producto {
     width: 50vw !important;
@@ -1615,5 +1616,11 @@ img {
 @media (max-width: 767px) {
     .panel-producto {
         width: 100% !important;
+    }
+
+    .columna-imagen {
+        margin-bottom: 30px;
+        padding-right: 25px;
+        padding-left: 20px;
     }
 }
