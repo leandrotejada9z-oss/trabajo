@@ -1466,8 +1466,8 @@ img {
 
     /*para darle estilo al punto cuando está seleccionado*/
     .precios .form-check-input:checked {
-        background-color: black;
-        border-color: black;
+        background-color: #CF4A29;
+        border-color: #CF4A29;
     }
 
     .form-check-input:focus {
@@ -1486,3 +1486,53 @@ img {
         box-shadow: none; /*le saco la sombra*/
     }
 }
+
+/*fijar filtro*/
+.filtro-lateral {
+    position: sticky;
+    top: 100px;
+    height: fit-content;
+    align-self: flex-start;
+}
+
+/* COLOR DE BOTONES SELECCIONADOS */
+.talles .btn-check:checked + .btn-outline-dark,
+.categorias .btn-check:checked + .btn-outline-dark {
+    background-color: #CF4A29;
+    border-color: white;
+    color: white;
+}
+
+/* BOTÓN BUSCAR */
+.btn-buscar {
+    background-color: black;
+    color: white;
+    border-color: black;
+}
+
+.btn-buscar:hover,
+.btn-buscar:active {
+    background-color: white;
+    color: black;
+    border-color: black;
+}
+
+.filtros-opciones .accordion-button:not(.collapsed) {
+    font-weight: bold;
+}
+.filtros-opciones .accordion-button {
+    font-weight: bold;
+}
+
+.separacion-productos {
+    padding-top: 12px;
+    padding-bottom: 60px;
+}
+
+@media (max-width: 575.98px) {
+    .separacion-productos {
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+}
+
