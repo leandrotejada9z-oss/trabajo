@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -52,11 +53,9 @@
             <div class="col d-none d-xl-flex">
                 <ul class="nav nav-underline flex-nowrap">
                     <li class="nav-item">
-                        <a class="nav-link enlaces-paginas" aria-current="page" href="index.html">Temporada SS26/27</a>
+                        <a class="nav-link enlaces-paginas" aria-current="page" href="temporada.html">Temporada</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link enlaces-paginas" href="#">Catálogo</a>
-                    </li>
+                    
                     <li class="nav-item">
                         <a class="nav-link enlaces-paginas" id="enlace-sale" href="sale.html">SALE</a>
                     </li>
@@ -73,8 +72,7 @@
                     </button>
 
                     <ul class="dropdown-menu menu-desplegable-movil">
-    <li><a class="dropdown-item enlaces-paginas" href="index.html">Temporada SS26/27</a></li>
-    <li><a class="dropdown-item enlaces-paginas" href="#">Catálogo</a></li>
+    <li><a class="dropdown-item enlaces-paginas" href="index.html">Temporada</a></li>
     <li><a class="dropdown-item enlaces-paginas" id="enlace-sale" href="sale.html">SALE</a></li>
     <li><hr class="dropdown-divider"></li>
     <li><a class="dropdown-item enlaces-paginas" href="locales.html"><i class="bi bi-geo-alt me-2"></i>Ubicación</a></li>
@@ -97,32 +95,21 @@
             </div>
 
             <!-- iconos -->
-            <div id="opciones-cabecera" class="col d-none d-xl-flex justify-content-end align-items-center gap-3">
+           <div id="opciones-cabecera" class="col d-none d-xl-flex justify-content-end align-items-center gap-3">
     <a class="icono-cabecera" href="index.html" title="Buscar">
         <i class="bi bi-search"></i>
     </a>
     <a class="icono-cabecera" href="locales.html" title="Ubicación">
         <i class="bi bi-geo-alt"></i>
     </a>
-    <a class="icono-cabecera" href="index.html" title="Mi cuenta">
-        <i class="bi bi-person"></i>
-    </a>
     <a class="icono-cabecera" href="contactanos.html" title="Contáctanos">
-        <i class="bi bi-people"></i>
-    </a>
-    <a class="icono-cabecera" href="index.html" title="Mis compras">
-        <i class="bi bi-bag"></i>
+        <i class="bi bi-telephone"></i>
     </a>
 </div>
 
             <!-- cuenta y bolso para celulares -->
             <div class="col-auto iconos-movil d-flex align-items-center gap-3 d-xl-none">
-                <a class="icono-cabecera" href="index.html" aria-label="Mi cuenta">
-                    <i class="bi bi-person"></i>
-                </a>
-                <a class="icono-cabecera" href="index.html" aria-label="Bolsa de compras">
-                    <i class="bi bi-bag"></i>
-                </a>
+                                
             </div>
 
         </div>
@@ -131,11 +118,14 @@
 
 </header>
 
+
+
 <!--panel lateral de filtro -> OFFCANVAS DONDE CADA ELEMENTO ES UN ACORDEON-->
+<div class="separacion-productos">
 <div class="container">
     <div class="row">
         <!--FILTROS-->
-        <div class="col-md-3"> <!--a partir de resolucion md, se ponen uno al lado de otro (para servir como barra lateral)-->
+        <div class="col-md-3 filtro-lateral"> <!--a partir de resolucion md, se ponen uno al lado de otro (para servir como barra lateral)-->
             <!--BOTON PARA MOSTRAR/DEJAR DE MOSTRAR PANEL-->
             <button class="btn d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#filtros">
                 <!--d-md-none: a partir de esa resolución en adelante desaparece ese elemento
@@ -158,12 +148,13 @@
                         <!--accordion-flush para remover borde y redondeo-->
                         <div class="accordion-item">
                             <h6 class="accordion-header">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#filtroCategoria">
-                                    PRODUCTO
-                                </button>
+                                <button class="accordion-button" type="button"
+    data-bs-toggle="collapse" data-bs-target="#filtroCategoria">
+    PRODUCTO
+</button>
                             </h6>
-                            <div id="filtroCategoria" class="accordion-collapse collapse show" data-bs-parent="#opcionesFiltro">
-                                <div class="accordion-body">
+                            <div id="filtroCategoria" class="accordion-collapse collapse show">
+                               <div class="accordion-body">
                                     <!--Filtro de PRODUCTOS-->
                                     <div class="categorias d-flex flex-wrap gap-2 rounded-0">
                                         <!--flex-wrap para que si no hay espacio, los elementos pasen a la siguiente linea
@@ -194,11 +185,12 @@
                         </div>
                         <div class="accordion-item">
                             <h6 class="accordion-header">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#filtroTalle">
-                                    TALLE
-                                </button>
+                                <button class="accordion-button" type="button"
+    data-bs-toggle="collapse" data-bs-target="#filtroTalle">
+    TALLE
+</button>
                             </h6>
-                            <div id="filtroTalle" class="accordion-collapse collapse show" data-bs-parent="#opcionesFiltro">
+                            <div id="filtroTalle" class="accordion-collapse collapse show">
                                 <div class="accordion-body">
                                     <!--opciones dentro de filtro-->
                                     <!--Filtro de TALLE-->
@@ -224,11 +216,12 @@
                         </div>
                         <div class="accordion-item">
                             <h6 class="accordion-header">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#filtroPrecio">
-                                    PRECIO
-                                </button>
+                                <button class="accordion-button" type="button"
+    data-bs-toggle="collapse" data-bs-target="#filtroPrecio">
+    PRECIO
+</button>
                             </h6>
-                            <div id="filtroPrecio" class="accordion-collapse collapse show" data-bs-parent="#opcionesFiltro">
+                            <div id="filtroPrecio" class="accordion-collapse collapse show">
                                 <div class="accordion-body">
                                     <!--Filtro de PRECIOS-->
                                     <div class="precios">
@@ -258,13 +251,14 @@
 
                         </div>
                         <div class="text-center">
-                            <button class="btn btn-outline-dark rounded-0 m-3">BUSCAR</button>
+                            <button class="btn btn-outline-dark rounded-0 m-3 btn-buscar">BUSCAR</button>
                         </div>
                     </div>
                 </div>
             </div>
             </div>
         <!--PRODUCTOS-->
+        
             <div class="col-md-9"> <!--tarjetas de productos-->
                 <div class="row row-cols-md-4 row-cols-sm-3 g-3">
                     <div class="col">
@@ -411,6 +405,7 @@
                                     <p class="nombrePrenda">CAMISETA AZUL CON BOTONES</p>
                                     <p class="precioPrenda">$44.200</p>
                                     <p class="cuotasPrenda">3 cuotas de </p>
+                                    
                                 </div>
                             </div>
                         </a>
@@ -419,6 +414,18 @@
             </div>
         </div> <!--cierre row-->
     </div> <!--cierre container-->
+    </div>
+
+
+
+
+
+
+
+
+
+
+
 
 <!--footer-->
 <footer class="bg-black">
@@ -554,6 +561,8 @@
 </footer>
 
 
+
+<!-- Bootstrap: activa el funcionamiento del carrusel -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
