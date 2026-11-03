@@ -22,7 +22,6 @@
 
 <body>
     <h1 class="visually-hidden">Cuervo – Indumentaria</h1>
-
 <header> <!--encabezado del sitio: carrusel con mensajes + barra de navegacion-->
     <div id="mensajes" class="carousel slide" data-bs-ride="carousel" data-bs-pause="false" data-bs-interval="3000">
         <!--data-bs-pause="false": por defecto el carrusel se pausa en hover, asi no se pausa cuando se le pasa el mouse por encima-->
@@ -81,10 +80,13 @@
                 </div>
 
                 <!-- buscador movil -->
-                <a class="icono-cabecera" href="index.html" aria-label="Buscar">
-                    <i class="bi bi-search"></i>
-                </a>
-            </div>
+<button class="icono-cabecera border-0 bg-transparent p-0" 
+        type="button" 
+        data-bs-toggle="modal" 
+        data-bs-target="#modalBusqueda"
+        aria-label="Buscar">
+    <i class="bi bi-search"></i>
+</button>            </div>
 
             <div class="col-auto logo-cabecera">
                 <!--col-auto hace que el elemento ocupe solo el ancho que necesita su contenido. Todo el resto de espacio que sobra se divide en partes iguales entre los dos col -> el logo queda exactamente en el centro-->
@@ -96,9 +98,14 @@
 
             <!-- iconos -->
            <div id="opciones-cabecera" class="col d-none d-xl-flex justify-content-end align-items-center gap-3">
-    <a class="icono-cabecera" href="index.html" title="Buscar">
-        <i class="bi bi-search"></i>
-    </a>
+    <!-- BUSCADOR PC -->
+<button class="icono-cabecera border-0 bg-transparent p-0"
+        type="button"
+        data-bs-toggle="modal"
+        data-bs-target="#modalBusqueda"
+        aria-label="Buscar">
+    <i class="bi bi-search"></i>
+</button>
     <a class="icono-cabecera" href="locales.html" title="Ubicación">
         <i class="bi bi-geo-alt"></i>
     </a>
@@ -584,7 +591,27 @@
     </div>
 </footer>
 
+<!-- MODAL BUSCADOR -->
+<div class="modal fade" id="modalBusqueda" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content rounded-0">
 
+            <!-- CABECERA -->
+            <div class="modal-header">
+                <h5 class="modal-title">¿QUÉ ESTÁS BUSCANDO?</h5>
+                <button type="button" class="btn-close" 
+                        data-bs-dismiss="modal"></button>
+            </div>
+
+            <!-- CUERPO -->
+            <div class="modal-body">
+                <input type="text" class="form-control rounded-0" 
+                       placeholder="Buscar productos...">
+            </div>
+
+        </div>
+    </div>
+</div>
 
 <!-- Bootstrap: activa el funcionamiento del carrusel -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
