@@ -1455,8 +1455,8 @@ img {
 
     /*para darle estilo al punto cuando está seleccionado*/
     .precios .form-check-input:checked {
-        background-color:  #CF4A29;
-        border-color:  #CF4A29;
+        background-color:  #C81919;
+        border-color:  #C81919;
     }
 
     .form-check-input:focus {
@@ -1486,8 +1486,8 @@ img {
 
     /*para darle estilo al punto cuando está seleccionado*/
     .precios .form-check-input:checked {
-        background-color: #CF4A29;
-        border-color: #CF4A29;
+        background-color: #C81919;
+        border-color: #C81919;
     }
 
     .form-check-input:focus {
@@ -1518,7 +1518,7 @@ img {
 /* COLOR DE BOTONES SELECCIONADOS */
 .talles .btn-check:checked + .btn-outline-dark,
 .categorias .btn-check:checked + .btn-outline-dark {
-    background-color: #CF4A29;
+    background-color: #C81919;
     border-color: white;
     color: white;
 }
