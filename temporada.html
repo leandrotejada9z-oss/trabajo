@@ -590,7 +590,75 @@
     </div>
 </div>
 
+<!-- PANEL DE PRODUCTO -->
+<div class="offcanvas offcanvas-end panel-producto" tabindex="-1" id="panelProducto">
+
+    <div class="offcanvas-header">
+        <h5>DETALLES DEL PRODUCTO</h5>
+        <button type="button" class="btn-close"
+            data-bs-dismiss="offcanvas"></button>
+    </div>
+
+    <div class="offcanvas-body">
+        <div class="row">
+
+            <!-- IMAGEN -->
+            <div class="col-md-6">
+                <img id="modalImagen" src="" class="img-fluid w-100">
+            </div>
+
+            <!-- INFORMACION -->
+            <div class="col-md-6">
+
+                <h4 id="modalNombre"></h4>
+
+                <h3 id="modalPrecio"></h3>
+
+                <p id="modalCuotas" class="text-secondary"></p>
+
+                <hr>
+
+                <!-- TALLES -->
+                <label class="form-label fw-bold">SELECCIONAR TALLE</label>
+
+                <select id="modalTalle" class="form-select rounded-0">
+    <option value="">Elegir talle</option>
+    <option value="XS" disabled>XS - SIN STOCK</option>
+    <option value="S">S</option>
+    <option value="M">M</option>
+    <option value="L">L</option>
+    <option value="XL" disabled>XL - SIN STOCK</option>
+</select>
+
+                <hr>
+
+                <!-- CANTIDAD -->
+                <label class="form-label fw-bold">CANTIDAD</label>
+
+                <div class="d-flex align-items-center gap-3">
+                    <button type="button" class="btn btn-outline-dark"
+                        id="restarCantidad">−</button>
+
+                    <span id="cantidadProducto">1</span>
+
+                    <button type="button" class="btn btn-outline-dark"
+                        id="sumarCantidad">+</button>
+                </div>
+
+                <hr>
+
+                <!-- CARRITO -->
+                <button class="btn btn-dark rounded-0 w-100 mt-3">
+                    AGREGAR AL CARRITO
+                </button>
+
+            </div>
+        </div>
+    </div>
+</div>
+
 <!-- Bootstrap: activa el funcionamiento del carrusel -->
+<script src="filtros.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
