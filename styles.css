@@ -1470,6 +1470,7 @@ img {
         background-color: transparent;
         color: black;
         font-weight: 400;
+
     }
     .accordion-button:focus {
         box-shadow: none; /*le saco la sombra*/
@@ -1600,4 +1601,8 @@ img {
 
 .aclaracion{
     color: red;
+}
+
+.form-check-input {
+    border: 1px solid #000;
 }
