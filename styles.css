@@ -584,6 +584,7 @@ footer {
     height: auto;
     margin-top: 80px;
     margin-left: 0;
+    margin-bottom: 10px;
 }
 
 
@@ -1030,6 +1031,7 @@ img {
         width: 160px;
         max-width: 100%;
         margin: 35px 0 0;
+        margin-bottom: 35px;
     }
 
     footer .row.px-5:has(.logo-negro) {
