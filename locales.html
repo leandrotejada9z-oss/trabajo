@@ -23,7 +23,7 @@
 
 </head>
 
-<body>
+<body class="bodylocales">
      <header> <!--encabezado del sitio: carrusel con mensajes + barra de navegacion-->
     <div id="mensajes" class="carousel slide" data-bs-ride="carousel" data-bs-pause="false" data-bs-interval="3000">
         <!--data-bs-pause="false": por defecto el carrusel se pausa en hover, asi no se pausa cuando se le pasa el mouse por encima-->
@@ -130,14 +130,14 @@
 
 <!-- SECCION LOCALES -->
 <section class="container separacion-secciones locales-seccion">
-    <h3 class="text-center mb-4">NUESTROS LOCALES</h3>
+    <h2 class="encuentra mb-4 titulo-locales">Nuestros locales</h2>
 
     <div class="row g-4 align-items-stretch">
 
         <!-- LISTA DE PROVINCIAS -->
-        <div class="col-12 col-lg-4">
-            <div class="border rounded p-3 h-100">
-                <h4 class="mb-3">Encontrá tu local</h4>
+        <div class="col-12 col-lg-4" >
+            <div class="border rounded p-3 h-100 contenedor-local">
+                <h4 class="mb-3 text-center">Encontrá tu local</h4>
 
          <div class="accordion" id="listaLocales">
 
@@ -456,8 +456,8 @@
 
 <!-- MAPA -->
 <div class="col-12 col-lg-8">
-    <div class="border rounded p-3 h-100">
-        <h4 class="mb-3">Ubicá nuestras sucursales</h4>
+    <div class="border rounded p-3 h-100 contenedor-local">
+        <h4 class="mb-3 text-center">Ubicá nuestras sucursales</h4>
 
         <div id="mapaLocales"></div>
     </div>
