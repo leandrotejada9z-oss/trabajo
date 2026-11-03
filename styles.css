@@ -1536,3 +1536,14 @@ img {
     }
 }
 
+/* IGUALAR ALTURA DE TARJETAS */
+.tarjetaPrenda {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.tarjetaPrenda .card-body {
+    flex-grow: 1;
+}
+
