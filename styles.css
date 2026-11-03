@@ -1435,8 +1435,8 @@ img {
 
     /*para darle estilo al punto cuando está seleccionado*/
     .precios .form-check-input:checked {
-        background-color: black;
-        border-color: black;
+        background-color:  #CF4A29;
+        border-color:  #CF4A29;
     }
 
     .form-check-input:focus {
@@ -1547,3 +1547,8 @@ img {
     flex-grow: 1;
 }
 
+@media (max-width: 767.98px) {
+    .filtro-lateral {
+        position: static;
+    }
+}
