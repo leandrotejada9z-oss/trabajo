@@ -1633,6 +1633,12 @@ img {
         align-self: flex-start;
     }
 }
+
+/* EVITAR DESPLAZAMIENTO AL ABRIR MODAL */
+html {
+    overflow-y: scroll;
+}
+
 body {
-    overflow-y: scroll !important;
+    overflow-y: auto !important;
 }
