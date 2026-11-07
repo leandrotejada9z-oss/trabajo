@@ -494,29 +494,27 @@ data-bs-target="#panelProducto">
 
 
 
-
 <!--footer-->
 <footer class="bg-black">
     <div class="container-fluid p-0">
-        <div class="row align-items-center justify-content-center mb-5 py-3 bg-light g-0 m-0">
-            <div class="col text-center border-end border-1 border-dark py-4">
-                <!--le da color al fondo de gris claro-->
+        <div class="row align-items-center justify-content-center mb-5 py-3 bg-light g-0 m-0 text-center">
+            <div class="col-12 col-md-6 text-start border-end border-1 border-dark py-4 newsletter-texto d-flex flex-column justify-content-center">             <!--le da color al fondo de gris claro-->
                 <!--border-end: clase que agrega borde a la derecha de la columna-->
                 <!--border-dark: le da borde negro
                 border-1: le da grosor a borde de 1-->
-                <h6 class="mb-1 text-secondary">Sé el primero en enterarte de las novedades.</h6>
+                <h6 class="mb-1 text-secondary newsletter-subt">Sé el primero en enterarte de las novedades</h6>
                 <!--text-secondary le da color gris al texto-->
-                <h5>Suscribite a nuestro newsletter</h5>
+                <h5 class="newsletter-titulo">Suscribite a nuestro newsletter</h5>
             </div>
-            <div class="col text-center">
-                <form>
+            <div class="col-12 col-md-6 text-center d-flex flex-column justify-content-center formulario-newsletter">
+                <form class="text-center newsletter-form">
                     <div class="mb-2">
                         <label for="newsletter-email" class="form-label d-block">
                             Introduzca su email:
                         </label>
                         <!--form-label es clase que le da espacio abajo del label-->
-                        <input type="email" class="inputEmail px-3 py-1" id="newsletter-email" required placeholder="tucorreo@gmail.com">
-                        <p class="py-2 text-secondary">Sin spam. Podés darte de baja cuando quieras.</p>
+                        <input type="email" class="inputEmail px-3 py-1 w-100 newsletter-subt" id="newsletter-email" required placeholder="tucorreo@gmail.com">
+                        <p class="py-2 text-secondary newsletter-subt">Sin spam. Podés darte de baja cuando quieras.</p>
                         <!--texto de ayuda o de aviso asociado al campo-->
                     </div>
                     <button type="submit" class="btn btn-dark enviarForm px-4">Suscribirse</button>
@@ -619,7 +617,7 @@ data-bs-target="#panelProducto">
         </div>
 
         <div class="row px-3">
-            <div class="col-12 p-0 text-start">
+            <div class="col-12 p-0 text-start footer-desplazar">
                 <a class="navbar-brand m-0" href="index.html">
                 <img src="IMAGENES HOME/logo-negro.png" alt="Logo de CUERVO" class="logo-negro">
             </a>
