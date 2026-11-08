@@ -1445,7 +1445,7 @@ img {
 /*banner contactanos PC igual al banner de index*/
 .bannerContacto {
     width: 100%;
-    aspect-ratio: 3775 / 1100;
+    aspect-ratio: 71 / 21;
     object-fit: cover;
     display: block;
 }
@@ -1716,12 +1716,13 @@ footer .inputEmail {
 /* AJUSTES PARA PC */
 @media (min-width: 768px) {
 
-    /*.footer-col:not(:last-child) {
+    .footer-col:not(:last-child) {
         margin-left: 30px;
     }
+
     .logo-negro {
         transform: translateX(35px);
-    }*/
+    }
 
     .formulario-newsletter {
         padding-left: 30px;
@@ -1812,6 +1813,8 @@ footer .inputEmail {
         border-right: none !important;
     }
 }
+
 .newsletter-texto {
     border-right-color: #f8f9fa !important;
 }
+
