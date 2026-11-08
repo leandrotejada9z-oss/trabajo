@@ -1812,3 +1812,6 @@ footer .inputEmail {
         border-right: none !important;
     }
 }
+.newsletter-texto {
+    border-right-color: #f8f9fa !important;
+}
