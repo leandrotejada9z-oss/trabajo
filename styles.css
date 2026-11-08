@@ -1716,13 +1716,12 @@ footer .inputEmail {
 /* AJUSTES PARA PC */
 @media (min-width: 768px) {
 
-    .footer-col:not(:last-child) {
+    /*.footer-col:not(:last-child) {
         margin-left: 30px;
     }
-
     .logo-negro {
         transform: translateX(35px);
-    }
+    }*/
 
     .formulario-newsletter {
         padding-left: 30px;
