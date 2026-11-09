@@ -1445,7 +1445,7 @@ img {
 /*banner contactanos PC igual al banner de index*/
 .bannerContacto {
     width: 100%;
-    aspect-ratio: 71 / 21;
+    aspect-ratio: 142 / 29;
     object-fit: cover;
     display: block;
 }
